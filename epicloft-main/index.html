@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EPIC Loft Conversion - Transforming Your Home</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <!-- AOS Library for scroll animations -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/styles.css">
+   
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="./assets/image/logo.png" alt="EPIC Loft Conversion Logo" class="img-fluid">
+                <!-- <img src="./assets/image/epicsvg.svg" alt="EPIC Loft Conversion Logo" class="img-fluid"> -->
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Home</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About Us</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Services
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Dormer Loft Conversion</a></li>
+                            <li><a class="dropdown-item" href="#">Mansard Loft Conversion</a></li>
+                            <li><a class="dropdown-item" href="#">Roof Light Loft Conversion</a></li>
+                            <li><a class="dropdown-item" href="#">Hip-to-gable Loft Conversion</a></li>
+                            <li><a class="dropdown-item" href="#">Modular Loft Conversions</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#process">Our Process</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#testimonials">Testimonials</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                    <li class="nav-item ms-lg-3">
+                        <a class="btn btn-primary rounded-pill px-4" href="#quote">Get a Free Quote</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Carousel -->
+    <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active"></button>
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active" style="background-image: url('./assets/image/hero.jpg')">
+                <div class="carousel-caption">
+                    <h1 class="display-4 fw-bold mb-4">Transforming Your Home with Quality Loft Conversions</h1>
+                    <p class="lead mb-4">Create extra space and add value to your property with our expert loft
+                        conversion services</p>
+                    <a href="#quote" class="btn btn-primary btn-lg px-5 me-3">Get a Free Quote</a>
+                    <a href="#process" class="btn btn-outline-light btn-lg px-5">Learn More</a>
+                </div>
+            </div>
+            <div class="carousel-item" style="background-image: url('./assets/image/hero2.jpg')">
+                <div class="carousel-caption">
+                    <h1 class="display-4 fw-bold mb-4">Custom Loft Designs for Every Home</h1>
+                    <p class="lead mb-4">From dormers to mansards, we create the perfect space for your needs</p>
+                    <a href="#services" class="btn btn-primary btn-lg px-5 me-3">Our Services</a>
+                    <a href="#quote" class="btn btn-outline-light btn-lg px-5">Get a Free Quote</a>
+                </div>
+            </div>
+            <div class="carousel-item" style="background-image: url('./assets/image/hero3.jpg')">
+                <div class="carousel-caption">
+                    <h1 class="display-4 fw-bold mb-4">Trusted Loft Conversion Specialists in London</h1>
+                    <p class="lead mb-4">Serving Central London and surrounding areas within a 50km radius</p>
+                    <a href="#testimonials" class="btn btn-primary btn-lg px-5 me-3">Our Testimonials</a>
+                    <a href="#contact" class="btn btn-outline-light btn-lg px-5">Contact Us</a>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+    <!-- About Section -->
+    <section id="about" class="py-5 my-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0" data-aos="fade-right">
+                    <img src="./assets/image/hero3.jpg" alt="About EPIC Loft Conversion"
+                        class="img-fluid rounded shadow">
+                </div>
+                <div class="col-lg-6" data-aos="fade-left">
+                    <h2 class="section-title">Why Choose EPIC Loft Conversion?</h2>
+                    <p class="lead mb-4">At EPIC Loft Conversion, we provide top-quality loft conversions in London. Our
+                        skilled team takes care of everything from design to construction, making the process smooth and
+                        stress-free.</p>
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <div class="d-flex align-items-center">
+                                <i class="fas fa-check-circle text-primary-red me-3 fs-4"></i>
+                                <p class="m-0">Proven Experience</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <div class="d-flex align-items-center">
+                                <i class="fas fa-check-circle text-primary-red me-3 fs-4"></i>
+                                <p class="m-0">Custom Designs & Planning</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <div class="d-flex align-items-center">
+                                <i class="fas fa-check-circle text-primary-red me-3 fs-4"></i>
+                                <p class="m-0">Warranty & Reliability</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <div class="d-flex align-items-center">
+                                <i class="fas fa-check-circle text-primary-red me-3 fs-4"></i>
+                                <p class="m-0">Affordable Pricing</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <div class="d-flex align-items-center">
+                                <i class="fas fa-check-circle text-primary-red me-3 fs-4"></i>
+                                <p class="m-0">Project Management</p>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#quote" class="btn btn-primary rounded-pill px-4 mt-4">Get a Free Quote</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-5 bg-light">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h2 class="section-title text-center">Types of Loft Conversions</h2>
+                <p class="lead">We specialize in different types of loft conversions to suit all home styles</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="conversion-type">
+                        <img src="./assets/image/services/dormer.jpg" alt="Dormer Loft Conversion">
+                        <div class="conversion-content">
+                            <h4>Dormer Loft Conversion</h4>
+                            <p>A dormer conversion extends your existing roof vertically, creating additional headroom
+                                and floor space. Perfect for adding a spacious bedroom, office, or bathroom.</p>
+                            <a href="#" class="btn btn-outline-primary">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="conversion-type">
+                        <img src="./assets/image/services/mansard-loft.jpg" alt="Mansard Loft Conversion">
+                        <div class="conversion-content">
+                            <h4>Mansard Loft Conversion</h4>
+                            <p>This type completely alters the roof's shape, creating almost a full additional storey.
+                                Ideal for homes in urban areas where maximizing space is crucial.</p>
+                            <a href="#" class="btn btn-outline-primary">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="conversion-type">
+                        <img src="./assets/image/services/roof-light.jpg" alt="Roof Light Loft Conversion">
+                        <div class="conversion-content">
+                            <h4>Roof Light Loft Conversion</h4>
+                            <p>The most cost-effective option, roof light conversions involve installing skylights
+                                without changing the roof structure. Perfect for homes with enough existing loft space.
+                            </p>
+                            <a href="#" class="btn btn-outline-primary">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="400">
+                    <div class="conversion-type">
+                        <img src="./assets/image/services/hip-to-gable.jpg" alt="Hip-to-Gable Loft Conversion">
+                        <div class="conversion-content">
+                            <h4>Hip-to-Gable Loft Conversion</h4>
+                            <p>This type extends a hipped roof to form a vertical gable, creating extra usable space.
+                                Especially beneficial for semi-detached or end-of-terrace houses.</p>
+                            <a href="#" class="btn btn-outline-primary">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="500">
+                    <div class="conversion-type">
+                        <img src="./assets/image/services/Modular-Loft-Conversion.jpg" alt="Modular Loft Conversions">
+                        <div class="conversion-content">
+                            <h4>Modular Loft Conversions</h4>
+                            <p>A fast and modern alternative with pre-fabricated sections built off-site and installed
+                                quickly. Reduces on-site construction time and ensures high precision.</p>
+                            <a href="#" class="btn btn-outline-primary">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="600">
+                    <div
+                        class="conversion-type bg-primary-off text-white d-flex align-items-center justify-content-center text-center p-4">
+                        <div>
+                            <i class="fas fa-home fa-3x mb-3"></i>
+                            <h4>Not sure which type is right for you?</h4>
+                            <p>Contact us for a free consultation and we'll help you find the perfect solution for your
+                                home.</p>
+                            <a href="#contact" class="btn btn-outline-light mt-3">Contact Us</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section id="process" class="py-5 my-5">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h2 class="section-title text-center">Our Loft Conversion Process</h2>
+                <p class="lead">We follow a simple and effective process to deliver the best results</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="process-card">
+                        <div class="process-icon">
+                            <i class="fas fa-comments"></i>
+                        </div>
+                        <h4>1. Consultation</h4>
+                        <p>We discuss your ideas, budget, and needs to understand your vision for the loft conversion.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="process-card">
+                        <div class="process-icon">
+                            <i class="fas fa-search"></i>
+                        </div>
+                        <h4>2. Free Site Survey</h4>
+                        <p>Our experts inspect your space and suggest the best options for your loft conversion.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="process-card">
+                        <div class="process-icon">
+                            <i class="fas fa-drafting-compass"></i>
+                        </div>
+                        <h4>3. Design & Planning</h4>
+                        <p>We create a custom design and handle all approvals to ensure a smooth process.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+                    <div class="process-card">
+                        <div class="process-icon">
+                            <i class="fas fa-hard-hat"></i>
+                        </div>
+                        <h4>4. Construction</h4>
+                        <p>Our builders complete the work with minimal disruption to your daily life.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
+                    <div class="process-card">
+                        <div class="process-icon">
+                            <i class="fas fa-clipboard-check"></i>
+                        </div>
+                        <h4>5. Final Checks & Handover</h4>
+                        <p>We make sure everything is perfect before handing over your new space.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
+                    <div class="process-card bg-primary-red text-white">
+                        <div class="process-icon bg-white">
+                            <i class="fas fa-phone text-primary-red"></i>
+                        </div>
+                        <h4>Ready to Get Started?</h4>
+                        <p>Contact us today to schedule your free consultation and begin your loft conversion journey.
+                        </p>
+                        <a href="#contact" class="btn btn-outline-light mt-3">Contact Us Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h2 class="section-title text-center">Benefits of a Loft Conversion</h2>
+                <p class="lead">Why a loft conversion is a smart investment for your home</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h4>Increase Property Value</h4>
+                        <p>A loft conversion can add significant value to your home, making it a great investment.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <i class="fas fa-expand-arrows-alt"></i>
+                        </div>
+                        <h4>Extra Space</h4>
+                        <p>Create additional living space without extending your property's footprint.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <i class="fas fa-leaf"></i>
+                        </div>
+                        <h4>Energy Efficiency</h4>
+                        <p>Modern insulation means your loft will be energy-efficient, reducing bills.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="400">
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <i class="fas fa-paint-brush"></i>
+                        </div>
+                        <h4>Customizable</h4>
+                        <p>Tailor your loft conversion to match your style and specific needs.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-5 my-5">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h2 class="section-title text-center">What Our Clients Say</h2>
+                <p class="lead">Hear from our satisfied customers about their loft conversion experience</p>
+            </div>
+            <div class="row testimonial-carousel">
+                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="testimonial-item">
+                        <div class="mb-4">
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                        </div>
+                        <p>"EPIC Loft Conversion turned our loft into a beautiful bedroom. The team was great from start
+                            to finish! They listened to our needs and delivered everything as promised."</p>
+                        <div class="client-info d-flex align-items-center">
+                            <img src="./assets/image/hero.jpg" alt="Jane D.">
+                            <div>
+                                <h5 class="mb-0">Jane D.</h5>
+                                <small>Dormer Loft Conversion</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="testimonial-item">
+                        <div class="mb-4">
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                        </div>
+                        <p>"Excellent service and great attention to detail. The team was professional, kept us informed
+                            throughout the project, and finished on time. Highly recommended!"</p>
+                        <div class="client-info d-flex align-items-center">
+                            <img src="./assets/image/hero.jpg" alt="Mark S.">
+                            <div>
+                                <h5 class="mb-0">Mark
+                                    S.</h5>
+                                <small>Mansard Loft Conversion</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="testimonial-item">
+                        <div class="mb-4">
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                        </div>
+                        <p>"Excellent service and great attention to detail. The team was professional, kept us informed
+                            throughout the project, and finished on time. Highly recommended!"</p>
+                        <div class="client-info d-flex align-items-center">
+                            <img src="./assets/image/hero.jpg" alt="Mark S.">
+                            <div>
+                                <h5 class="mb-0">Mark
+                                    S.</h5>
+                                <small>Mansard Loft Conversion</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quote CTA Section -->
+    <section id="quote" class="py-5 bg-primary-red text-white">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-7 mb-4 mb-lg-0" data-aos="fade-right">
+                    <h2 class="fw-bold mb-3">Get Your Free Loft Conversion Quote Today</h2>
+                    <p class="lead">We offer affordable loft conversions with free, no-obligation quotes. Contact us now
+                        to start transforming your home!</p>
+                </div>
+                <div class="col-lg-5" data-aos="fade-left">
+                    <div class="bg-white p-4 rounded shadow">
+                        <h4 class="text-dark mb-4">Request Your Free Quote</h4>
+                        <form>
+                            <div class="mb-3">
+                                <input type="text" class="form-control" placeholder="Your Name">
+                            </div>
+                            <div class="mb-3">
+                                <input type="email" class="form-control" placeholder="Your Email">
+                            </div>
+                            <div class="mb-3">
+                                <input type="tel" class="form-control" placeholder="Your Phone">
+                            </div>
+                            <div class="mb-3">
+                                <select class="form-select">
+                                    <option selected>Type of Loft Conversion</option>
+                                    <option>Dormer Loft Conversion</option>
+                                    <option>Mansard Loft Conversion</option>
+                                    <option>Roof Light Loft Conversion</option>
+                                    <option>Hip-to-Gable Conversion</option>
+                                    <option>Modular Loft Conversion</option>
+                                    <option>Not Sure - Need Advice</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <textarea class="form-control" rows="3" placeholder="Your Message"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary w-100">Get Free Quote</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="py-5 my-5">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h2 class="section-title text-center">Our Recent Projects</h2>
+                <p class="lead">Take a look at some of our finished loft conversions</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="100">
+                    <a href="#">
+                        <img src="./assets/image/services/hip-to-gable.jpg" alt="Loft Project 1"
+                            class="img-fluid rounded shadow">
+                    </a>
+                </div>
+                <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="200">
+                    <a href="#">
+                        <img src="./assets/image/services/hip-to-gable.jpg" alt="Loft Project 2"
+                            class="img-fluid rounded shadow">
+                    </a>
+                </div>
+                <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="300">
+                    <a href="#">
+                        <img src="./assets/image/services/mansard-loft.jpg" alt="Loft Project 3"
+                            class="img-fluid rounded shadow">
+                    </a>
+                </div>
+                <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="400">
+                    <a href="#">
+                        <img src="./assets/image/services/Modular-Loft-Conversion.jpg" alt="Loft Project 4"
+                            class="img-fluid rounded shadow">
+                    </a>
+                </div>
+                <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="500">
+                    <a href="#">
+                        <img src="./assets/image/services/pexels-emrecan-2079434.jpg" alt="Loft Project 5"
+                            class="img-fluid rounded shadow">
+                    </a>
+                </div>
+                <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="600">
+                    <a href="#">
+                        <img src="./assets/image/services/pexels-laura-tancredi-7078294.jpg" alt="Loft Project 6"
+                            class="img-fluid rounded shadow">
+                    </a>
+                </div>
+            </div>
+            <div class="text-center mt-4">
+                <a href="#" class="btn btn-primary px-4">View All Projects</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-5 bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 mb-4 mb-lg-0" data-aos="fade-right">
+                    <h2 class="section-title">Contact Us Today</h2>
+                    <p class="lead mb-4">Ready to upgrade your home? Contact EPIC Loft Conversion for a free
+                        consultation and site survey today!</p>
+                    <div class="d-flex mb-4">
+                        <i class="fas fa-map-marker-alt fs-4 me-3 mt-1 text-primary-red"></i>
+                        <p>London, UK (Serving Central London and a 50km radius)</p>
+                    </div>
+                    <div class="d-flex mb-4">
+                        <i class="fas fa-phone fs-4 me-3 mt-1 text-primary-red"></i>
+                        <p>+44 20 1234 5678</p>
+                    </div>
+                    <div class="d-flex mb-4">
+                        <i class="fas fa-envelope fs-4 me-3 mt-1 text-primary-red"></i>
+                        <p>info@epicloftconversion.com</p>
+                    </div>
+                    <div class="d-flex mb-4">
+                        <i class="fas fa-clock fs-4 me-3 mt-1 text-primary-red"></i>
+                        <p>Monday-Friday: 8am-6pm<br>Saturday: 9am-3pm<br>Sunday: Closed</p>
+                    </div>
+                    <!-- <div class="social-media mt-4">
+                        <a href="#" class="me-3 fs-4"><i class="fab fa-facebook text-primary"></i></a>
+                        <a href="#" class="me-3 fs-4"><i class="fab fa-instagram text-primary"></i></a>
+                        <a href="#" class="me-3 fs-4"><i class="fab fa-twitter text-primary"></i></a>
+                        <a href="#" class="me-3 fs-4"><i class="fab fa-linkedin text-primary"></i></a>
+                    </div> -->
+                </div>
+                <div class="col-lg-6" data-aos="fade-left">
+                    <div class="bg-white p-4 rounded shadow">
+                        <h4 class="mb-4">Send Us a Message</h4>
+                        <form>
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <input type="text" class="form-control" placeholder="Your Name">
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <input type="email" class="form-control" placeholder="Your Email">
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <input type="tel" class="form-control" placeholder="Your Phone">
+                            </div>
+                            <div class="mb-3">
+                                <input type="text" class="form-control" placeholder="Subject">
+                            </div>
+                            <div class="mb-3">
+                                <textarea class="form-control" rows="5" placeholder="Your Message"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <!-- <div class="footer-logo">
+                        <img src="./assets/image/logo.jpeg" alt="EPIC Loft Conversion Logo" class="img-fluid">
+                    </div> -->
+                    <p>EPIC Loft Conversion is a leading provider of high-quality loft conversions in London, delivering
+                        exceptional results and outstanding customer service.</p>
+                    <div class="social-links mt-4">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
+                    <h5 class="text-white mb-4">Quick Links</h5>
+                    <ul class="list-unstyled footer-links">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#process">Our Process</a></li>
+                        <li><a href="#testimonials">Testimonials</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                    <h5 class="text-white mb-4">Our Services</h5>
+                    <ul class="list-unstyled footer-links">
+                        <li><a href="#">Dormer Loft Conversion</a></li>
+                        <li><a href="#">Mansard Loft Conversion</a></li>
+                        <li><a href="#">Roof Light Conversion</a></li>
+                        <li><a href="#">Hip-to-Gable Conversion</a></li>
+                        <li><a href="#">Modular Loft Conversion</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-white mb-4">Contact Info</h5>
+                    <ul class="list-unstyled footer-contact">
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>London, UK<br>Serving Central London and a 50km radius</div>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <div>+44 20 1234 5678</div>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <div>info@epicloftconversion.com</div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom text-center">
+                <p class="m-0">&copy; 2025 EPIC Loft Conversion. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <!-- AOS Library JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+    <!-- Custom JavaScript -->
+    <script>
+        // Initialize AOS
+        document.addEventListener('DOMContentLoaded', function () {
+            AOS.init({
+                duration: 800,
+                easing: 'ease-in-out',
+                once: true
+            });
+
+            // Back to top button
+            const backToTopButton = document.getElementById('backToTop');
+
+            window.addEventListener('scroll', function () {
+                if (window.pageYOffset > 300) {
+                    backToTopButton.classList.add('active');
+                } else {
+                    backToTopButton.classList.remove('active');
+                }
+            });
+
+            backToTopButton.addEventListener('click', function (e) {
+                e.preventDefault();
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+
+            // Smooth scrolling for navbar links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        targetElement.scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                    }
+
+                    // Close mobile menu if open
+                    const navbarCollapse = document.querySelector('.navbar-collapse');
+                    if (navbarCollapse.classList.contains('show')) {
+                        navbarCollapse.classList.remove('show');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

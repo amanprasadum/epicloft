@@ -1,0 +1,11 @@
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .hero-img {
+        height: 300px; /* Mobile pe thoda chhota */
+    }
+}
+@media (max-width: 576px) {
+    .gallery-item {
+        height: 200px;
+    }
+}

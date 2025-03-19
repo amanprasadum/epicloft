@@ -12,7 +12,7 @@
     <!-- AOS Library for scroll animations -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="./assets/css/styles.css">
-   
+
 </head>
 
 <body>
@@ -586,6 +586,63 @@
         </div>
     </section>
 
+    <!-- Video Section -->
+    <section class="video-section py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="text-center mb-5">
+                        <h2 class="display-4 fw-bold text-primary mb-3">Featured Video</h2>
+                        <p class="lead mb-0">Watch our latest video to learn more about our products and services</p>
+                    </div>
+
+                    <div class="video-container">
+                        <!-- Video Embed with Poster Image -->
+                        <div class="ratio ratio-16x9 shadow-lg rounded-4 overflow-hidden">
+                            <video class="video-player" controls poster="https://via.placeholder.com/1920x1080">
+                                <source src="your-video-file.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                            <!-- Optional Play Button Overlay -->
+                            <div class="play-button-overlay">
+                                <button class="btn-play">
+                                    <i class="bi bi-play-circle-fill"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="video-details mt-4">
+                        <div class="row align-items-center">
+                            <div class="col-md-8">
+                                <h3 class="h4 mb-2">Video Title Goes Here</h3>
+                                <p class="text-muted">Published on March 19, 2025</p>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="d-flex justify-content-md-end gap-2 mt-3 mt-md-0">
+                                    <button class="btn btn-outline-primary rounded-pill px-4">
+                                        <i class="bi bi-share me-2"></i>Share
+                                    </button>
+                                    <button class="btn btn-outline-secondary rounded-pill px-4">
+                                        <i class="bi bi-download me-2"></i>Download
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <hr class="my-4">
+                        <p class="video-description">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae
+                            vestibulum vestibulum.
+                            Cras porttitor metus in nisi tincidunt, vitae tincidunt eros imperdiet. Maecenas vestibulum
+                            enim vel ligula
+                            feugiat, in tempus neque fringilla.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Footer -->
     <footer>
         <div class="container">
@@ -706,6 +763,23 @@
                     }
                 });
             });
+        });
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const videoPlayer = document.querySelector('.video-player');
+            const playButton = document.querySelector('.play-button-overlay');
+
+            if (playButton && videoPlayer) {
+                playButton.addEventListener('click', function () {
+                    videoPlayer.play();
+                    videoPlayer.setAttribute('playing', '');
+                });
+
+                videoPlayer.addEventListener('pause', function () {
+                    videoPlayer.removeAttribute('playing');
+                });
+            }
         });
     </script>
 </body>

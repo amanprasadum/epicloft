@@ -26,8 +26,93 @@ body {
     overflow-x: hidden;
 }
 
-
+/* Navbar Styles */
 .navbar {
+    padding: 15px 0;
+    background-color: rgba(255, 255, 255, 0.98);
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+}
+
+.navbar-brand {
+    padding: 0;
+}
+
+.logo-large {
+    max-height: 60px; /* Adjust based on your logo */
+    transition: all 0.3s ease;
+}
+
+.navbar-nav .nav-link {
+    color: #333;
+    font-size: 16px;
+    padding: 12px 15px;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #e63946; /* Assuming your primary-red color is similar */
+}
+
+.navbar-nav .nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #e63946;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: width 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover::after {
+    width: 60%;
+}
+
+.dropdown-menu {
+    border: none;
+    border-radius: 8px;
+    padding: 10px;
+}
+
+.dropdown-item {
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: all 0.2s ease;
+}
+
+.dropdown-item:hover {
+    background-color: rgba(230, 57, 70, 0.1);
+    color: #e63946;
+}
+
+.btn-primary {
+    background-color: #e63946;
+    border-color: #e63946;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #d62e3c;
+    border-color: #d62e3c;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(230, 57, 70, 0.3);
+}
+
+/* Add this for a scrolled state if you want the navbar to change on scroll */
+.navbar.scrolled {
+    padding: 8px 0;
+    background-color: rgba(255, 255, 255, 0.98);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.navbar.scrolled .logo-large {
+    max-height: 50px;
+}
+/* .navbar {
     background-color: white;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
@@ -65,7 +150,7 @@ body {
 .btn-outline-primary:hover {
     background-color: var(--primary);
     color: white;
-}
+} */
 
 .hero-section {
     height: 80vh;

@@ -17,29 +17,32 @@
 
 <body>
     <!-- Navigation Bar -->
-    <!-- Navigation Bar -->
     <nav class="navbar navbar-expand-lg navbar-light sticky-top">
         <div class="container">
             <a class="navbar-brand" href="#">
-                <img src="./assets/image/main-logo.svg" alt="EPIC Loft Conversion Logo" class="img-fluid logo-large">
+                <!-- <img src="./assets/image/crop-logo2.png" alt="EPIC Loft Conversion Logo" class="img-fluid"> -->
+                <!-- <img src="./assets/image/main-logo2.png" alt="EPIC Loft Conversion Logo" class="img-fluid"> -->
+                <img src="./assets/image/main-logo.svg" alt="EPIC Loft Conversion Logo" class="img-fluid">
+                <!-- <img src="./assets/image/epicsvg.svg" alt="EPIC Loft Conversion Logo" class="img-fluid"> -->
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto align-items-center">
+                <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link fw-medium" href="#">Home</a>
+                        <a class="nav-link" href="#">Home</a>
                     </li>
+
                     <li class="nav-item">
-                        <a class="nav-link fw-medium" href="#about">About Us</a>
+                        <a class="nav-link" href="#about">About Us</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle fw-medium" href="#" role="button" data-bs-toggle="dropdown"
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                             aria-expanded="false">
                             Services
                         </a>
-                        <ul class="dropdown-menu shadow">
+                        <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="#">Dormer Loft Conversion</a></li>
                             <li><a class="dropdown-item" href="#">Mansard Loft Conversion</a></li>
                             <li><a class="dropdown-item" href="#">Roof Light Loft Conversion</a></li>
@@ -48,16 +51,16 @@
                         </ul>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link fw-medium" href="#process">Our Process</a>
+                        <a class="nav-link" href="#process">Our Process</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link fw-medium" href="#testimonials">Testimonials</a>
+                        <a class="nav-link" href="#testimonials">Testimonials</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link fw-medium" href="#contact">Contact</a>
+                        <a class="nav-link" href="#contact">Contact</a>
                     </li>
                     <li class="nav-item ms-lg-3">
-                        <a class="btn btn-primary rounded-pill px-4 py-2" href="#quote">Get a Free Quote</a>
+                        <a class="btn btn-primary rounded-pill px-4" href="#quote">Get a Free Quote</a>
                     </li>
                 </ul>
             </div>
@@ -716,18 +719,6 @@
 
     <!-- Custom JavaScript -->
     <script>
-        // Add this to your existing JavaScript
-        window.addEventListener('scroll', function () {
-            const navbar = document.querySelector('.navbar');
-            if (window.scrollY > 50) {
-                navbar.classList.add('scrolled');
-            } else {
-                navbar.classList.remove('scrolled');
-            }
-        });
-    </script>
-    <script>
-
         // Initialize AOS
         document.addEventListener('DOMContentLoaded', function () {
             AOS.init({

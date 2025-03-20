@@ -750,9 +750,9 @@
 
             // Function to handle the carousel on desktop/tablet
             function handleDesktopCarousel() {
-                // Initialize the Bootstrap carousel with no auto-sliding
+                // Initialize the Bootstrap carousel with autoplay enabled
                 const carousel = new bootstrap.Carousel(multipleCardCarousel, {
-                    interval: false
+                    interval: 5000 // Autoplay interval in milliseconds (5 seconds)
                 });
 
                 // Get width measurements
@@ -763,24 +763,83 @@
                 // Initialize scroll position
                 let scrollPosition = 0;
 
-                // Add event listener for "next" button
-                multipleCardCarousel.querySelector('.carousel-control-next').addEventListener('click', function () {
+                // Auto advance function
+                let autoAdvanceInterval = setInterval(function () {
                     if (scrollPosition < carouselWidth - cardWidth * 3) {
                         scrollPosition += cardWidth;
-
-                        // Smooth scroll animation
-                        smoothScroll(carouselInner, scrollPosition, 600);
+                    } else {
+                        scrollPosition = 0;
                     }
+
+                    // Smooth scroll animation
+                    smoothScroll(carouselInner, scrollPosition, 600);
+                }, 5000); // Same interval as the carousel
+
+                // Add event listener for "next" button
+                multipleCardCarousel.querySelector('.carousel-control-next').addEventListener('click', function () {
+                    // Reset autoplay timer when user interacts
+                    clearInterval(autoAdvanceInterval);
+
+                    if (scrollPosition < carouselWidth - cardWidth * 3) {
+                        scrollPosition += cardWidth;
+                    } else {
+                        scrollPosition = 0; // Loop back to beginning
+                    }
+
+                    // Smooth scroll animation
+                    smoothScroll(carouselInner, scrollPosition, 600);
+
+                    // Restart autoplay after user interaction
+                    autoAdvanceInterval = setInterval(function () {
+                        if (scrollPosition < carouselWidth - cardWidth * 3) {
+                            scrollPosition += cardWidth;
+                        } else {
+                            scrollPosition = 0;
+                        }
+                        smoothScroll(carouselInner, scrollPosition, 600);
+                    }, 5000);
                 });
 
                 // Add event listener for "previous" button
                 multipleCardCarousel.querySelector('.carousel-control-prev').addEventListener('click', function () {
+                    // Reset autoplay timer when user interacts
+                    clearInterval(autoAdvanceInterval);
+
                     if (scrollPosition > 0) {
                         scrollPosition -= cardWidth;
-
-                        // Smooth scroll animation
-                        smoothScroll(carouselInner, scrollPosition, 600);
+                    } else {
+                        scrollPosition = carouselWidth - cardWidth * 3; // Loop to end
                     }
+
+                    // Smooth scroll animation
+                    smoothScroll(carouselInner, scrollPosition, 600);
+
+                    // Restart autoplay after user interaction
+                    autoAdvanceInterval = setInterval(function () {
+                        if (scrollPosition < carouselWidth - cardWidth * 3) {
+                            scrollPosition += cardWidth;
+                        } else {
+                            scrollPosition = 0;
+                        }
+                        smoothScroll(carouselInner, scrollPosition, 600);
+                    }, 5000);
+                });
+
+                // Pause autoplay on hover
+                multipleCardCarousel.addEventListener('mouseenter', function () {
+                    clearInterval(autoAdvanceInterval);
+                });
+
+                // Resume autoplay when mouse leaves
+                multipleCardCarousel.addEventListener('mouseleave', function () {
+                    autoAdvanceInterval = setInterval(function () {
+                        if (scrollPosition < carouselWidth - cardWidth * 3) {
+                            scrollPosition += cardWidth;
+                        } else {
+                            scrollPosition = 0;
+                        }
+                        smoothScroll(carouselInner, scrollPosition, 600);
+                    }, 5000);
                 });
             }
 
@@ -813,7 +872,10 @@
             if (window.matchMedia("(min-width: 576px)").matches) {
                 handleDesktopCarousel();
             } else {
-                // For mobile, just add the 'slide' class to enable standard behavior
+                // For mobile, enable autoplay
+                const carousel = new bootstrap.Carousel(multipleCardCarousel, {
+                    interval: 5000 // 5 seconds
+                });
                 multipleCardCarousel.classList.add("slide");
             }
 
@@ -823,11 +885,11 @@
                 clearTimeout(resizeTimer);
                 resizeTimer = setTimeout(function () {
                     // Reload the page on resize to reinitialize the carousel
-                    // Note: In a production environment, you might want to use a more sophisticated approach
                     window.location.reload();
                 }, 250);
             });
         });
+        // --------------------------------
         // var multipleCardCarousel = document.querySelector("#supertestimonialCarousel");
         // if (window.matchMedia("(min-width: 576px)").matches) {
         //     var carousel = new bootstrap.Carousel(multipleCardCarousel, {

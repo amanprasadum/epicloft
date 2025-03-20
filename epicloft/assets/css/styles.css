@@ -187,6 +187,80 @@ body {
 
 /* testimonail end */
 
+/* supertestimonial start */
+.supertestimonial-slider {
+    background-color: #5072a7;
+    padding: 2em 2em 3em;
+}
+
+.supertestimonial-title {
+    color: #fff;
+}
+
+.supertestimonial-title h2 {
+    padding-left: 0.2em;
+}
+
+#supertestimonial .card {
+    margin: 0 0.5em;
+    box-shadow: 2px 6px 8px 0 rgba(22, 22, 26, 0.18);
+    border: none;
+    height: 100%;
+}
+
+#supertestimonial .carousel-control-prev,
+#supertestimonial .carousel-control-next {
+    background-color: #fff;
+    width: 3em;
+    height: 3em;
+    border-radius: 50%;
+    top: 60%;
+    transform: translateY(-50%);
+}
+
+#supertestimonial .img-wrapper {
+    height: 200px;
+    overflow: hidden;
+}
+
+#supertestimonial .img-wrapper img {
+    height: 100%;
+    object-fit: cover;
+}
+
+@media (min-width: 576px) {
+    #supertestimonial .carousel-item {
+        margin-right: 0;
+        flex: 0 0 50%;
+        display: block;
+    }
+
+    #supertestimonial .carousel-inner {
+        display: flex;
+    }
+}
+
+@media (min-width: 768px) {
+    #supertestimonial .carousel-inner {
+        padding: 1em;
+    }
+
+    #supertestimonial .carousel-control-prev,
+    #supertestimonial .carousel-control-next {
+        opacity: 1;
+        position: absolute;
+        left: 1em;
+        top: 90%;
+        transform: translateY(-50%);
+    }
+
+    #supertestimonial .carousel-control-next {
+        left: 5em;
+    }
+}
+
+/* supertestimonial end */
+
 .client-info img {
     width: 60px;
     height: 60px;

@@ -743,35 +743,120 @@
 
     <!-- Custom JavaScript -->
     <script>
-        var multipleCardCarousel = document.querySelector("#supertestimonialCarousel");
-        if (window.matchMedia("(min-width: 576px)").matches) {
-            var carousel = new bootstrap.Carousel(multipleCardCarousel, {
-                interval: false
-            });
-            var carouselWidth = $("#supertestimonialCarousel .carousel-inner")[0].scrollWidth;
-            var cardWidth = $("#supertestimonialCarousel .carousel-item").width();
-            var scrollPosition = 0;
-            $("#supertestimonialCarousel .carousel-control-next").on("click", function () {
-                if (scrollPosition < carouselWidth - cardWidth * 3) {
-                    scrollPosition += cardWidth;
-                    $("#supertestimonialCarousel .carousel-inner").animate(
-                        { scrollLeft: scrollPosition },
-                        600
-                    );
+        // Wait for the DOM to be fully loaded
+        document.addEventListener('DOMContentLoaded', function () {
+            // Get the carousel element
+            const multipleCardCarousel = document.querySelector("#supertestimonialCarousel");
+
+            // Function to handle the carousel on desktop/tablet
+            function handleDesktopCarousel() {
+                // Initialize the Bootstrap carousel with no auto-sliding
+                const carousel = new bootstrap.Carousel(multipleCardCarousel, {
+                    interval: false
+                });
+
+                // Get width measurements
+                const carouselInner = multipleCardCarousel.querySelector('.carousel-inner');
+                const carouselWidth = carouselInner.scrollWidth;
+                const cardWidth = multipleCardCarousel.querySelector('.carousel-item').offsetWidth;
+
+                // Initialize scroll position
+                let scrollPosition = 0;
+
+                // Add event listener for "next" button
+                multipleCardCarousel.querySelector('.carousel-control-next').addEventListener('click', function () {
+                    if (scrollPosition < carouselWidth - cardWidth * 3) {
+                        scrollPosition += cardWidth;
+
+                        // Smooth scroll animation
+                        smoothScroll(carouselInner, scrollPosition, 600);
+                    }
+                });
+
+                // Add event listener for "previous" button
+                multipleCardCarousel.querySelector('.carousel-control-prev').addEventListener('click', function () {
+                    if (scrollPosition > 0) {
+                        scrollPosition -= cardWidth;
+
+                        // Smooth scroll animation
+                        smoothScroll(carouselInner, scrollPosition, 600);
+                    }
+                });
+            }
+
+            // Smooth scroll function (alternative to jQuery animate)
+            function smoothScroll(element, targetPosition, duration) {
+                const startPosition = element.scrollLeft;
+                const distance = targetPosition - startPosition;
+                let startTime = null;
+
+                function animation(currentTime) {
+                    if (startTime === null) startTime = currentTime;
+                    const timeElapsed = currentTime - startTime;
+                    const run = ease(timeElapsed, startPosition, distance, duration);
+                    element.scrollLeft = run;
+                    if (timeElapsed < duration) requestAnimationFrame(animation);
                 }
-            });
-            $("#supertestimonialCarousel .carousel-control-prev").on("click", function () {
-                if (scrollPosition > 0) {
-                    scrollPosition -= cardWidth;
-                    $("#supertestimonialCarousel .carousel-inner").animate(
-                        { scrollLeft: scrollPosition },
-                        600
-                    );
+
+                // Easing function for smooth animation
+                function ease(t, b, c, d) {
+                    t /= d / 2;
+                    if (t < 1) return c / 2 * t * t + b;
+                    t--;
+                    return -c / 2 * (t * (t - 2) - 1) + b;
                 }
+
+                requestAnimationFrame(animation);
+            }
+
+            // Check viewport width and handle accordingly
+            if (window.matchMedia("(min-width: 576px)").matches) {
+                handleDesktopCarousel();
+            } else {
+                // For mobile, just add the 'slide' class to enable standard behavior
+                multipleCardCarousel.classList.add("slide");
+            }
+
+            // Handle resize events
+            let resizeTimer;
+            window.addEventListener('resize', function () {
+                clearTimeout(resizeTimer);
+                resizeTimer = setTimeout(function () {
+                    // Reload the page on resize to reinitialize the carousel
+                    // Note: In a production environment, you might want to use a more sophisticated approach
+                    window.location.reload();
+                }, 250);
             });
-        } else {
-            $(multipleCardCarousel).addClass("slide");
-        }
+        });
+        // var multipleCardCarousel = document.querySelector("#supertestimonialCarousel");
+        // if (window.matchMedia("(min-width: 576px)").matches) {
+        //     var carousel = new bootstrap.Carousel(multipleCardCarousel, {
+        //         interval: false
+        //     });
+        //     var carouselWidth = $("#supertestimonialCarousel .carousel-inner")[0].scrollWidth;
+        //     var cardWidth = $("#supertestimonialCarousel .carousel-item").width();
+        //     var scrollPosition = 0;
+        //     $("#supertestimonialCarousel .carousel-control-next").on("click", function () {
+        //         if (scrollPosition < carouselWidth - cardWidth * 3) {
+        //             scrollPosition += cardWidth;
+        //             $("#supertestimonialCarousel .carousel-inner").animate(
+        //                 { scrollLeft: scrollPosition },
+        //                 600
+        //             );
+        //         }
+        //     });
+        //     $("#supertestimonialCarousel .carousel-control-prev").on("click", function () {
+        //         if (scrollPosition > 0) {
+        //             scrollPosition -= cardWidth;
+        //             $("#supertestimonialCarousel .carousel-inner").animate(
+        //                 { scrollLeft: scrollPosition },
+        //                 600
+        //             );
+        //         }
+        //     });
+        // } else {
+        //     $(multipleCardCarousel).addClass("slide");
+        // }
     </script>
     <script>
         // Initialize AOS

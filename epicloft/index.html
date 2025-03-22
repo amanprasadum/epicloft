@@ -17,55 +17,88 @@
 
 <body>
     <!-- Navigation Bar -->
-    <nav class="navbar navbar-expand-lg navbar-light sticky-top-off">
-        <div class="container">
-            <a class="navbar-brand" href="#">
-                <!-- <img src="./assets/image/crop-logo2.png" alt="EPIC Loft Conversion Logo" class="img-fluid"> -->
-                <!-- <img src="./assets/image/main-logo2.png" alt="EPIC Loft Conversion Logo" class="img-fluid"> -->
-                <img src="./assets/image/main-logo.svg" alt="EPIC Loft Conversion Logo" class="img-fluid">
-                <!-- <img src="./assets/image/epicsvg.svg" alt="EPIC Loft Conversion Logo" class="img-fluid"> -->
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Home</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="#about">About Us</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">
-                            Services
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Dormer Loft Conversion</a></li>
-                            <li><a class="dropdown-item" href="#">Mansard Loft Conversion</a></li>
-                            <li><a class="dropdown-item" href="#">Roof Light Loft Conversion</a></li>
-                            <li><a class="dropdown-item" href="#">Hip-to-gable Loft Conversion</a></li>
-                            <li><a class="dropdown-item" href="#">Modular Loft Conversions</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#process">Our Process</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#testimonials">Testimonials</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contact">Contact</a>
-                    </li>
-                    <li class="nav-item ms-lg-3">
-                        <a class="btn btn-primary rounded-pill px-4" href="#quote">Get a Free Quote</a>
-                    </li>
-                </ul>
+    <!-- Top layer: Social icons and email -->
+<div class="top-bar bg-light py-2">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <span class="me-3"><i class="bi bi-envelope"></i> info@epicloftconversion.com</span>
+                <span><i class="bi bi-telephone"></i> 020 1234 5678</span>
+            </div>
+            <div class="col-md-4 text-end">
+                <a href="#" class="me-2 text-dark"><i class="bi bi-facebook"></i></a>
+                <a href="#" class="me-2 text-dark"><i class="bi bi-instagram"></i></a>
+                <a href="#" class="me-2 text-dark"><i class="bi bi-twitter-x"></i></a>
+                <a href="#" class="text-dark"><i class="bi bi-linkedin"></i></a>
             </div>
         </div>
-    </nav>
+    </div>
+</div>
+
+<!-- Middle layer: Logo and text -->
+<div class="logo-bar py-3">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-4">
+                <a class="navbar-brand d-flex align-items-center" href="#">
+                    <img src="./assets/image/main-logo.svg" alt="EPIC Loft Conversion Logo" class="img-fluid me-3" style="max-height: 60px;">
+                    <div>
+                        <h2 class="mb-0 fw-bold">EPIC</h2>
+                        <p class="mb-0 small">Loft Conversion Specialists</p>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-8 text-end d-none d-md-block">
+                <p class="mb-0"><strong>Transform Your Space, Elevate Your Living</strong></p>
+                <p class="mb-0 small">Professional Loft Conversions Across London & Home Counties</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Bottom layer: Navigation menu -->
+<nav class="navbar navbar-expand-lg navbar-light bg-primary sticky-top">
+    <div class="container">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="#about">About Us</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        Services
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Dormer Loft Conversion</a></li>
+                        <li><a class="dropdown-item" href="#">Mansard Loft Conversion</a></li>
+                        <li><a class="dropdown-item" href="#">Roof Light Loft Conversion</a></li>
+                        <li><a class="dropdown-item" href="#">Hip-to-gable Loft Conversion</a></li>
+                        <li><a class="dropdown-item" href="#">Modular Loft Conversions</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="#process">Our Process</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="#testimonials">Testimonials</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="#contact">Contact</a>
+                </li>
+                <li class="nav-item ms-lg-3">
+                    <a class="btn btn-light rounded-pill px-4" href="#quote">Get a Free Quote</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
 
     <!-- Hero Carousel -->
     <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
@@ -742,184 +775,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
 
     <!-- Custom JavaScript -->
-    <script>
-        // Wait for the DOM to be fully loaded
-        document.addEventListener('DOMContentLoaded', function () {
-            // Get the carousel element
-            const multipleCardCarousel = document.querySelector("#supertestimonialCarousel");
 
-            // Function to handle the carousel on desktop/tablet
-            function handleDesktopCarousel() {
-                // Initialize the Bootstrap carousel with autoplay enabled
-                const carousel = new bootstrap.Carousel(multipleCardCarousel, {
-                    interval: 5000 // Autoplay interval in milliseconds (5 seconds)
-                });
-
-                // Get width measurements
-                const carouselInner = multipleCardCarousel.querySelector('.carousel-inner');
-                const carouselWidth = carouselInner.scrollWidth;
-                const cardWidth = multipleCardCarousel.querySelector('.carousel-item').offsetWidth;
-
-                // Initialize scroll position
-                let scrollPosition = 0;
-
-                // Auto advance function
-                let autoAdvanceInterval = setInterval(function () {
-                    if (scrollPosition < carouselWidth - cardWidth * 3) {
-                        scrollPosition += cardWidth;
-                    } else {
-                        scrollPosition = 0;
-                    }
-
-                    // Smooth scroll animation
-                    smoothScroll(carouselInner, scrollPosition, 600);
-                }, 5000); // Same interval as the carousel
-
-                // Add event listener for "next" button
-                multipleCardCarousel.querySelector('.carousel-control-next').addEventListener('click', function () {
-                    // Reset autoplay timer when user interacts
-                    clearInterval(autoAdvanceInterval);
-
-                    if (scrollPosition < carouselWidth - cardWidth * 3) {
-                        scrollPosition += cardWidth;
-                    } else {
-                        scrollPosition = 0; // Loop back to beginning
-                    }
-
-                    // Smooth scroll animation
-                    smoothScroll(carouselInner, scrollPosition, 600);
-
-                    // Restart autoplay after user interaction
-                    autoAdvanceInterval = setInterval(function () {
-                        if (scrollPosition < carouselWidth - cardWidth * 3) {
-                            scrollPosition += cardWidth;
-                        } else {
-                            scrollPosition = 0;
-                        }
-                        smoothScroll(carouselInner, scrollPosition, 600);
-                    }, 5000);
-                });
-
-                // Add event listener for "previous" button
-                multipleCardCarousel.querySelector('.carousel-control-prev').addEventListener('click', function () {
-                    // Reset autoplay timer when user interacts
-                    clearInterval(autoAdvanceInterval);
-
-                    if (scrollPosition > 0) {
-                        scrollPosition -= cardWidth;
-                    } else {
-                        scrollPosition = carouselWidth - cardWidth * 3; // Loop to end
-                    }
-
-                    // Smooth scroll animation
-                    smoothScroll(carouselInner, scrollPosition, 600);
-
-                    // Restart autoplay after user interaction
-                    autoAdvanceInterval = setInterval(function () {
-                        if (scrollPosition < carouselWidth - cardWidth * 3) {
-                            scrollPosition += cardWidth;
-                        } else {
-                            scrollPosition = 0;
-                        }
-                        smoothScroll(carouselInner, scrollPosition, 600);
-                    }, 5000);
-                });
-
-                // Pause autoplay on hover
-                multipleCardCarousel.addEventListener('mouseenter', function () {
-                    clearInterval(autoAdvanceInterval);
-                });
-
-                // Resume autoplay when mouse leaves
-                multipleCardCarousel.addEventListener('mouseleave', function () {
-                    autoAdvanceInterval = setInterval(function () {
-                        if (scrollPosition < carouselWidth - cardWidth * 3) {
-                            scrollPosition += cardWidth;
-                        } else {
-                            scrollPosition = 0;
-                        }
-                        smoothScroll(carouselInner, scrollPosition, 600);
-                    }, 5000);
-                });
-            }
-
-            // Smooth scroll function (alternative to jQuery animate)
-            function smoothScroll(element, targetPosition, duration) {
-                const startPosition = element.scrollLeft;
-                const distance = targetPosition - startPosition;
-                let startTime = null;
-
-                function animation(currentTime) {
-                    if (startTime === null) startTime = currentTime;
-                    const timeElapsed = currentTime - startTime;
-                    const run = ease(timeElapsed, startPosition, distance, duration);
-                    element.scrollLeft = run;
-                    if (timeElapsed < duration) requestAnimationFrame(animation);
-                }
-
-                // Easing function for smooth animation
-                function ease(t, b, c, d) {
-                    t /= d / 2;
-                    if (t < 1) return c / 2 * t * t + b;
-                    t--;
-                    return -c / 2 * (t * (t - 2) - 1) + b;
-                }
-
-                requestAnimationFrame(animation);
-            }
-
-            // Check viewport width and handle accordingly
-            if (window.matchMedia("(min-width: 576px)").matches) {
-                handleDesktopCarousel();
-            } else {
-                // For mobile, enable autoplay
-                const carousel = new bootstrap.Carousel(multipleCardCarousel, {
-                    interval: 5000 // 5 seconds
-                });
-                multipleCardCarousel.classList.add("slide");
-            }
-
-            // Handle resize events
-            let resizeTimer;
-            window.addEventListener('resize', function () {
-                clearTimeout(resizeTimer);
-                resizeTimer = setTimeout(function () {
-                    // Reload the page on resize to reinitialize the carousel
-                    window.location.reload();
-                }, 250);
-            });
-        });
-        // --------------------------------
-        // var multipleCardCarousel = document.querySelector("#supertestimonialCarousel");
-        // if (window.matchMedia("(min-width: 576px)").matches) {
-        //     var carousel = new bootstrap.Carousel(multipleCardCarousel, {
-        //         interval: false
-        //     });
-        //     var carouselWidth = $("#supertestimonialCarousel .carousel-inner")[0].scrollWidth;
-        //     var cardWidth = $("#supertestimonialCarousel .carousel-item").width();
-        //     var scrollPosition = 0;
-        //     $("#supertestimonialCarousel .carousel-control-next").on("click", function () {
-        //         if (scrollPosition < carouselWidth - cardWidth * 3) {
-        //             scrollPosition += cardWidth;
-        //             $("#supertestimonialCarousel .carousel-inner").animate(
-        //                 { scrollLeft: scrollPosition },
-        //                 600
-        //             );
-        //         }
-        //     });
-        //     $("#supertestimonialCarousel .carousel-control-prev").on("click", function () {
-        //         if (scrollPosition > 0) {
-        //             scrollPosition -= cardWidth;
-        //             $("#supertestimonialCarousel .carousel-inner").animate(
-        //                 { scrollLeft: scrollPosition },
-        //                 600
-        //             );
-        //         }
-        //     });
-        // } else {
-        //     $(multipleCardCarousel).addClass("slide");
-        // }
-    </script>
     <script>
         // Initialize AOS
         document.addEventListener('DOMContentLoaded', function () {

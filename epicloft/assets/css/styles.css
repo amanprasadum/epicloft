@@ -262,6 +262,9 @@ body {
     transform: translateY(-5px);
     box-shadow: 0 10px 25px rgba(0,0,0,0.15);
 }
+.testimonialCarousel_item{
+    height: 100% !important;
+}
 
 @media (max-width: 768px) {
     #testimonialCarousel .carousel-control-prev,

@@ -12,94 +12,231 @@
     <!-- AOS Library for scroll animations -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="./assets/css/styles.css">
+    <style>
+        .social-icon i {
+            font-size: 16px;
+            transition: all 0.3s;
+        }
 
+        .social-icon:hover i {
+            transform: translateY(-3px);
+        }
+
+        .hover-effect:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        .dropdown-item:hover {
+            background-color: #f8f9fa;
+            padding-left: 25px !important;
+            color: #4e73df;
+        }
+
+        @media (max-width: 992px) {
+            .navbar-nav {
+                padding: 10px 0;
+            }
+
+            .hover-effect:hover {
+                background-color: rgba(255, 255, 255, 0.05);
+                padding-left: 30px !important;
+            }
+        }
+    </style>
 </head>
 
 <body>
     <!-- Navigation Bar -->
     <!-- Top layer: Social icons and email -->
-<div class="top-bar bg-light py-2">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-8">
-                <span class="me-3"><i class="bi bi-envelope"></i> info@epicloftconversion.com</span>
-                <span><i class="bi bi-telephone"></i> 020 1234 5678</span>
-            </div>
-            <div class="col-md-4 text-end">
-                <a href="#" class="me-2 text-dark"><i class="bi bi-facebook"></i></a>
-                <a href="#" class="me-2 text-dark"><i class="bi bi-instagram"></i></a>
-                <a href="#" class="me-2 text-dark"><i class="bi bi-twitter-x"></i></a>
-                <a href="#" class="text-dark"><i class="bi bi-linkedin"></i></a>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- Middle layer: Logo and text -->
-<div class="logo-bar py-3">
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-md-4">
-                <a class="navbar-brand d-flex align-items-center" href="#">
-                    <img src="./assets/image/main-logo.svg" alt="EPIC Loft Conversion Logo" class="img-fluid me-3" style="max-height: 60px;">
-                    <div>
-                        <h2 class="mb-0 fw-bold">EPIC</h2>
-                        <p class="mb-0 small">Loft Conversion Specialists</p>
-                    </div>
-                </a>
-            </div>
-            <div class="col-md-8 text-end d-none d-md-block">
-                <p class="mb-0"><strong>Transform Your Space, Elevate Your Living</strong></p>
-                <p class="mb-0 small">Professional Loft Conversions Across London & Home Counties</p>
+    <!-- <div class="top-bar bg-light py-2">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <span class="me-3"><i class="bi bi-envelope"></i> info@epicloftconversion.com</span>
+                    <span><i class="bi bi-telephone"></i> 020 1234 5678</span>
+                </div>
+                <div class="col-md-4 text-end">
+                    <a href="#" class="me-2 text-dark"><i class="bi bi-facebook"></i></a>
+                    <a href="#" class="me-2 text-dark"><i class="bi bi-instagram"></i></a>
+                    <a href="#" class="me-2 text-dark"><i class="bi bi-twitter-x"></i></a>
+                    <a href="#" class="text-dark"><i class="bi bi-linkedin"></i></a>
+                </div>
             </div>
         </div>
-    </div>
-</div>
+    </div> -->
 
-<!-- Bottom layer: Navigation menu -->
-<nav class="navbar navbar-expand-lg navbar-light bg-primary sticky-top">
-    <div class="container">
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav mx-auto">
-                <li class="nav-item">
-                    <a class="nav-link text-white" href="#">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-white" href="#about">About Us</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown"
-                        aria-expanded="false">
-                        Services
+    <!-- Middle layer: Logo and text -->
+    <!-- <div class="logo-bar py-3">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-4">
+                    <a class="navbar-brand d-flex align-items-center" href="#">
+                        <img src="./assets/image/main-logo.svg" alt="EPIC Loft Conversion Logo" class="img-fluid me-3"
+                            style="max-height: 60px;">
+                        <div>
+                            <h2 class="mb-0 fw-bold">EPIC</h2>
+                            <p class="mb-0 small">Loft Conversion Specialists</p>
+                        </div>
                     </a>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Dormer Loft Conversion</a></li>
-                        <li><a class="dropdown-item" href="#">Mansard Loft Conversion</a></li>
-                        <li><a class="dropdown-item" href="#">Roof Light Loft Conversion</a></li>
-                        <li><a class="dropdown-item" href="#">Hip-to-gable Loft Conversion</a></li>
-                        <li><a class="dropdown-item" href="#">Modular Loft Conversions</a></li>
-                    </ul>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-white" href="#process">Our Process</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-white" href="#testimonials">Testimonials</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-white" href="#contact">Contact</a>
-                </li>
-                <li class="nav-item ms-lg-3">
-                    <a class="btn btn-light rounded-pill px-4" href="#quote">Get a Free Quote</a>
-                </li>
-            </ul>
+                </div>
+                <div class="col-md-8 text-end d-none d-md-block">
+                    <p class="mb-0"><strong>Transform Your Space, Elevate Your Living</strong></p>
+                    <p class="mb-0 small">Professional Loft Conversions Across London & Home Counties</p>
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+    <!-- Bottom layer: Navigation menu -->
+    <!-- <nav class="navbar navbar-expand-lg navbar-light bg-primary sticky-top">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#about">About Us</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Services
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Dormer Loft Conversion</a></li>
+                            <li><a class="dropdown-item" href="#">Mansard Loft Conversion</a></li>
+                            <li><a class="dropdown-item" href="#">Roof Light Loft Conversion</a></li>
+                            <li><a class="dropdown-item" href="#">Hip-to-gable Loft Conversion</a></li>
+                            <li><a class="dropdown-item" href="#">Modular Loft Conversions</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#process">Our Process</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#testimonials">Testimonials</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#contact">Contact</a>
+                    </li>
+                    <li class="nav-item ms-lg-3">
+                        <a class="btn btn-light rounded-pill px-4" href="#quote">Get a Free Quote</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav> -->
+
+
+    <!-- Top layer: Social icons and email with enhanced styling -->
+    <div class="top-bar py-2" style="background-color: #f8f9fa;">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-8">
+                    <span class="me-4" style="font-size: 14px; color: #555;"><i class="bi bi-envelope-fill me-1"
+                            style="color: #4e73df;"></i> info@epicloftconversion.com</span>
+                    <span style="font-size: 14px; color: #555;"><i class="bi bi-telephone-fill me-1"
+                            style="color: #4e73df;"></i> 020 1234 5678</span>
+                </div>
+                <div class="col-md-4 text-end">
+                    <a href="#" class="me-3 social-icon"><i class="bi bi-facebook" style="color: #3b5998;"></i></a>
+                    <a href="#" class="me-3 social-icon"><i class="bi bi-instagram" style="color: #e1306c;"></i></a>
+                    <a href="#" class="me-3 social-icon"><i class="bi bi-twitter-x" style="color: #000;"></i></a>
+                    <a href="#" class="social-icon"><i class="bi bi-linkedin" style="color: #0077b5;"></i></a>
+                </div>
+            </div>
         </div>
     </div>
-</nav>
 
+    <!-- Middle layer: Logo and text with enhanced design -->
+    <div class="logo-bar py-4" style="background-color: white; box-shadow: 0 2px 15px rgba(0,0,0,0.05);">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-5 col-md-12">
+                    <a class="navbar-brand d-flex align-items-center" href="#">
+                        <img src="./assets/image/main-logo.svg" alt="EPIC Loft Conversion Logo" class="img-fluid me-3"
+                            style="max-height: 70px;">
+                        <div>
+                            <h1 class="mb-0 fw-bold" style="color: #4e73df; font-size: 28px; letter-spacing: 1px;">EPIC
+                            </h1>
+                            <p class="mb-0" style="color: #555; font-size: 16px; letter-spacing: 0.5px;">Loft Conversion
+                                Specialists</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-7 col-md-12 text-lg-end text-center mt-3 mt-lg-0">
+                    <p class="mb-0" style="font-size: 18px; font-weight: 600; color: #333;"><span
+                            style="border-bottom: 2px solid #4e73df;">Transform Your Space, Elevate Your Living</span>
+                    </p>
+                    <p class="mb-0 mt-1" style="font-size: 14px; color: #666;">Professional Loft Conversions Across
+                        London & Home Counties</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bottom layer: Navigation menu with enhanced styling -->
+    <nav class="navbar navbar-expand-lg sticky-top" style="background-color: #4e73df; padding: 0;">
+        <div class="container">
+            <button class="navbar-toggler my-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                style="border-color: rgba(255,255,255,0.7);">
+                <span class="navbar-toggler-icon" style="filter: brightness(0) invert(1);"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link text-white py-3 px-4 hover-effect" href="#"
+                            style="font-weight: 500; letter-spacing: 0.5px; transition: all 0.3s;">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white py-3 px-4 hover-effect" href="#about"
+                            style="font-weight: 500; letter-spacing: 0.5px; transition: all 0.3s;">About Us</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-white py-3 px-4 hover-effect" href="#" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false"
+                            style="font-weight: 500; letter-spacing: 0.5px; transition: all 0.3s;">
+                            Services
+                        </a>
+                        <ul class="dropdown-menu"
+                            style="border-radius: 0; border-top: 3px solid #4e73df; box-shadow: 0 10px 20px rgba(0,0,0,0.1);">
+                            <li><a class="dropdown-item py-2" href="#" style="transition: all 0.2s;">Dormer Loft
+                                    Conversion</a></li>
+                            <li><a class="dropdown-item py-2" href="#" style="transition: all 0.2s;">Mansard Loft
+                                    Conversion</a></li>
+                            <li><a class="dropdown-item py-2" href="#" style="transition: all 0.2s;">Roof Light Loft
+                                    Conversion</a></li>
+                            <li><a class="dropdown-item py-2" href="#" style="transition: all 0.2s;">Hip-to-gable Loft
+                                    Conversion</a></li>
+                            <li><a class="dropdown-item py-2" href="#" style="transition: all 0.2s;">Modular Loft
+                                    Conversions</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white py-3 px-4 hover-effect" href="#process"
+                            style="font-weight: 500; letter-spacing: 0.5px; transition: all 0.3s;">Our Process</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white py-3 px-4 hover-effect" href="#testimonials"
+                            style="font-weight: 500; letter-spacing: 0.5px; transition: all 0.3s;">Testimonials</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white py-3 px-4 hover-effect" href="#contact"
+                            style="font-weight: 500; letter-spacing: 0.5px; transition: all 0.3s;">Contact</a>
+                    </li>
+                    <li class="nav-item ms-lg-1">
+                        <a class="btn px-4 py-2 my-2 my-lg-0 mx-lg-3" href="#quote"
+                            style="background-color: #fff; color: #4e73df; font-weight: 600; border-radius: 30px; transition: all 0.3s; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">Get
+                            a Free Quote</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
     <!-- Hero Carousel -->
     <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
         <div class="carousel-indicators">

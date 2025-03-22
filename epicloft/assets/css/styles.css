@@ -228,6 +228,47 @@ body {
     line-height: 0;
     position: relative;
 }
+ /* Custom styling for testimonial carousel */
+ #testimonialCarousel .carousel-indicators {
+    bottom: -50px;
+}
+
+#testimonialCarousel .carousel-indicators button {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #c8102e;
+    opacity: 0.3;
+}
+
+#testimonialCarousel .carousel-indicators button.active {
+    opacity: 1;
+}
+
+#testimonialCarousel .carousel-control-prev,
+#testimonialCarousel .carousel-control-next {
+    width: 10%;
+    color: #c8102e;
+}
+
+.testimonial-item {
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    background-color: #fff;
+    transition: all 0.3s ease;
+}
+
+.testimonial-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+@media (max-width: 768px) {
+    #testimonialCarousel .carousel-control-prev,
+    #testimonialCarousel .carousel-control-next {
+        display: none;
+    }
+}
 
 /* testimonail end */
 

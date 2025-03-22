@@ -455,79 +455,138 @@ footer {
 
 /*  */
 /* Custom CSS for Video Section */
-/* Gradient Text */
-.text-gradient {
-    background: linear-gradient(45deg, #00c6ff, #0072ff);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+/* Custom CSS for Video Section */
+.airvideo-section {
+    background-color: #fff; /* White background to match your theme */
 }
 
-/* Video Wrapper */
-.video-wrapper {
+/* Video Container */
+.airvideo-container {
+    position: relative;
+}
+
+.airvideo-wrapper {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-.video-wrapper:hover {
+.airvideo-wrapper:hover {
     transform: scale(1.02);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3) !important;
+    box-shadow: 0 15px 30px rgba(218, 0, 61, 0.2); /* Subtle red shadow */
+}
+
+.airvideo-player {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 1rem;
 }
 
 /* Play Button Overlay */
-.play-button-overlay {
+.airvideo-play-button-overlay {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     display: flex;
-    align-items: center;
     justify-content: center;
-    background: rgba(0, 0, 0, 0.4);
+    align-items: center;
+    background-color: rgba(218, 0, 61, 0.3); /* Red-tinted overlay */
     opacity: 1;
     transition: opacity 0.3s ease;
-}
-.video-player:hover + .play-button-overlay,
-.play-button-overlay:hover {
-    opacity: 0.8;
-}
-.btn-play {
-    font-size: 4rem;
-    color: #fff;
-    background: none;
-    border: none;
-    transition: transform 0.3s ease;
-}
-.btn-play:hover {
-    transform: scale(1.1);
-    color: #00c6ff;
+    cursor: pointer;
 }
 
-/* Gradient Button */
-.btn-gradient {
-    background: linear-gradient(45deg, #00c6ff, #0072ff);
+.airvideo-player[playing] + .airvideo-play-button-overlay {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.airvideo-btn-play {
+    background: none;
+    border: none;
+    font-size: 5rem;
+    color: #fff;
+    opacity: 0.9;
+    transition: all 0.3s ease;
+}
+
+.airvideo-btn-play:hover {
+    transform: scale(1.1);
+    opacity: 1;
+}
+
+.airvideo-btn-play i {
+    text-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    animation: airvideo-pulse 2s infinite;
+}
+
+@keyframes airvideo-pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+/* Text Content */
+.airvideo-content {
+    background: linear-gradient(135deg, #da003d 0%, #fff 100%); /* Gradient from red to white */
+    color: #333; /* Dark text for readability */
+}
+
+.airvideo-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #da003d; /* Red title */
+}
+
+.airvideo-subtitle {
+    font-size: 1.25rem;
+    color: #666;
+}
+
+.airvideo-video-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #333;
+}
+
+.airvideo-date {
+    font-size: 0.9rem;
+}
+
+.airvideo-description {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Buttons */
+.airvideo-btn-primary {
+    background-color: #da003d; /* Red button */
     color: #fff;
     border: none;
-    transition: background 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
-.btn-gradient:hover {
-    background: linear-gradient(45deg, #0072ff, #00c6ff);
+.airvideo-btn-primary:hover {
+    background-color: #b00033; /* Darker red on hover */
+    transform: translateY(-2px);
+}
+
+.airvideo-btn-secondary {
+    background-color: transparent;
+    color: #da003d;
+    border: 2px solid #da003d;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+}
+.airvideo-btn-secondary:hover {
+    background-color: #da003d;
     color: #fff;
+    transform: translateY(-2px);
 }
 
 /* Shadow Extra Large */
 .shadow-xl {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
-
-/* Dark Theme for Details */
-.bg-dark {
-    background: #1a1a1a;
-}
-.text-light {
-    color: #f1f1f1 !important;
-}
-.border-muted {
-    border-color: #444 !important;
-}
+/* custom vdo section end */
 
 /* Video Details Section */
 .video-details {

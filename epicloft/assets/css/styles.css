@@ -460,66 +460,38 @@ footer {
     background-color: #fff; /* White background */
 }
 
-/* Video Container */
-.airvideo-container .ratio {
-    border-radius: 0.5rem;
-    overflow: hidden;
-}
-
 .airvideo-player {
     width: 100%;
     height: auto;
-    object-fit: cover;
+    border-radius: 0.25rem;
 }
 
-/* Typography */
-.airvideo-main-title {
-    font-size: 2rem;
-    font-weight: 700;
-    color: #da003d; /* Red title */
-}
-
-.airvideo-sub-title {
-    font-size: 1.25rem;
-    font-weight: 400;
-    color: #666; /* Subtle gray */
-}
-
-.airvideo-info-title {
+.airvideo-title {
     font-size: 1.75rem;
     font-weight: 600;
     color: #da003d; /* Red title */
 }
 
-.airvideo-info-text {
+.airvideo-text {
     font-size: 1rem;
-    color: #333; /* Dark text for readability */
-    line-height: 1.6;
+    color: #333; /* Dark text */
+    line-height: 1.5;
 }
 
-/* Button */
-.airvideo-btn-enquire {
+.airvideo-btn {
     background-color: #da003d; /* Red button */
     color: #fff;
     border: none;
-    padding: 0.75rem 2rem;
+    padding: 0.5rem 1.5rem;
     font-size: 1rem;
-    font-weight: 600;
-    text-transform: uppercase;
     border-radius: 0.25rem;
-    transition: background-color 0.3s ease, transform 0.2s ease;
+    transition: background-color 0.3s ease;
 }
 
-.airvideo-btn-enquire:hover {
+.airvideo-btn:hover {
     background-color: #b00033; /* Darker red on hover */
-    transform: translateY(-2px);
     color: #fff;
     text-decoration: none;
-}
-
-/* Shadow */
-.shadow-sm {
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 /* custom vdo section end */
 

@@ -455,8 +455,9 @@ footer {
 
 /*  */
 /* Custom CSS for Video Section start*/
+/* Custom CSS for Video Section */
 .airvideo-section {
-    background-color: #fff; /* White background to match your theme */
+    background-color: #fff; /* White background for the section */
 }
 
 /* Video Container */
@@ -468,18 +469,18 @@ footer {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 .airvideo-wrapper:hover {
-    transform: scale(1.02);
-    box-shadow: 0 15px 30px rgba(218, 0, 61, 0.2); /* Subtle red shadow */
+    transform: scale(1.01);
+    box-shadow: 0 15px 30px rgba(218, 0, 61, 0.2); /* Red-tinted shadow */
 }
 
 .airvideo-player {
     width: 100%;
     height: auto;
     object-fit: cover;
-    border-radius: 1rem;
+    border-radius: 0.5rem;
 }
 
-/* Play Button Overlay */
+/* Play Button Overlay (YouTube-Style) */
 .airvideo-play-button-overlay {
     position: absolute;
     top: 0;
@@ -489,7 +490,7 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgba(218, 0, 61, 0.3); /* Red-tinted overlay */
+    background-color: rgba(0, 0, 0, 0.5); /* Dark overlay like YouTube */
     opacity: 1;
     transition: opacity 0.3s ease;
     cursor: pointer;
@@ -503,8 +504,8 @@ footer {
 .airvideo-btn-play {
     background: none;
     border: none;
-    font-size: 5rem;
-    color: #fff;
+    font-size: 4rem;
+    color: #da003d; /* Red play button */
     opacity: 0.9;
     transition: all 0.3s ease;
 }
@@ -515,8 +516,8 @@ footer {
 }
 
 .airvideo-btn-play i {
-    text-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-    animation: airvideo-pulse 2s infinite;
+    text-shadow: 0 0 15px rgba(218, 0, 61, 0.7);
+    animation: airvideo-pulse 1.5s infinite;
 }
 
 @keyframes airvideo-pulse {
@@ -525,60 +526,31 @@ footer {
     100% { transform: scale(1); }
 }
 
-/* Text Content */
+/* Text Content (YouTube-Style) */
 .airvideo-content {
-    background: linear-gradient(135deg, #da003d 0%, #fff 100%); /* Gradient from red to white */
-    color: #333; /* Dark text for readability */
-}
-
-.airvideo-title {
-    font-size: 2.5rem;
-    font-weight: bold;
-    color: #da003d; /* Red title */
-}
-
-.airvideo-subtitle {
-    font-size: 1.25rem;
-    color: #666;
+    background-color: #da003d; /* Solid red background */
+    color: #fff; /* White text for contrast */
 }
 
 .airvideo-video-title {
-    font-size: 1.5rem;
-    font-weight: 600;
-    color: #333;
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.2;
 }
 
 .airvideo-date {
     font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.7); /* Slightly faded white */
+}
+
+.airvideo-divider {
+    border-color: rgba(255, 255, 255, 0.3); /* Light white divider */
 }
 
 .airvideo-description {
     font-size: 1rem;
-    color: #555;
-}
-
-/* Buttons */
-.airvideo-btn-primary {
-    background-color: #da003d; /* Red button */
     color: #fff;
-    border: none;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-}
-.airvideo-btn-primary:hover {
-    background-color: #b00033; /* Darker red on hover */
-    transform: translateY(-2px);
-}
-
-.airvideo-btn-secondary {
-    background-color: transparent;
-    color: #da003d;
-    border: 2px solid #da003d;
-    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
-}
-.airvideo-btn-secondary:hover {
-    background-color: #da003d;
-    color: #fff;
-    transform: translateY(-2px);
 }
 
 /* Shadow Extra Large */

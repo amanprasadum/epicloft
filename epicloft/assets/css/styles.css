@@ -286,6 +286,8 @@ body {
 }
 
 .benefit-card {
+    text-align: center;
+    align-items: center;
     background-color: white;
     padding: 25px;
     border-radius: 10px;

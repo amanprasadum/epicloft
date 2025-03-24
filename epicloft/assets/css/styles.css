@@ -77,6 +77,11 @@ body {
         display: block;
         width: fit-content;
     }
+    
+    .airnavbar-middle .container {
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+    }
 }
 
 @media (max-width: 767px) {

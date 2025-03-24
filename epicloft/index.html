@@ -14,22 +14,25 @@
     <!-- AOS Library for scroll animations -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="./assets/css/styles.css">
+    <link rel="stylesheet" href="./assets/css/mobile.css">
 </head>
 
 <body>
     <!-- Airnavbar -->
     <section class="airnavbar">
-        <!-- Top layer: Social icons and email with EPIC brand colors -->
+        <!-- Top layer: Social icons and email -->
         <div class="airnavbar-top py-2" style="background-color: #f8f9fa;">
             <div class="container">
                 <div class="row align-items-center">
-                    <div class="col-md-8">
-                        <span class="me-4" style="font-size: 14px; color: #4a4a4a;"><i class="bi bi-envelope-fill me-1"
-                                style="color: #c8102e;"></i> info@epicloftconversion.com</span>
-                        <span style="font-size: 14px; color: #4a4a4a;"><i class="bi bi-telephone-fill me-1"
-                                style="color: #c8102e;"></i> 020 1234 5678</span>
+                    <div class="col-md-8 col-12 text-center text-md-start mb-2 mb-md-0">
+                        <span class="me-4" style="font-size: 14px; color: #4a4a4a;">
+                            <i class="bi bi-envelope-fill me-1" style="color: #c8102e;"></i> info@epicloftconversion.com
+                        </span>
+                        <span style="font-size: 14px; color: #4a4a4a;">
+                            <i class="bi bi-telephone-fill me-1" style="color: #c8102e;"></i> 020 1234 5678
+                        </span>
                     </div>
-                    <div class="col-md-4 text-end">
+                    <div class="col-md-4 col-12 text-center text-md-end">
                         <a href="#" class="me-3 airnavbar-social"><i class="bi bi-facebook"
                                 style="color: #4a4a4a;"></i></a>
                         <a href="#" class="me-3 airnavbar-social"><i class="bi bi-instagram"
@@ -41,37 +44,45 @@
                 </div>
             </div>
         </div>
-        <!-- Middle layer: Logo and text with brand styling -->
+
+        <!-- Middle layer: Logo and text -->
         <div class="airnavbar-middle py-4" style="background-color: white; box-shadow: 0 2px 15px rgba(0,0,0,0.05);">
             <div class="container">
                 <div class="row align-items-center">
-                    <div class="col-lg-6 col-md-12 text-lg-start text-center">
+                    <div class="col-lg-6 col-12 text-center text-lg-start mb-3 mb-lg-0">
                         <a class="navbar-brand d-inline-flex align-items-center" href="#">
                             <img src="./assets/image/main-logo.svg" alt="EPIC Loft Conversion Logo" class="img-fluid"
                                 style="max-height: 110px; width: auto;">
-                            <div class="d-none d-sm-block ms-3">
-                                <h1 class="mb-0 fw-bold" style="color: #4a4a4a; font-size: 28px; letter-spacing: 1px;">
-                                    EPIC
-                                    <span style="color: #4a4a4a;">LOFT</span>
+                            <div class="ms-3">
+                                <h1 class="mb-0 fw-bold"
+                                    style="color: #4a4a4a; font-size: clamp(20px, 3vw, 28px); letter-spacing: 1px;">
+                                    EPIC <span style="color: #4a4a4a;">LOFT</span>
                                 </h1>
                                 <p class="mb-0"
-                                    style="color: #c8102e; font-size: 20px; letter-spacing: 1.5px; font-weight: 500;">
-                                    CONVERSION</p>
+                                    style="color: #c8102e; font-size: clamp(16px, 2vw, 20px); letter-spacing: 1.5px; font-weight: 500;">
+                                    CONVERSION
+                                </p>
+                                <p class="mt-1 mb-0" style="color: #666; font-size: clamp(12px, 1.5vw, 14px);">
+                                    London's Top Company For Loft Conversion
+                                </p>
                             </div>
                         </a>
                     </div>
-                    <div class="col-lg-6 col-md-12 text-lg-end text-center mt-3 mt-lg-0">
-                        <p class="mb-0" style="font-size: 18px; font-weight: 600; color: #4a4a4a;">Transform Your Space,
-                            Elevate Your Living</p>
-                        <div class="mt-2"
+                    <div class="col-lg-6 col-12 text-center text-lg-end">
+                        <p class="mb-0" style="font-size: clamp(16px, 2vw, 18px); font-weight: 600; color: #4a4a4a;">
+                            Create, Expand, and Enjoy Your New Loft
+                        </p>
+                        <div class="mt-2 mx-auto mx-lg-0"
                             style="height: 2px; width: 100px; background-color: #c8102e; display: inline-block;"></div>
-                        <p class="mb-0 mt-2" style="font-size: 14px; color: #666;">Professional Loft Conversions Across
-                            London & Home Counties</p>
+                        <p class="mb-0 mt-2" style="font-size: clamp(12px, 1.5vw, 14px); color: #666;">
+                            Specialist Loft Conversion Company Providing Services Across London
+                        </p>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- Bottom layer: Navigation menu with EPIC brand styling -->
+
+        <!-- Bottom layer: Navigation menu -->
         <nav class="airnavbar-bottom navbar navbar-expand-lg sticky-top-off"
             style="background-color: #c8102e; padding: 0;">
             <div class="container">
@@ -80,7 +91,7 @@
                     <span class="navbar-toggler-icon" style="filter: brightness(0) invert(1);"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav mx-auto align-items-center">
+                    <ul class="navbar-nav mx-auto align-items-lg-center text-center">
                         <li class="nav-item">
                             <a class="nav-link text-white py-3 px-4 airnavbar-link" href="#"
                                 style="font-weight: 500; letter-spacing: 0.5px;">Home</a>
@@ -104,22 +115,15 @@
                                 <li><a class="dropdown-item py-2" href="#">Modular Loft Conversions</a></li>
                             </ul>
                         </li>
-                        <!-- <li class="nav-item">
-                            <a class="nav-link text-white py-3 px-4 airnavbar-link" href="#process"
-                                style="font-weight: 500; letter-spacing: 0.5px;">Our Process</a>
-                        </li> -->
-                        <!-- <li class="nav-item">
-                            <a class="nav-link text-white py-3 px-4 airnavbar-link" href="#testimonials"
-                                style="font-weight: 500; letter-spacing: 0.5px;">Testimonials</a>
-                        </li> -->
                         <li class="nav-item">
                             <a class="nav-link text-white py-3 px-4 airnavbar-link" href="#contact"
                                 style="font-weight: 500; letter-spacing: 0.5px;">Contact</a>
                         </li>
                         <li class="nav-item ms-lg-1">
                             <a class="btn px-4 py-2 my-2 my-lg-0 mx-lg-3 airnavbar-btn" href="#quote"
-                                style="background-color: #fff; color: #c8102e; font-weight: 600; border-radius: 30px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">Get
-                                a Free Quote</a>
+                                style="background-color: #fff; color: #c8102e; font-weight: 600; border-radius: 30px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+                                Get a Free Quote
+                            </a>
                         </li>
                     </ul>
                 </div>

@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - Epic Loft Conversion</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet">
+    <style>
+        /* Custom Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            color: #666;
+        }
+
+        /* Navbar Styles (from previous design) */
+        .airnavbar-social i {
+            font-size: 16px;
+            transition: all 0.3s;
+        }
+
+        .airnavbar-social:hover i {
+            transform: translateY(-3px);
+            color: #c8102e !important;
+        }
+
+        .airnavbar-link {
+            transition: all 0.3s;
+        }
+
+        .airnavbar-link:hover {
+            background-color: rgba(255,255,255,0.1);
+        }
+
+        .airnavbar-dropdown .dropdown-item:hover {
+            background-color: #f8f9fa;
+            padding-left: 25px !important;
+            color: #c8102e;
+        }
+
+        .airnavbar-btn {
+            transition: all 0.3s;
+        }
+
+        .airnavbar-btn:hover {
+            background-color: #4a4a4a !important;
+            color: white !important;
+        }
+
+        /* Hero Section */
+        .hero-section {
+            background: url('path-to-hero-image.jpg') center/cover no-repeat;
+            position: relative;
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+        }
+
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        .hero-section h1 {
+            font-size: clamp(24px, 4vw, 48px);
+            font-weight: 700;
+            color: white;
+            position: relative;
+        }
+
+        .hero-section p {
+            font-size: clamp(14px, 2vw, 18px);
+            position: relative;
+            margin-bottom: 20px;
+        }
+
+        /* Services Section */
+        .services-section {
+            padding: 60px 0;
+            background-color: #f8f9fa;
+        }
+
+        .services-section h2 {
+            color: #4a4a4a;
+            font-size: clamp(24px, 3vw, 36px);
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .services-section p {
+            color: #666;
+            font-size: 16px;
+            margin-bottom: 40px;
+        }
+
+        .service-card {
+            background: white;
+            border: none;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+            border-radius: 10px;
+            overflow: hidden;
+            transition: transform 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .service-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .service-card .card-body {
+            padding: 20px;
+        }
+
+        .service-card h3 {
+            color: #4a4a4a;
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .service-card p {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .service-card .btn {
+            background-color: #c8102e;
+            color: white;
+            border-radius: 30px;
+            padding: 8px 20px;
+            font-weight: 500;
+        }
+
+        /* Why Choose Us Section */
+        .why-choose-section {
+            padding: 60px 0;
+        }
+
+        .why-choose-section h2 {
+            color: #4a4a4a;
+            font-size: clamp(24px, 3vw, 36px);
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .why-choose-section p {
+            color: #666;
+            font-size: 16px;
+            margin-bottom: 40px;
+        }
+
+        .why-choose-item {
+            text-align: center;
+        }
+
+        .why-choose-item i {
+            font-size: 40px;
+            color: #c8102e;
+            margin-bottom: 15px;
+        }
+
+        .why-choose-item h4 {
+            color: #4a4a4a;
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background-color: #c8102e;
+            color: white;
+            padding: 60px 0;
+        }
+
+        .cta-section h2 {
+            font-size: clamp(24px, 3vw, 36px);
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .cta-section form {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+        }
+
+        .cta-section .form-control {
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            margin-bottom: 15px;
+        }
+
+        .cta-section .btn {
+            background-color: #c8102e;
+            color: white;
+            border-radius: 30px;
+            padding: 10px 30px;
+            font-weight: 500;
+        }
+
+        /* Footer (from homepage) */
+        .footer {
+            background-color: #333;
+            color: white;
+            padding: 40px 0;
+        }
+
+        .footer h5 {
+            color: white;
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .footer a {
+            color: #ccc;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .footer a:hover {
+            color: #c8102e;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 991px) {
+            .navbar-nav {
+                padding: 10px 0;
+            }
+            
+            .airnavbar-link:hover {
+                background-color: rgba(255,255,255,0.05);
+                padding-left: 30px !important;
+            }
+            
+            .airnavbar-btn {
+                margin: 0 auto;
+                display: block;
+                width: fit-content;
+            }
+        }
+
+        @media (max-width: 767px) {
+            .airnavbar-middle {
+                padding: 20px 0;
+            }
+            
+            .navbar-brand img {
+                max-height: 80px;
+            }
+            
+            .airnavbar-btn {
+                font-size: 14px;
+                padding: 8px 20px;
+            }
+
+            .service-card {
+                margin-bottom: 20px;
+            }
+        }
+
+        @media (max-width: 575px) {
+            .airnavbar-top span {
+                display: block;
+                margin: 5px 0;
+            }
+            
+            .airnavbar-social {
+                margin: 0 10px;
+            }
+            
+            .navbar-brand img {
+                max-height: 60px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar (from previous design) -->
+    <section class="airnavbar">
+        <div class="airnavbar-top py-2" style="background-color: #f8f9fa;">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-8 col-12 text-center text-md-start mb-2 mb-md-0">
+                        <span class="me-4" style="font-size: 14px; color: #4a4a4a;">
+                            <i class="bi bi-envelope-fill me-1" style="color: #c8102e;"></i> info@epicloftconversion.com
+                        </span>
+                        <span style="font-size: 14px; color: #4a4a4a;">
+                            <i class="bi bi-telephone-fill me-1" style="color: #c8102e;"></i> 020 1234 5678
+                        </span>
+                    </div>
+                    <div class="col-md-4 col-12 text-center text-md-end">
+                        <a href="#" class="me-3 airnavbar-social"><i class="bi bi-facebook" style="color: #4a4a4a;"></i></a>
+                        <a href="#" class="me-3 airnavbar-social"><i class="bi bi-instagram" style="color: #4a4a4a;"></i></a>
+                        <a href="#" class="me-3 airnavbar-social"><i class="bi bi-twitter-x" style="color: #4a4a4a;"></i></a>
+                        <a href="#" class="airnavbar-social"><i class="bi bi-linkedin" style="color: #4a4a4a;"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="airnavbar-middle py-4" style="background-color: white; box-shadow: 0 2px 15px rgba(0,0,0,0.05);">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-10 col-md-11 col-12">
+                        <div class="row align-items-center">
+                            <div class="col-lg-5 col-md-6 col-12 text-center text-lg-start mb-3 mb-lg-0">
+                                <a class="navbar-brand d-inline-flex align-items-center" href="#">
+                                    <img src="./assets/image/main-logo.svg" alt="EPIC Loft Conversion Logo" class="img-fluid" style="max-height: 110px; width: auto;">
+                                    <div class="ms-3">
+                                        <p class="mb-0" style="color: #c8102e; font-size: clamp(16px, 2vw, 20px); font-weight: 500; letter-spacing: 1px;">
+                                            London's Top Company
+                                        </p>
+                                        <p class="mb-0" style="color: #4a4a4a; font-size: clamp(14px, 1.8vw, 18px); font-weight: 600;">
+                                            For Loft Conversion
+                                        </p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-lg-7 col-md-6 col-12 text-center text-lg-end">
+                                <p class="mb-0" style="font-size: clamp(16px, 2vw, 18px); font-weight: 600; color: #4a4a4a;">
+                                    Create, Expand, and Enjoy Your New Loft
+                                </p>
+                                <div class="mt-2 mx-auto mx-lg-0" style="height: 2px; width: 100px; background-color: #c8102e; display: inline-block;"></div>
+                                <p class="mb-0 mt-2" style="font-size: clamp(12px, 1.5vw, 14px); color: #666;">
+                                    Specialist Loft Conversion Company Providing Services Across London
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <nav class="airnavbar-bottom navbar navbar-expand-lg sticky-top-off" style="background-color: #c8102e; padding: 0;">
+            <div class="container">
+                <button class="navbar-toggler my-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    style="border-color: rgba(255,255,255,0.7);">
+                    <span class="navbar-toggler-icon" style="filter: brightness(0) invert(1);"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav mx-auto align-items-lg-center text-center">
+                        <li class="nav-item">
+                            <a class="nav-link text-white py-3 px-4 airnavbar-link" href="#" style="font-weight: 500; letter-spacing: 0.5px;">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white py-3 px-4 airnavbar-link" href="#about" style="font-weight: 500; letter-spacing: 0.5px;">About Us</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-white py-3 px-4 airnavbar-link active" href="#" role="button" 
+                                data-bs-toggle="dropdown" aria-expanded="false" style="font-weight: 500; letter-spacing: 0.5px;">
+                                Services
+                            </a>
+                            <ul class="dropdown-menu airnavbar-dropdown" 
+                                style="border-radius: 0; border-top: 3px solid #c8102e; box-shadow: 0 10px 20px rgba(0,0,0,0.1);">
+                                <li><a class="dropdown-item py-2" href="#">Dormer Loft Conversion</a></li>
+                                <li><a class="dropdown-item py-2" href="#">Mansard Loft Conversion</a></li>
+                                <li><a class="dropdown-item py-2" href="#">Roof Light Loft Conversion</a></li>
+                                <li><a class="dropdown-item py-2" href="#">Hip-to-Gable Loft Conversion</a></li>
+                                <li><a class="dropdown-item py-2" href="#">Modular Loft Conversions</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white py-3 px-4 airnavbar-link" href="#contact" style="font-weight: 500; letter-spacing: 0.5px;">Contact</a>
+                        </li>
+                        <li class="nav-item ms-lg-1">
+                            <a class="btn px-4 py-2 my-2 my-lg-0 mx-lg-3 airnavbar-btn" href="#quote" 
+                                style="background-color: #fff; color: #c8102e; font-weight: 600; border-radius: 30px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+                                Get a Free Quote
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </section>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <h1>Our Loft Conversion Services</h1>
+            <p>We offer a range of loft conversion services tailored to your needs in London</p>
+            <a href="#quote" class="btn airnavbar-btn" style="background-color: #c8102e; color: white; font-weight: 600; border-radius: 30px;">Get a Free Quote</a>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services-section">
+        <div class="container">
+            <div class="text-center">
+                <h2>Types of Loft Conversions</h2>
+                <p>We specialize in different types of conversions to suit all home styles</p>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-6 col-12">
+                    <div class="service-card">
+                        <img src="path-to-dormer-image.jpg" alt="Dormer Loft Conversion">
+                        <div class="card-body">
+                            <h3>Dormer Loft Conversion</h3>
+                            <p>Dormer loft conversions are popular for extending the existing roof, creating more spacious rooms with vertical walls.</p>
+                            <a href="#" class="btn">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-12">
+                    <div class="service-card">
+                        <img src="path-to-mansard-image.jpg" alt="Mansard Loft Conversion">
+                        <div class="card-body">
+                            <h3>Mansard Loft Conversion</h3>
+                            <p>Mansard conversions alter the roof structure, creating a flat roof with sloping sides for maximum space.</p>
+                            <a href="#" class="btn">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-12">
+                    <div class="service-card">
+                        <img src="path-to-roof-light-image.jpg" alt="Roof Light Loft Conversion">
+                        <div class="card-body">
+                            <h3>Roof Light Loft Conversion</h3>
+                            <p>Roof light conversions add windows to the existing roof, perfect for homes needing more light and space.</p>
+                            <a href="#" class="btn">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-12">
+                    <div class="service-card">
+                        <img src="path-to-hip-to-gable-image.jpg" alt="Hip-to-Gable Loft Conversion">
+                        <div class="card-body">
+                            <h3>Hip-to-Gable Loft Conversion</h3>
+                            <p>Hip-to-gable conversions extend the sloped roof to a vertical gable end, ideal for semi-detached homes.</p>
+                            <a href="#" class="btn">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-12">
+                    <div class="service-card">
+                        <img src="path-to-modular-image.jpg" alt="Modular Loft Conversion">
+                        <div class="card-body">
+                            <h3>Modular Loft Conversion</h3>
+                            <p>Modular conversions use pre-fabricated units, offering a fast and efficient way to add space.</p>
+                            <a href="#" class="btn">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="why-choose-section">
+        <div class="container">
+            <div class="text-center">
+                <h2>Why Choose Epic Loft Conversion?</h2>
+                <p>At Epic Loft Conversion, we provide top-quality loft conversions in London</p>
+            </div>
+            <div class="row">
+                <div class="col-lg-3 col-md-6 col-12 why-choose-item">
+                    <i class="bi bi-award"></i>
+                    <h4>Expert Team</h4>
+                    <p>Our skilled team ensures every project meets the highest standards.</p>
+                </div>
+                <div class="col-lg-3 col-md-6 col-12 why-choose-item">
+                    <i class="bi bi-house-door"></i>
+                    <h4>Custom Designs</h4>
+                    <p>We tailor each conversion to fit your home and lifestyle.</p>
+                </div>
+                <div class="col-lg-3 col-md-6 col-12 why-choose-item">
+                    <i class="bi bi-gear"></i>
+                    <h4>Project Management</h4>
+                    <p>From start to finish, we manage every detail for a smooth process.</p>
+                </div>
+                <div class="col-lg-3 col-md-6 col-12 why-choose-item">
+                    <i class="bi bi-wallet2"></i>
+                    <h4>Affordable Pricing</h4>
+                    <p>Competitive pricing with no hidden costs for your peace of mind.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 col-12">
+                    <h2>Get Your Free Loft Conversion Quote Today</h2>
+                    <p>We offer affordable loft conversions with free, no-obligation quotes. Contact us to start transforming your home!</p>
+                </div>
+                <div class="col-lg-6 col-12">
+                    <form>
+                        <input type="text" class="form-control" placeholder="Your Name">
+                        <input type="email" class="form-control" placeholder="Your Email">
+                        <input type="tel" class="form-control" placeholder="Your Phone">
+                        <select class="form-control">
+                            <option>Type of Conversion</option>
+                            <option>Dormer</option>
+                            <option>Mansard</option>
+                            <option>Roof Light</option>
+                            <option>Hip-to-Gable</option>
+                            <option>Modular</option>
+                        </select>
+                        <button type="submit" class="btn">Get Free Quote</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 col-12">
+                    <h5>EPIC Loft Conversion</h5>
+                    <p>EPIC Loft Conversion is a leading provider of high-quality loft conversions in London.</p>
+                </div>
+                <div class="col-lg-3 col-md-6 col-12">
+                    <h5>Quick Links</h5>
+                    <p><a href="#">Home</a></p>
+                    <p><a href="#">About Us</a></p>
+                    <p><a href="#">Services</a></p>
+                    <p><a href="#">Contact</a></p>
+                </div>
+                <div class="col-lg-3 col-md-6 col-12">
+                    <h5>Our Services</h5>
+                    <p><a href="#">Dormer Loft Conversion</a></p>
+                    <p><a href="#">Mansard Loft Conversion</a></p>
+                    <p><a href="#">Roof Light Loft Conversion</a></p>
+                    <p><a href="#">Hip-to-Gable Loft Conversion</a></p>
+                    <p><a href="#">Modular Loft Conversion</a></p>
+                </div>
+                <div class="col-lg-3 col-md-6 col-12">
+                    <h5>Contact Info</h5>
+                    <p><i class="bi bi-geo-alt"></i> London, UK</p>
+                    <p><i class="bi bi-telephone"></i> 020 1234 5678</p>
+                    <p><i class="bi bi-envelope"></i> info@epicloftconversion.com</p>
+                </div>
+            </div>
+            <div class="text-center mt-4">
+                <p>&copy; 2025 EPIC Loft Conversion. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

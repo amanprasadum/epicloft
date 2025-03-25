@@ -34,29 +34,39 @@
             padding: 100px 0;
         }
 
-        .feature-icon {
-            color: var(--primary-color);
-            font-size: 3rem;
-            margin-bottom: 15px;
-        }
-
-        .process-card {
+        .feature-card {
             background-color: white;
             border: none;
             border-radius: 15px;
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
             transition: transform 0.3s ease;
             margin-bottom: 20px;
+            height: 100%;
         }
 
-        .process-card:hover {
+        .feature-card:hover {
             transform: translateY(-10px);
         }
 
-        .cta-card {
-            background-color: var(--primary-color);
-            color: white;
+        .conversion-type-card {
+            background-color: white;
+            border: none;
             border-radius: 15px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+
+        .pricing-card {
+            background-color: white;
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+
+        .section-title {
+            color: var(--primary-color);
+            margin-bottom: 30px;
         }
 
         .btn-primary {
@@ -67,17 +77,6 @@
         .btn-primary:hover {
             background-color: #8B0000;
             border-color: #8B0000;
-        }
-
-        .process-icon {
-            width: 60px;
-            height: 60px;
-            background-color: rgba(228, 27, 71, 0.1);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 15px;
         }
     </style>
 </head>
@@ -92,8 +91,8 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="#">Services</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Portfolio</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="#">Mansard Conversion</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Types of Conversion</a></li>
                     <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
                 </ul>
             </div>
@@ -103,42 +102,132 @@
     <!-- Hero Section -->
     <section class="hero text-center text-white">
         <div class="container">
-            <h1 class="display-4 mb-4">Transform Your Loft Space</h1>
+            <h1 class="display-4 mb-4">Maximize Your Living Space</h1>
             <p class="lead mb-4">Expert Mansard Loft Conversions in London</p>
-            <a href="#consultation" class="btn btn-light btn-lg">Get Started</a>
+            <a href="#consultation" class="btn btn-light btn-lg">Get Free Consultation</a>
         </div>
     </section>
 
-    <!-- Our Process -->
+    <!-- Key Advantages -->
     <section class="py-5">
         <div class="container">
-            <h2 class="text-center mb-5">Our Conversion Process</h2>
+            <h2 class="text-center section-title">Key Advantages of Mansard Loft Conversion</h2>
             <div class="row">
                 <div class="col-md-4 mb-4">
-                    <div class="card process-card h-100 text-center p-4">
-                        <div class="process-icon mb-3">
-                            <i class="bi bi-chat-text text-danger"></i>
-                        </div>
-                        <h3 class="h4">1. Consultation</h3>
-                        <p>We discuss your ideas, budget, and needs to understand your vision for the loft conversion.</p>
+                    <div class="card feature-card p-4 text-center">
+                        <h3 class="h4 mb-3">Maximizes Space</h3>
+                        <p>Unlike other loft conversions, a Mansard conversion significantly increases usable floor space and head height, making it feel like a natural extension of your home.</p>
                     </div>
                 </div>
                 <div class="col-md-4 mb-4">
-                    <div class="card process-card h-100 text-center p-4">
-                        <div class="process-icon mb-3">
-                            <i class="bi bi-search text-danger"></i>
-                        </div>
-                        <h3 class="h4">2. Free Site Survey</h3>
-                        <p>Our experts inspect your space and suggest the best options for your loft conversion.</p>
+                    <div class="card feature-card p-4 text-center">
+                        <h3 class="h4 mb-3">Enhances Property Value</h3>
+                        <p>A Mansard loft conversion can add substantial value to your property, making it a worthwhile investment for homeowners in London.</p>
                     </div>
                 </div>
                 <div class="col-md-4 mb-4">
-                    <div class="card process-card h-100 text-center p-4">
-                        <div class="process-icon mb-3">
-                            <i class="bi bi-pencil-square text-danger"></i>
-                        </div>
-                        <h3 class="h4">3. Design & Planning</h3>
-                        <p>We create a custom design and handle all approvals to ensure a smooth process.</p>
+                    <div class="card feature-card p-4 text-center">
+                        <h3 class="h4 mb-3">Flexible Design</h3>
+                        <p>You can customize your Mansard loft to include bedrooms, bathrooms, home offices, or even an entertainment space with ease.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Types of Mansard Loft Conversions -->
+    <section class="py-5 bg-white">
+        <div class="container">
+            <h2 class="text-center section-title">Types of Mansard Loft Conversions</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card conversion-type-card p-4">
+                        <h3 class="h4 mb-3">Rear Mansard</h3>
+                        <p>The most common type, altering the rear slope of the roof to create a near-vertical wall. Ideal for Victorian and Georgian terraced homes.</p>
+                        <ul class="list-unstyled">
+                            <li>✓ Maximizes internal space</li>
+                            <li>✓ Enhances property value</li>
+                            <li>✓ Blends with traditional architecture</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card conversion-type-card p-4">
+                        <h3 class="h4 mb-3">Double Mansard</h3>
+                        <p>Combines front and rear conversions, effectively adding a full additional floor to the home.</p>
+                        <ul class="list-unstyled">
+                            <li>✓ Largest increase in space</li>
+                            <li>✓ Ideal for multiple rooms</li>
+                            <li>✓ Great for large families</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card conversion-type-card p-4">
+                        <h3 class="h4 mb-3">L-Shaped Mansard</h3>
+                        <p>Extends over an existing rear extension, creating an L-shape. Perfect for Victorian and Edwardian properties.</p>
+                        <ul class="list-unstyled">
+                            <li>✓ Multiple functional spaces</li>
+                            <li>✓ Optimizes house footprint</li>
+                            <li>✓ Maximizes floor area</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="text-center section-title">Conversion Costs</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card pricing-card p-4 text-center">
+                        <h3 class="h4 mb-3">Small Conversion</h3>
+                        <p class="display-6 text-primary">£40,000 - £55,000</p>
+                        <p class="text-muted">Suitable for compact spaces with minimal structural changes</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card pricing-card p-4 text-center">
+                        <h3 class="h4 mb-3">Medium Conversion</h3>
+                        <p class="display-6 text-primary">£55,000 - £75,000</p>
+                        <p class="text-muted">Ideal for standard-sized homes with moderate space requirements</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card pricing-card p-4 text-center">
+                        <h3 class="h4 mb-3">Large Conversion</h3>
+                        <p class="display-6 text-primary">£75,000 - £100,000+</p>
+                        <p class="text-muted">Comprehensive conversion for larger properties with extensive modifications</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="py-5 bg-white">
+        <div class="container">
+            <h2 class="text-center section-title">Why Choose EPIC Loft Conversion</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card feature-card p-4 text-center">
+                        <h3 class="h4 mb-3">Experienced Team</h3>
+                        <p>Our professionals have years of experience in loft conversions across London, ensuring top-quality workmanship.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card feature-card p-4 text-center">
+                        <h3 class="h4 mb-3">Customized Solutions</h3>
+                        <p>Every loft conversion is tailored to your unique needs and preferences, ensuring a perfect fit for your home.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card feature-card p-4 text-center">
+                        <h3 class="h4 mb-3">Full Project Management</h3>
+                        <p>From planning permission to completion, we handle everything to make your loft conversion process smooth and stress-free.</p>
                     </div>
                 </div>
             </div>
@@ -146,23 +235,17 @@
     </section>
 
     <!-- CTA Section -->
-    <section class="py-5">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-8 offset-md-2">
-                    <div class="card cta-card text-center p-5">
-                        <h2 class="mb-4">Ready to Get Started?</h2>
-                        <p class="lead mb-4">Contact us today to schedule your free consultation and begin your loft conversion journey.</p>
-                        <a href="tel:+442012345678" class="btn btn-light btn-lg me-3">Call Now</a>
-                        <a href="mailto:info@epicloftconversion.com" class="btn btn-outline-light btn-lg">Email Us</a>
-                    </div>
-                </div>
-            </div>
+    <section class="py-5" style="background-color: var(--primary-color); color: white;">
+        <div class="container text-center">
+            <h2 class="display-5 mb-4">Ready to Transform Your Home?</h2>
+            <p class="lead mb-4">Contact EPIC Loft Conversion for a free consultation and take the first step towards your dream space.</p>
+            <a href="tel:+442012345678" class="btn btn-light btn-lg me-3">Call Now</a>
+            <a href="mailto:info@epicloftconversion.com" class="btn btn-outline-light btn-lg">Email Us</a>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-white py-4 border-top">
+    <footer class="bg-dark text-white py-4">
         <div class="container text-center">
             <p class="mb-0">&copy; 2024 EPIC Loft Conversion. All Rights Reserved.</p>
             <small class="text-muted">Specialists in Mansard Loft Conversions across London</small>
@@ -170,6 +253,5 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
 </body>
 </html>

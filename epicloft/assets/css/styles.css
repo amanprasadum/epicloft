@@ -1,3 +1,6 @@
+html,body{
+    overflow-x: hidden;
+}
 ::selection {
     color: #fff;
     background: #c9093d;
@@ -28,6 +31,10 @@ body {
 
 /* ----------- navbar start ----------------  */
 /* Navbar CSS */
+.middle_logo{
+    height: 190px;
+    width: auto;
+}
 .airnavbar-social i {
     font-size: 16px;
     transition: all 0.3s;

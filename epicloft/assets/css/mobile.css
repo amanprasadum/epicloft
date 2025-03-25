@@ -9,3 +9,68 @@
         height: 200px;
     }
 }
+
+/* Default styles (for all screen sizes) */
+.airnavbar-middle .navbar-brand img {
+    max-height: 190px;
+    width: auto;
+}
+
+.airnavbar-middle p {
+    font-size: clamp(16px, 2vw, 18px);
+}
+
+.airnavbar-middle .text-lg-end {
+    text-align: center;
+}
+
+/* Extra Small Devices (Portrait Phones, less than 576px) */
+@media (max-width: 575.98px) {
+    .airnavbar-middle .navbar-brand img {
+        max-height: 252px;
+    }
+    .middle_logo_a {
+        flex-direction: column-reverse;
+        justify-content: center;
+    }
+    .middle_logo{
+        height: 228px ;
+    }
+
+    .airnavbar-middle p {
+        font-size: clamp(10px, 1.5vw, 12px); /* Smaller text */
+    }
+
+    .airnavbar-middle .col-md-6 {
+        margin-bottom: 1.5rem; /* Add spacing between stacked elements */
+    }
+
+    .airnavbar-middle .mx-auto.mx-lg-0 {
+        width: 60px; /* Smaller underline for mobile */
+    }
+}
+
+/* Small Devices (Landscape Phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+    
+}
+
+/* Medium Devices (Tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+   
+}
+
+/* Large Devices (Desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+   
+}
+
+/* Extra Large Devices (Large Desktops, 1200px and up) */
+@media (min-width: 1200px) and (max-width: 1399.98px) {
+  
+}
+
+/* Extra Extra Large Devices (Very Large Desktops, 1400px and up) */
+@media (min-width: 1400px) {
+  
+}

@@ -10,6 +10,8 @@ body {
 }
 
 :root {
+    --primary-color: #E3053D;
+    --light-gray: #f8f9fa;
     --primary: #c9093d;
     /* Red from logo */
     --secondary: #4d4d4d;

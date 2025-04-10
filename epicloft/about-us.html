@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - EPIC Loft Conversion</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #3498db;
+            --secondary-color: #2c3e50;
+            --accent-color: #e74c3c;
+            --light-gray: #f8f9fa;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #333;
+        }
+        
+        .section-title {
+            position: relative;
+            margin-bottom: 2rem;
+            font-weight: 700;
+            color: var(--secondary-color);
+        }
+        
+        .section-title:after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 60px;
+            height: 4px;
+            background-color: var(--primary-color);
+        }
+        
+        .about-section {
+            padding: 80px 0;
+        }
+        
+        .bg-light-gray {
+            background-color: var(--light-gray);
+        }
+        
+        .service-card {
+            transition: all 0.3s ease;
+            border: none;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            height: 100%;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 20px rgba(0,0,0,0.1);
+        }
+        
+        .process-item {
+            position: relative;
+            padding-left: 70px;
+            margin-bottom: 30px;
+        }
+        
+        .process-number {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 50px;
+            height: 50px;
+            background-color: var(--primary-color);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1.5rem;
+        }
+        
+        .benefit-icon {
+            color: var(--primary-color);
+            font-size: 2rem;
+            margin-bottom: 15px;
+        }
+        
+        .areas-list {
+            columns: 2;
+            column-gap: 20px;
+        }
+        
+        @media (max-width: 768px) {
+            .areas-list {
+                columns: 1;
+            }
+        }
+        
+        .cta-section {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 50px 0;
+            text-align: center;
+        }
+        
+        .guarantee-badge {
+            background-color: var(--accent-color);
+            color: white;
+            display: inline-block;
+            padding: 15px 25px;
+            border-radius: 50px;
+            font-weight: 700;
+            margin: 20px 0;
+            font-size: 1.2rem;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <!-- About Us Introduction -->
+        <section class="about-section">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 mb-4 mb-lg-0">
+                        <h2 class="section-title">Who We Are</h2>
+                        <p class="lead">EPIC Loft Conversion is a <strong>leading loft conversion company based in London</strong>, with over <strong>15 years of hands-on experience</strong> turning empty lofts into stunning new rooms.</p>
+                        <p>We're a team of friendly and skilled professionals who take pride in what we do. From start to finish, we focus on building spaces that are practical, attractive, and built to last. Whether you need an extra bedroom, a home office, or a quiet place to relax, we can help make it happen.</p>
+                        <div class="guarantee-badge">
+                            <i class="fas fa-shield-alt me-2"></i> 10-Year Guarantee on All Work
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <img src="/api/placeholder/600/400" alt="EPIC Loft Conversion Team" class="img-fluid rounded shadow">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Choose Us -->
+        <section class="about-section bg-light-gray">
+            <div class="container">
+                <h2 class="section-title text-center mb-5">Why Choose EPIC Loft Conversion?</h2>
+                <div class="row g-4">
+                    <div class="col-md-6 col-lg-3">
+                        <div class="text-center">
+                            <div class="benefit-icon">
+                                <i class="fas fa-medal"></i>
+                            </div>
+                            <h4>Experienced & Reliable</h4>
+                            <ul class="list-unstyled text-start">
+                                <li><i class="fas fa-check-circle text-success me-2"></i> Over 15 years of experience</li>
+                                <li><i class="fas fa-check-circle text-success me-2"></i> Fully trained team</li>
+                                <li><i class="fas fa-check-circle text-success me-2"></i> Hundreds of happy homeowners</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="text-center">
+                            <div class="benefit-icon">
+                                <i class="fas fa-smile"></i>
+                            </div>
+                            <h4>Friendly Service</h4>
+                            <ul class="list-unstyled text-start">
+                                <li><i class="fas fa-check-circle text-success me-2"></i> We respect your home</li>
+                                <li><i class="fas fa-check-circle text-success me-2"></i> Clear communication</li>
+                                <li><i class="fas fa-check-circle text-success me-2"></i> Solutions that fit your lifestyle</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="text-center">
+                            <div class="benefit-icon">
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <h4>High-Quality Results</h4>
+                            <ul class="list-unstyled text-start">
+                                <li><i class="fas fa-check-circle text-success me-2"></i> Great finish and durability</li>
+                                <li><i class="fas fa-check-circle text-success me-2"></i> Built to all standards</li>
+                                <li><i class="fas fa-check-circle text-success me-2"></i> No cutting corners</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="text-center">
+                            <div class="benefit-icon">
+                                <i class="fas fa-thumbs-up"></i>
+                            </div>
+                            <h4>All-in-One Service</h4>
+                            <ul class="list-unstyled text-start">
+                                <li><i class="fas fa-check-circle text-success me-2"></i> We handle every step</li>
+                                <li><i class="fas fa-check-circle text-success me-2"></i> No need for separate contractors</li>
+                                <li><i class="fas fa-check-circle text-success me-2"></i> Stress-free experience</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Our Process -->
+        <section class="about-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 mb-4 mb-lg-0">
+                        <h2 class="section-title">How We Work</h2>
+                        <p class="lead">We keep things simple so you know exactly what to expect:</p>
+                        
+                        <div class="process-item">
+                            <div class="process-number">1</div>
+                            <h4>Free Visit & Quote</h4>
+                            <p>We visit your home, listen to your ideas, and give a free quote with honest advice and no pressure.</p>
+                        </div>
+                        
+                        <div class="process-item">
+                            <div class="process-number">2</div>
+                            <h4>Planning & Design</h4>
+                            <p>We create a plan that suits your needs, take care of drawings and permissions if required, ensuring everything follows safety and building rules.</p>
+                        </div>
+                        
+                        <div class="process-item">
+                            <div class="process-number">3</div>
+                            <h4>Building Phase</h4>
+                            <p>Our builders get to work on time and keep things moving with a site manager always available to answer your questions and keep you updated.</p>
+                        </div>
+                        
+                        <div class="process-item">
+                            <div class="process-number">4</div>
+                            <h4>Final Touches & Handover</h4>
+                            <p>We finish the loft to a high standard with full clean-up and final walk-through to ensure you're 100% happy.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <h2 class="section-title">Our Loft Conversion Services</h2>
+                        <p class="lead">We offer a full service, so you don't need to worry about finding separate tradespeople:</p>
+                        
+                        <div class="row g-4">
+                            <div class="col-md-6">
+                                <div class="service-card card h-100">
+                                    <div class="card-body">
+                                        <h5 class="card-title"><i class="fas fa-drafting-compass text-primary me-2"></i> Loft Design</h5>
+                                        <p class="card-text">Custom designs made to fit your space and specific needs.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="service-card card h-100">
+                                    <div class="card-body">
+                                        <h5 class="card-title"><i class="fas fa-file-contract text-primary me-2"></i> Planning Help</h5>
+                                        <p class="card-text">Assistance with permissions and building control requirements.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="service-card card h-100">
+                                    <div class="card-body">
+                                        <h5 class="card-title"><i class="fas fa-home text-primary me-2"></i> Conversion Types</h5>
+                                        <p class="card-text">Dormer, Mansard, Hip to Gable, Roof Light, and Modular conversions.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="service-card card h-100">
+                                    <div class="card-body">
+                                        <h5 class="card-title"><i class="fas fa-tools text-primary me-2"></i> Complete Finishing</h5>
+                                        <p class="card-text">Plastering, painting, lighting, bathrooms, heating, storage, and staircases.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Areas We Cover -->
+        <section class="about-section bg-light-gray">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 mb-4 mb-lg-0">
+                        <h2 class="section-title">Areas We Cover</h2>
+                        <p class="lead">We proudly serve homeowners in <strong>Central London</strong> and <strong>within a 50-mile radius</strong>, including:</p>
+                        
+                        <h5 class="mt-4 mb-3">Central & Greater London:</h5>
+                        <ul class="areas-list list-unstyled">
+                            <li><i class="fas fa-map-marker-alt text-primary me-2"></i> Westminster</li>
+                            <li><i class="fas fa-map-marker-alt text-primary me-2"></i> Camden</li>
+                            <li><i class="fas fa-map-marker-alt text-primary me-2"></i> Islington</li>
+                            <li><i class="fas fa-map-marker-alt text-primary me-2"></i> Hackney</li>
+                            <li><i class="fas fa-map-marker-alt text-primary me-2"></i> Southwark</li>
+                            <li><i class="fas fa-map-marker-alt text-primary me-2"></i> Lambeth</li>
+                            <li><i class="fas fa-map-marker-alt text-primary me-2"></i> Hammersmith</li>
+                            <li><i class="fas fa-map-marker-alt text-primary me-2"></i> Kensington</li>
+                            <li><i class="fas fa-map-marker-alt text-primary me-2"></i> Fulham</li>
+                            <li><i class="fas fa-map-marker-alt text-primary me-2"></i> Wandsworth</li>
+                            <li><i class="fas fa-map-marker-alt text-primary me-2"></i> Croydon</li>
+                            <li><i class="fas fa-map-marker-alt text-primary me-2"></i> Enfield</li>
+                            <li><i class="fas fa-map-marker-alt text-primary me-2"></i> Barnet</li>
+                            <li><i class="fas fa-map-marker-alt text-primary me-2"></i> Brent</li>
+                            <li><i class="fas fa-map-marker-alt text-primary me-2"></i> Ealing</li>
+                            <li><i class="fas fa-map-marker-alt text-primary me-2"></i> Hounslow</li>
+                            <li><i class="fas fa-map-marker-alt text-primary me-2"></i> Kingston</li>
+                            <li><i class="fas fa-map-marker-alt text-primary me-2"></i> Richmond</li>
+                            <li><i class="fas fa-map-marker-alt text-primary me-2"></i> Bromley</li>
+                            <li><i class="fas fa-map-marker-alt text-primary me-2"></i> Bexley</li>
+                        </ul>
+                        
+                        <h5 class="mt-4 mb-3">Nearby Counties:</h5>
+                        <ul class="areas-list list-unstyled">
+                            <li><i class="fas fa-map-marker-alt text-primary me-2"></i> <strong>Essex</strong> – Romford, Ilford, Brentwood</li>
+                            <li><i class="fas fa-map-marker-alt text-primary me-2"></i> <strong>Hertfordshire</strong> – Watford, St Albans</li>
+                            <li><i class="fas fa-map-marker-alt text-primary me-2"></i> <strong>Surrey</strong> – Guildford, Woking</li>
+                            <li><i class="fas fa-map-marker-alt text-primary me-2"></i> <strong>Kent</strong> – Dartford, Sevenoaks</li>
+                            <li><i class="fas fa-map-marker-alt text-primary me-2"></i> <strong>Buckinghamshire</strong> – High Wycombe</li>
+                            <li><i class="fas fa-map-marker-alt text-primary me-2"></i> <strong>Berkshire</strong> – Slough, Reading</li>
+                            <li><i class="fas fa-map-marker-alt text-primary me-2"></i> <strong>Luton</strong></li>
+                        </ul>
+                        
+                        <p class="mt-3"><em>If you're just outside these areas, get in touch – we often travel further for the right project.</em></p>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="bg-white p-4 rounded shadow">
+                            <h2 class="section-title">Our Loft Guarantee</h2>
+                            <p class="lead">We stand behind every project we complete.</p>
+                            <div class="d-flex align-items-center mb-4">
+                                <div class="me-4">
+                                    <i class="fas fa-shield-alt text-primary" style="font-size: 4rem;"></i>
+                                </div>
+                                <div>
+                                    <h3>Built With Care</h3>
+                                    <p>We don't just build lofts — we build peace of mind.</p>
+                                </div>
+                            </div>
+                            <ul class="list-unstyled">
+                                <li class="mb-3">
+                                    <div class="d-flex">
+                                        <div class="me-3">
+                                            <i class="fas fa-check-circle text-success fa-2x"></i>
+                                        </div>
+                                        <div>
+                                            <h5>10-Year Guarantee</h5>
+                                            <p>On all our work for complete peace of mind.</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="mb-3">
+                                    <div class="d-flex">
+                                        <div class="me-3">
+                                            <i class="fas fa-check-circle text-success fa-2x"></i>
+                                        </div>
+                                        <div>
+                                            <h5>Product Warranties</h5>
+                                            <p>From trusted suppliers for all materials used.</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="d-flex">
+                                        <div class="me-3">
+                                            <i class="fas fa-check-circle text-success fa-2x"></i>
+                                        </div>
+                                        <div>
+                                            <h5>Ongoing Support</h5>
+                                            <p>We're here to help even after your loft is finished.</p>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action -->
+        <section class="cta-section">
+            <div class="container">
+                <h2>Ready to Transform Your Loft?</h2>
+                <p class="lead mb-4">Get in touch for a free, no-obligation quote today!</p>
+                <a href="contact.html" class="btn btn-light btn-lg">Contact Us Now</a>
+            </div>
+        </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -8,224 +8,376 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         :root {
-            --primary-color: #c9093d; /* Updated to your brand red */
-            --secondary-color: #4d4d4d; /* Updated to your brand gray */
-            --accent-color: #e74c3c;
-            --light-gray: #f8f9fa;
+            --epic-primary: #c9093d;
+            --epic-secondary: #4d4d4d;
+            --epic-light: #f8f9fa;
+            --epic-dark: #343a40;
+            --epic-white: #ffffff;
+            --epic-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
         }
         
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             color: #333;
+            line-height: 1.7;
+        }
+        
+        /* Typography */
+        .epic-title {
+            color: var(--epic-secondary);
+            font-weight: 700;
+            margin-bottom: 1.5rem;
         }
         
         .epic-section-title {
             position: relative;
-            margin-bottom: 2.5rem;
+            padding-bottom: 1.2rem;
+            margin-bottom: 2rem;
             font-weight: 700;
-            color: var(--secondary-color);
+            color: var(--epic-secondary);
         }
         
-        .epic-section-title:after {
+        .epic-section-title::after {
             content: '';
             position: absolute;
-            bottom: -12px;
+            bottom: 0;
             left: 0;
-            width: 70px;
+            width: 80px;
             height: 4px;
-            background-color: var(--primary-color);
+            background-color: var(--epic-primary);
         }
         
-        .epic-about-section {
-            padding: 90px 0;
+        .epic-section-title.text-center::after {
+            left: 50%;
+            transform: translateX(-50%);
         }
         
-        .epic-bg-light-gray {
-            background-color: var(--light-gray);
+        .epic-lead {
+            font-size: 1.25rem;
+            font-weight: 400;
+            margin-bottom: 1.5rem;
+            color: var(--epic-secondary);
         }
         
-        .epic-service-card {
-            transition: all 0.3s ease;
+        /* Layout */
+        .epic-section {
+            padding: 6rem 0;
+        }
+        
+        .epic-section-alt {
+            background-color: var(--epic-light);
+            padding: 6rem 0;
+        }
+        
+        /* Components */
+        .epic-card {
             border: none;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+            border-radius: 12px;
+            box-shadow: var(--epic-box-shadow);
+            transition: all 0.3s ease;
             height: 100%;
-            margin-bottom: 1.25rem;
+            overflow: hidden;
         }
         
-        .epic-service-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 18px 25px rgba(0,0,0,0.15);
+        .epic-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
         }
         
+        .epic-card-body {
+            padding: 1.8rem;
+        }
+        
+        .epic-card-title {
+            color: var(--epic-secondary);
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+        
+        /* Process */
         .epic-process-item {
             position: relative;
-            padding-left: 75px;
-            margin-bottom: 35px;
+            padding-left: 85px;
+            margin-bottom: 3rem;
         }
         
         .epic-process-number {
             position: absolute;
             left: 0;
             top: 0;
-            width: 55px;
-            height: 55px;
-            background-color: var(--primary-color);
+            width: 65px;
+            height: 65px;
+            background-color: var(--epic-primary);
             color: white;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             font-weight: 700;
-            font-size: 1.5rem;
+            font-size: 1.8rem;
+            box-shadow: 0 5px 15px rgba(201, 9, 61, 0.3);
         }
         
-        .epic-benefit-icon {
-            color: var(--primary-color);
-            font-size: 2.25rem;
-            margin-bottom: 20px;
+        .epic-process-title {
+            font-weight: 600;
+            margin-bottom: 0.7rem;
+            color: var(--epic-secondary);
         }
         
-        .epic-areas-list {
+        /* Features */
+        .epic-feature {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        
+        .epic-icon-box {
+            width: 85px;
+            height: 85px;
+            border-radius: 50%;
+            background-color: rgba(201, 9, 61, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+        }
+        
+        .epic-icon {
+            color: var(--epic-primary);
+            font-size: 2.5rem;
+        }
+        
+        .epic-feature h4 {
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: var(--epic-secondary);
+        }
+        
+        .epic-feature-list {
+            text-align: left;
+        }
+        
+        .epic-feature-list li {
+            margin-bottom: 0.5rem;
+            position: relative;
+            padding-left: 1.8rem;
+        }
+        
+        .epic-feature-list li i {
+            position: absolute;
+            left: 0;
+            top: 5px;
+            color: var(--epic-primary);
+        }
+        
+        /* Areas */
+        .epic-areas {
             columns: 2;
-            column-gap: 25px;
+            column-gap: 30px;
+        }
+        
+        .epic-areas li {
+            margin-bottom: 0.7rem;
+            break-inside: avoid;
+        }
+        
+        .epic-areas i {
+            color: var(--epic-primary);
+            margin-right: 0.7rem;
         }
         
         @media (max-width: 768px) {
-            .epic-areas-list {
+            .epic-areas {
                 columns: 1;
             }
         }
         
-        .epic-cta-section {
-            background-color: var(--primary-color);
-            color: white;
-            padding: 60px 0;
-            text-align: center;
+        /* Guarantee */
+        .epic-guarantee-card {
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: var(--epic-box-shadow);
+            padding: 2.5rem;
         }
         
         .epic-guarantee-badge {
-            background-color: var(--primary-color);
+            background-color: var(--epic-primary);
             color: white;
             display: inline-block;
-            padding: 15px 30px;
+            padding: 0.8rem 1.5rem;
             border-radius: 50px;
-            font-weight: 700;
-            margin: 25px 0;
-            font-size: 1.2rem;
+            font-weight: 600;
+            margin: 1.5rem 0;
             box-shadow: 0 5px 15px rgba(201, 9, 61, 0.3);
         }
         
-        .epic-text-primary {
-            color: var(--primary-color) !important;
+        .epic-shield-icon {
+            color: var(--epic-primary);
+            font-size: 4rem;
+            margin-right: 1.5rem;
         }
         
-        .epic-btn-primary {
-            background-color: var(--primary-color);
-            border-color: var(--primary-color);
-            padding: 12px 30px;
-            font-weight: 600;
-            border-radius: 30px;
-            transition: all 0.3s ease;
-        }
-        
-        .epic-btn-primary:hover {
-            background-color: #a8072f;
-            border-color: #a8072f;
-            transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(201, 9, 61, 0.4);
-        }
-        
-        .epic-card-content {
-            padding: 1.75rem;
-        }
-        
-        .epic-feature-item {
+        .epic-check-item {
+            display: flex;
             margin-bottom: 1.5rem;
         }
         
-        .epic-map-icon {
-            color: var(--primary-color);
-            margin-right: 10px;
+        .epic-check-icon {
+            color: var(--epic-primary);
+            font-size: 1.8rem;
+            margin-right: 1rem;
+            flex-shrink: 0;
+        }
+        
+        /* CTA */
+        .epic-cta {
+            background-color: var(--epic-primary);
+            padding: 4rem 0;
+            color: white;
+            text-align: center;
+            position: relative;
+        }
+        
+        .epic-cta h2 {
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+        }
+        
+        .epic-btn {
+            background-color: white;
+            color: var(--epic-primary);
+            border: none;
+            padding: 0.8rem 2rem;
+            font-weight: 600;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 1rem;
+        }
+        
+        .epic-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+            background-color: #f8f9fa;
+            color: var(--epic-primary);
+        }
+        
+        /* Image styling */
+        .epic-img {
+            border-radius: 12px;
+            box-shadow: var(--epic-box-shadow);
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 991.98px) {
+            .epic-section, .epic-section-alt {
+                padding: 4rem 0;
+            }
+            
+            .epic-process-item {
+                padding-left: 70px;
+            }
+            
+            .epic-process-number {
+                width: 55px;
+                height: 55px;
+                font-size: 1.5rem;
+            }
+        }
+        
+        @media (max-width: 767.98px) {
+            .epic-section, .epic-section-alt {
+                padding: 3rem 0;
+            }
+            
+            .epic-feature {
+                margin-bottom: 2.5rem;
+            }
+            
+            .epic-guarantee-card {
+                padding: 1.5rem;
+                margin-top: 2rem;
+            }
         }
     </style>
 </head>
 <body>
     <main>
         <!-- About Us Introduction -->
-        <section class="epic-about-section">
+        <section class="epic-section">
             <div class="container">
                 <div class="row align-items-center">
                     <div class="col-lg-6 mb-5 mb-lg-0">
                         <h2 class="epic-section-title">Who We Are</h2>
-                        <p class="lead">EPIC Loft Conversion is a <strong>leading loft conversion company based in London</strong>, with over <strong>15 years of hands-on experience</strong> turning empty lofts into stunning new rooms.</p>
+                        <p class="epic-lead">EPIC Loft Conversion is a <strong>leading loft conversion company based in London</strong>, with over <strong>15 years of hands-on experience</strong> turning empty lofts into stunning new rooms.</p>
                         <p>We're a team of friendly and skilled professionals who take pride in what we do. From start to finish, we focus on building spaces that are practical, attractive, and built to last. Whether you need an extra bedroom, a home office, or a quiet place to relax, we can help make it happen.</p>
                         <div class="epic-guarantee-badge">
                             <i class="fas fa-shield-alt me-2"></i> 10-Year Guarantee on All Work
                         </div>
                     </div>
                     <div class="col-lg-6">
-                        <img src="/api/placeholder/600/400" alt="EPIC Loft Conversion Team" class="img-fluid rounded shadow">
+                        <img src="/api/placeholder/600/400" alt="EPIC Loft Conversion Team" class="img-fluid epic-img">
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Why Choose Us -->
-        <section class="epic-about-section epic-bg-light-gray">
+        <section class="epic-section-alt">
             <div class="container">
-                <h2 class="epic-section-title text-center mb-5">Why Choose EPIC Loft Conversion?</h2>
+                <h2 class="epic-section-title text-center">Why Choose EPIC Loft Conversion?</h2>
                 <div class="row g-4">
                     <div class="col-md-6 col-lg-3">
-                        <div class="text-center epic-feature-item">
-                            <div class="epic-benefit-icon">
-                                <i class="fas fa-medal"></i>
+                        <div class="epic-feature">
+                            <div class="epic-icon-box">
+                                <i class="fas fa-medal epic-icon"></i>
                             </div>
                             <h4>Experienced & Reliable</h4>
-                            <ul class="list-unstyled text-start">
-                                <li><i class="fas fa-check-circle epic-text-primary me-2"></i> Over 15 years of experience</li>
-                                <li><i class="fas fa-check-circle epic-text-primary me-2"></i> Fully trained team</li>
-                                <li><i class="fas fa-check-circle epic-text-primary me-2"></i> Hundreds of happy homeowners</li>
+                            <ul class="list-unstyled epic-feature-list">
+                                <li><i class="fas fa-check-circle"></i> Over 15 years of experience</li>
+                                <li><i class="fas fa-check-circle"></i> Fully trained team</li>
+                                <li><i class="fas fa-check-circle"></i> Hundreds of happy homeowners</li>
                             </ul>
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-3">
-                        <div class="text-center epic-feature-item">
-                            <div class="epic-benefit-icon">
-                                <i class="fas fa-smile"></i>
+                        <div class="epic-feature">
+                            <div class="epic-icon-box">
+                                <i class="fas fa-smile epic-icon"></i>
                             </div>
                             <h4>Friendly Service</h4>
-                            <ul class="list-unstyled text-start">
-                                <li><i class="fas fa-check-circle epic-text-primary me-2"></i> We respect your home</li>
-                                <li><i class="fas fa-check-circle epic-text-primary me-2"></i> Clear communication</li>
-                                <li><i class="fas fa-check-circle epic-text-primary me-2"></i> Solutions that fit your lifestyle</li>
+                            <ul class="list-unstyled epic-feature-list">
+                                <li><i class="fas fa-check-circle"></i> We respect your home</li>
+                                <li><i class="fas fa-check-circle"></i> Clear communication</li>
+                                <li><i class="fas fa-check-circle"></i> Solutions that fit your lifestyle</li>
                             </ul>
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-3">
-                        <div class="text-center epic-feature-item">
-                            <div class="epic-benefit-icon">
-                                <i class="fas fa-star"></i>
+                        <div class="epic-feature">
+                            <div class="epic-icon-box">
+                                <i class="fas fa-star epic-icon"></i>
                             </div>
                             <h4>High-Quality Results</h4>
-                            <ul class="list-unstyled text-start">
-                                <li><i class="fas fa-check-circle epic-text-primary me-2"></i> Great finish and durability</li>
-                                <li><i class="fas fa-check-circle epic-text-primary me-2"></i> Built to all standards</li>
-                                <li><i class="fas fa-check-circle epic-text-primary me-2"></i> No cutting corners</li>
+                            <ul class="list-unstyled epic-feature-list">
+                                <li><i class="fas fa-check-circle"></i> Great finish and durability</li>
+                                <li><i class="fas fa-check-circle"></i> Built to all standards</li>
+                                <li><i class="fas fa-check-circle"></i> No cutting corners</li>
                             </ul>
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-3">
-                        <div class="text-center epic-feature-item">
-                            <div class="epic-benefit-icon">
-                                <i class="fas fa-thumbs-up"></i>
+                        <div class="epic-feature">
+                            <div class="epic-icon-box">
+                                <i class="fas fa-thumbs-up epic-icon"></i>
                             </div>
                             <h4>All-in-One Service</h4>
-                            <ul class="list-unstyled text-start">
-                                <li><i class="fas fa-check-circle epic-text-primary me-2"></i> We handle every step</li>
-                                <li><i class="fas fa-check-circle epic-text-primary me-2"></i> No need for separate contractors</li>
-                                <li><i class="fas fa-check-circle epic-text-primary me-2"></i> Stress-free experience</li>
+                            <ul class="list-unstyled epic-feature-list">
+                                <li><i class="fas fa-check-circle"></i> We handle every step</li>
+                                <li><i class="fas fa-check-circle"></i> No need for separate contractors</li>
+                                <li><i class="fas fa-check-circle"></i> Stress-free experience</li>
                             </ul>
                         </div>
                     </div>
@@ -234,71 +386,71 @@
         </section>
 
         <!-- Our Process -->
-        <section class="epic-about-section">
+        <section class="epic-section">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-6 mb-5 mb-lg-0">
                         <h2 class="epic-section-title">How We Work</h2>
-                        <p class="lead">We keep things simple so you know exactly what to expect:</p>
+                        <p class="epic-lead">We keep things simple so you know exactly what to expect:</p>
                         
                         <div class="epic-process-item">
                             <div class="epic-process-number">1</div>
-                            <h4>Free Visit & Quote</h4>
+                            <h4 class="epic-process-title">Free Visit & Quote</h4>
                             <p>We visit your home, listen to your ideas, and give a free quote with honest advice and no pressure.</p>
                         </div>
                         
                         <div class="epic-process-item">
                             <div class="epic-process-number">2</div>
-                            <h4>Planning & Design</h4>
+                            <h4 class="epic-process-title">Planning & Design</h4>
                             <p>We create a plan that suits your needs, take care of drawings and permissions if required, ensuring everything follows safety and building rules.</p>
                         </div>
                         
                         <div class="epic-process-item">
                             <div class="epic-process-number">3</div>
-                            <h4>Building Phase</h4>
+                            <h4 class="epic-process-title">Building Phase</h4>
                             <p>Our builders get to work on time and keep things moving with a site manager always available to answer your questions and keep you updated.</p>
                         </div>
                         
                         <div class="epic-process-item">
                             <div class="epic-process-number">4</div>
-                            <h4>Final Touches & Handover</h4>
+                            <h4 class="epic-process-title">Final Touches & Handover</h4>
                             <p>We finish the loft to a high standard with full clean-up and final walk-through to ensure you're 100% happy.</p>
                         </div>
                     </div>
                     <div class="col-lg-6">
                         <h2 class="epic-section-title">Our Loft Conversion Services</h2>
-                        <p class="lead">We offer a full service, so you don't need to worry about finding separate tradespeople:</p>
+                        <p class="epic-lead">We offer a full service, so you don't need to worry about finding separate tradespeople:</p>
                         
                         <div class="row g-4">
                             <div class="col-md-6">
-                                <div class="epic-service-card card h-100">
-                                    <div class="epic-card-content">
-                                        <h5 class="card-title"><i class="fas fa-drafting-compass epic-text-primary me-2"></i> Loft Design</h5>
-                                        <p class="card-text">Custom designs made to fit your space and specific needs.</p>
+                                <div class="epic-card">
+                                    <div class="epic-card-body">
+                                        <h5 class="epic-card-title"><i class="fas fa-drafting-compass me-2" style="color: var(--epic-primary);"></i> Loft Design</h5>
+                                        <p>Custom designs made to fit your space and specific needs.</p>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-md-6">
-                                <div class="epic-service-card card h-100">
-                                    <div class="epic-card-content">
-                                        <h5 class="card-title"><i class="fas fa-file-contract epic-text-primary me-2"></i> Planning Help</h5>
-                                        <p class="card-text">Assistance with permissions and building control requirements.</p>
+                                <div class="epic-card">
+                                    <div class="epic-card-body">
+                                        <h5 class="epic-card-title"><i class="fas fa-file-contract me-2" style="color: var(--epic-primary);"></i> Planning Help</h5>
+                                        <p>Assistance with permissions and building control requirements.</p>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-6">
-                                <div class="epic-service-card card h-100">
-                                    <div class="epic-card-content">
-                                        <h5 class="card-title"><i class="fas fa-home epic-text-primary me-2"></i> Conversion Types</h5>
-                                        <p class="card-text">Dormer, Mansard, Hip to Gable, Roof Light, and Modular conversions.</p>
+                            <div class="col-md-6 mt-4">
+                                <div class="epic-card">
+                                    <div class="epic-card-body">
+                                        <h5 class="epic-card-title"><i class="fas fa-home me-2" style="color: var(--epic-primary);"></i> Conversion Types</h5>
+                                        <p>Dormer, Mansard, Hip to Gable, Roof Light, and Modular conversions.</p>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-6">
-                                <div class="epic-service-card card h-100">
-                                    <div class="epic-card-content">
-                                        <h5 class="card-title"><i class="fas fa-tools epic-text-primary me-2"></i> Complete Finishing</h5>
-                                        <p class="card-text">Plastering, painting, lighting, bathrooms, heating, storage, and staircases.</p>
+                            <div class="col-md-6 mt-4">
+                                <div class="epic-card">
+                                    <div class="epic-card-body">
+                                        <h5 class="epic-card-title"><i class="fas fa-tools me-2" style="color: var(--epic-primary);"></i> Complete Finishing</h5>
+                                        <p>Plastering, painting, lighting, bathrooms, heating, storage, and staircases.</p>
                                     </div>
                                 </div>
                             </div>
@@ -309,98 +461,82 @@
         </section>
 
         <!-- Areas We Cover -->
-        <section class="epic-about-section epic-bg-light-gray">
+        <section class="epic-section-alt">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-6 mb-5 mb-lg-0">
                         <h2 class="epic-section-title">Areas We Cover</h2>
-                        <p class="lead">We proudly serve homeowners in <strong>Central London</strong> and <strong>within a 50-mile radius</strong>, including:</p>
+                        <p class="epic-lead">We proudly serve homeowners in <strong>Central London</strong> and <strong>within a 50-mile radius</strong>, including:</p>
                         
-                        <h5 class="mt-4 mb-3">Central & Greater London:</h5>
-                        <ul class="epic-areas-list list-unstyled">
-                            <li><i class="fas fa-map-marker-alt epic-map-icon"></i> Westminster</li>
-                            <li><i class="fas fa-map-marker-alt epic-map-icon"></i> Camden</li>
-                            <li><i class="fas fa-map-marker-alt epic-map-icon"></i> Islington</li>
-                            <li><i class="fas fa-map-marker-alt epic-map-icon"></i> Hackney</li>
-                            <li><i class="fas fa-map-marker-alt epic-map-icon"></i> Southwark</li>
-                            <li><i class="fas fa-map-marker-alt epic-map-icon"></i> Lambeth</li>
-                            <li><i class="fas fa-map-marker-alt epic-map-icon"></i> Hammersmith</li>
-                            <li><i class="fas fa-map-marker-alt epic-map-icon"></i> Kensington</li>
-                            <li><i class="fas fa-map-marker-alt epic-map-icon"></i> Fulham</li>
-                            <li><i class="fas fa-map-marker-alt epic-map-icon"></i> Wandsworth</li>
-                            <li><i class="fas fa-map-marker-alt epic-map-icon"></i> Croydon</li>
-                            <li><i class="fas fa-map-marker-alt epic-map-icon"></i> Enfield</li>
-                            <li><i class="fas fa-map-marker-alt epic-map-icon"></i> Barnet</li>
-                            <li><i class="fas fa-map-marker-alt epic-map-icon"></i> Brent</li>
-                            <li><i class="fas fa-map-marker-alt epic-map-icon"></i> Ealing</li>
-                            <li><i class="fas fa-map-marker-alt epic-map-icon"></i> Hounslow</li>
-                            <li><i class="fas fa-map-marker-alt epic-map-icon"></i> Kingston</li>
-                            <li><i class="fas fa-map-marker-alt epic-map-icon"></i> Richmond</li>
-                            <li><i class="fas fa-map-marker-alt epic-map-icon"></i> Bromley</li>
-                            <li><i class="fas fa-map-marker-alt epic-map-icon"></i> Bexley</li>
+                        <h5 class="mt-4 mb-3 fw-bold">Central & Greater London:</h5>
+                        <ul class="epic-areas list-unstyled">
+                            <li><i class="fas fa-map-marker-alt"></i> Westminster</li>
+                            <li><i class="fas fa-map-marker-alt"></i> Camden</li>
+                            <li><i class="fas fa-map-marker-alt"></i> Islington</li>
+                            <li><i class="fas fa-map-marker-alt"></i> Hackney</li>
+                            <li><i class="fas fa-map-marker-alt"></i> Southwark</li>
+                            <li><i class="fas fa-map-marker-alt"></i> Lambeth</li>
+                            <li><i class="fas fa-map-marker-alt"></i> Hammersmith</li>
+                            <li><i class="fas fa-map-marker-alt"></i> Kensington</li>
+                            <li><i class="fas fa-map-marker-alt"></i> Fulham</li>
+                            <li><i class="fas fa-map-marker-alt"></i> Wandsworth</li>
+                            <li><i class="fas fa-map-marker-alt"></i> Croydon</li>
+                            <li><i class="fas fa-map-marker-alt"></i> Enfield</li>
+                            <li><i class="fas fa-map-marker-alt"></i> Barnet</li>
+                            <li><i class="fas fa-map-marker-alt"></i> Brent</li>
+                            <li><i class="fas fa-map-marker-alt"></i> Ealing</li>
+                            <li><i class="fas fa-map-marker-alt"></i> Hounslow</li>
+                            <li><i class="fas fa-map-marker-alt"></i> Kingston</li>
+                            <li><i class="fas fa-map-marker-alt"></i> Richmond</li>
+                            <li><i class="fas fa-map-marker-alt"></i> Bromley</li>
+                            <li><i class="fas fa-map-marker-alt"></i> Bexley</li>
                         </ul>
                         
-                        <h5 class="mt-4 mb-3">Nearby Counties:</h5>
-                        <ul class="epic-areas-list list-unstyled">
-                            <li><i class="fas fa-map-marker-alt epic-map-icon"></i> <strong>Essex</strong> – Romford, Ilford, Brentwood</li>
-                            <li><i class="fas fa-map-marker-alt epic-map-icon"></i> <strong>Hertfordshire</strong> – Watford, St Albans</li>
-                            <li><i class="fas fa-map-marker-alt epic-map-icon"></i> <strong>Surrey</strong> – Guildford, Woking</li>
-                            <li><i class="fas fa-map-marker-alt epic-map-icon"></i> <strong>Kent</strong> – Dartford, Sevenoaks</li>
-                            <li><i class="fas fa-map-marker-alt epic-map-icon"></i> <strong>Buckinghamshire</strong> – High Wycombe</li>
-                            <li><i class="fas fa-map-marker-alt epic-map-icon"></i> <strong>Berkshire</strong> – Slough, Reading</li>
-                            <li><i class="fas fa-map-marker-alt epic-map-icon"></i> <strong>Luton</strong></li>
+                        <h5 class="mt-4 mb-3 fw-bold">Nearby Counties:</h5>
+                        <ul class="epic-areas list-unstyled">
+                            <li><i class="fas fa-map-marker-alt"></i> <strong>Essex</strong> – Romford, Ilford, Brentwood</li>
+                            <li><i class="fas fa-map-marker-alt"></i> <strong>Hertfordshire</strong> – Watford, St Albans</li>
+                            <li><i class="fas fa-map-marker-alt"></i> <strong>Surrey</strong> – Guildford, Woking</li>
+                            <li><i class="fas fa-map-marker-alt"></i> <strong>Kent</strong> – Dartford, Sevenoaks</li>
+                            <li><i class="fas fa-map-marker-alt"></i> <strong>Buckinghamshire</strong> – High Wycombe</li>
+                            <li><i class="fas fa-map-marker-alt"></i> <strong>Berkshire</strong> – Slough, Reading</li>
+                            <li><i class="fas fa-map-marker-alt"></i> <strong>Luton</strong></li>
                         </ul>
                         
                         <p class="mt-4"><em>If you're just outside these areas, get in touch – we often travel further for the right project.</em></p>
                     </div>
                     <div class="col-lg-6">
-                        <div class="bg-white p-5 rounded shadow">
+                        <div class="epic-guarantee-card">
                             <h2 class="epic-section-title">Our Loft Guarantee</h2>
-                            <p class="lead">We stand behind every project we complete.</p>
+                            <p class="epic-lead">We stand behind every project we complete.</p>
                             <div class="d-flex align-items-center mb-4">
-                                <div class="me-4">
-                                    <i class="fas fa-shield-alt epic-text-primary" style="font-size: 4rem;"></i>
-                                </div>
+                                <i class="fas fa-shield-alt epic-shield-icon"></i>
                                 <div>
-                                    <h3>Built With Care</h3>
+                                    <h3 class="fw-bold">Built With Care</h3>
                                     <p>We don't just build lofts — we build peace of mind.</p>
                                 </div>
                             </div>
-                            <ul class="list-unstyled">
-                                <li class="mb-4">
-                                    <div class="d-flex">
-                                        <div class="me-3">
-                                            <i class="fas fa-check-circle epic-text-primary fa-2x"></i>
-                                        </div>
-                                        <div>
-                                            <h5>10-Year Guarantee</h5>
-                                            <p>On all our work for complete peace of mind.</p>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="mb-4">
-                                    <div class="d-flex">
-                                        <div class="me-3">
-                                            <i class="fas fa-check-circle epic-text-primary fa-2x"></i>
-                                        </div>
-                                        <div>
-                                            <h5>Product Warranties</h5>
-                                            <p>From trusted suppliers for all materials used.</p>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="d-flex">
-                                        <div class="me-3">
-                                            <i class="fas fa-check-circle epic-text-primary fa-2x"></i>
-                                        </div>
-                                        <div>
-                                            <h5>Ongoing Support</h5>
-                                            <p>We're here to help even after your loft is finished.</p>
-                                        </div>
-                                    </div>
-                                </li>
-                            </ul>
+                            <div class="epic-check-item">
+                                <i class="fas fa-check-circle epic-check-icon"></i>
+                                <div>
+                                    <h5 class="fw-bold">10-Year Guarantee</h5>
+                                    <p>On all our work for complete peace of mind.</p>
+                                </div>
+                            </div>
+                            <div class="epic-check-item">
+                                <i class="fas fa-check-circle epic-check-icon"></i>
+                                <div>
+                                    <h5 class="fw-bold">Product Warranties</h5>
+                                    <p>From trusted suppliers for all materials used.</p>
+                                </div>
+                            </div>
+                            <div class="epic-check-item">
+                                <i class="fas fa-check-circle epic-check-icon"></i>
+                                <div>
+                                    <h5 class="fw-bold">Ongoing Support</h5>
+                                    <p>We're here to help even after your loft is finished.</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -408,11 +544,11 @@
         </section>
 
         <!-- Call to Action -->
-        <section class="epic-cta-section">
+        <section class="epic-cta">
             <div class="container">
                 <h2>Ready to Transform Your Loft?</h2>
-                <p class="lead mb-4">Get in touch for a free, no-obligation quote today!</p>
-                <a href="contact.html" class="btn btn-light btn-lg epic-btn-primary">Contact Us Now</a>
+                <p class="epic-lead mb-4" style="color: white;">Get in touch for a free, no-obligation quote today!</p>
+                <a href="contact.html" class="epic-btn">Contact Us Now</a>
             </div>
         </section>
     </main>

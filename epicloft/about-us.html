@@ -270,6 +270,72 @@
             box-shadow: var(--epic-box-shadow);
         }
         
+        /* NEW: Card Styling with Clip Path */
+        .epic-card-container {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 2rem;
+        }
+        
+        .epic-clip-card {
+            position: relative;
+            width: 100%;
+            height: 330px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: var(--epic-box-shadow);
+            padding: 2rem;
+            text-align: center;
+            transition: all 0.3s ease;
+            overflow: hidden;
+            clip-path: polygon(0 0, 100% 0, 100% 85%, 85% 100%, 0 100%);
+        }
+        
+        .epic-clip-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+        
+        .epic-icon-circle {
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            background-color: rgba(201, 9, 61, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .epic-clip-card h4 {
+            color: var(--epic-secondary);
+            font-weight: 600;
+            margin-bottom: 1rem;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .epic-clip-card::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 30px;
+            height: 30px;
+            background-color: rgba(201, 9, 61, 0.2);
+            z-index: 0;
+            clip-path: polygon(100% 0, 100% 100%, 0 100%);
+        }
+        
+        .card-row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+        }
+        
         /* Responsive adjustments */
         @media (max-width: 991.98px) {
             .epic-section, .epic-section-alt {
@@ -300,6 +366,11 @@
                 padding: 1.5rem;
                 margin-top: 2rem;
             }
+            
+            .epic-clip-card {
+                height: auto;
+                min-height: 330px;
+            }
         }
     </style>
 </head>
@@ -324,61 +395,73 @@
             </div>
         </section>
 
-        <!-- Why Choose Us -->
+        <!-- Why Choose Us - UPDATED SECTION WITH CLIP CARDS -->
         <section class="epic-section-alt">
             <div class="container">
                 <h2 class="epic-section-title text-center">Why Choose EPIC Loft Conversion?</h2>
-                <div class="row g-4">
+                
+                <div class="card-row">
                     <div class="col-md-6 col-lg-3">
-                        <div class="epic-feature">
-                            <div class="epic-icon-box">
-                                <i class="fas fa-medal epic-icon"></i>
+                        <div class="epic-card-container">
+                            <div class="epic-clip-card">
+                                <div class="epic-icon-circle">
+                                    <i class="fas fa-medal epic-icon"></i>
+                                </div>
+                                <h4>Experienced & Reliable</h4>
+                                <ul class="list-unstyled epic-feature-list">
+                                    <li><i class="fas fa-check-circle"></i> Over 15 years of experience</li>
+                                    <li><i class="fas fa-check-circle"></i> Fully trained team</li>
+                                    <li><i class="fas fa-check-circle"></i> Hundreds of happy homeowners</li>
+                                </ul>
                             </div>
-                            <h4>Experienced & Reliable</h4>
-                            <ul class="list-unstyled epic-feature-list">
-                                <li><i class="fas fa-check-circle"></i> Over 15 years of experience</li>
-                                <li><i class="fas fa-check-circle"></i> Fully trained team</li>
-                                <li><i class="fas fa-check-circle"></i> Hundreds of happy homeowners</li>
-                            </ul>
                         </div>
                     </div>
+                    
                     <div class="col-md-6 col-lg-3">
-                        <div class="epic-feature">
-                            <div class="epic-icon-box">
-                                <i class="fas fa-smile epic-icon"></i>
+                        <div class="epic-card-container">
+                            <div class="epic-clip-card">
+                                <div class="epic-icon-circle">
+                                    <i class="fas fa-smile epic-icon"></i>
+                                </div>
+                                <h4>Friendly Service</h4>
+                                <ul class="list-unstyled epic-feature-list">
+                                    <li><i class="fas fa-check-circle"></i> We respect your home</li>
+                                    <li><i class="fas fa-check-circle"></i> Clear communication</li>
+                                    <li><i class="fas fa-check-circle"></i> Solutions that fit your lifestyle</li>
+                                </ul>
                             </div>
-                            <h4>Friendly Service</h4>
-                            <ul class="list-unstyled epic-feature-list">
-                                <li><i class="fas fa-check-circle"></i> We respect your home</li>
-                                <li><i class="fas fa-check-circle"></i> Clear communication</li>
-                                <li><i class="fas fa-check-circle"></i> Solutions that fit your lifestyle</li>
-                            </ul>
                         </div>
                     </div>
+                    
                     <div class="col-md-6 col-lg-3">
-                        <div class="epic-feature">
-                            <div class="epic-icon-box">
-                                <i class="fas fa-star epic-icon"></i>
+                        <div class="epic-card-container">
+                            <div class="epic-clip-card">
+                                <div class="epic-icon-circle">
+                                    <i class="fas fa-star epic-icon"></i>
+                                </div>
+                                <h4>High-Quality Results</h4>
+                                <ul class="list-unstyled epic-feature-list">
+                                    <li><i class="fas fa-check-circle"></i> Great finish and durability</li>
+                                    <li><i class="fas fa-check-circle"></i> Built to all standards</li>
+                                    <li><i class="fas fa-check-circle"></i> No cutting corners</li>
+                                </ul>
                             </div>
-                            <h4>High-Quality Results</h4>
-                            <ul class="list-unstyled epic-feature-list">
-                                <li><i class="fas fa-check-circle"></i> Great finish and durability</li>
-                                <li><i class="fas fa-check-circle"></i> Built to all standards</li>
-                                <li><i class="fas fa-check-circle"></i> No cutting corners</li>
-                            </ul>
                         </div>
                     </div>
+                    
                     <div class="col-md-6 col-lg-3">
-                        <div class="epic-feature">
-                            <div class="epic-icon-box">
-                                <i class="fas fa-thumbs-up epic-icon"></i>
+                        <div class="epic-card-container">
+                            <div class="epic-clip-card">
+                                <div class="epic-icon-circle">
+                                    <i class="fas fa-thumbs-up epic-icon"></i>
+                                </div>
+                                <h4>All-in-One Service</h4>
+                                <ul class="list-unstyled epic-feature-list">
+                                    <li><i class="fas fa-check-circle"></i> We handle every step</li>
+                                    <li><i class="fas fa-check-circle"></i> No need for separate contractors</li>
+                                    <li><i class="fas fa-check-circle"></i> Stress-free experience</li>
+                                </ul>
                             </div>
-                            <h4>All-in-One Service</h4>
-                            <ul class="list-unstyled epic-feature-list">
-                                <li><i class="fas fa-check-circle"></i> We handle every step</li>
-                                <li><i class="fas fa-check-circle"></i> No need for separate contractors</li>
-                                <li><i class="fas fa-check-circle"></i> Stress-free experience</li>
-                            </ul>
                         </div>
                     </div>
                 </div>

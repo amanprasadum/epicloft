@@ -69,47 +69,6 @@
       color: #c8102e;
     }
     
-    .epic-team-member {
-      text-align: center;
-      background: white;
-      border-radius: 5px;
-      overflow: hidden;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-      transition: transform 0.3s;
-    }
-    
-    .epic-team-member:hover {
-      transform: translateY(-5px);
-    }
-    
-    .epic-team-member img {
-      width: 100%;
-      height: auto;
-    }
-    
-    .epic-team-info {
-      padding: 20px;
-    }
-    
-    .epic-social-icons a {
-      display: inline-flex;
-      width: 32px;
-      height: 32px;
-      background-color: #f5f5f5;
-      color: #333;
-      border-radius: 50%;
-      align-items: center;
-      justify-content: center;
-      margin: 0 5px;
-      transition: all 0.3s;
-      text-decoration: none;
-    }
-    
-    .epic-social-icons a:hover {
-      background-color: #c8102e;
-      color: white;
-    }
-    
     .epic-count-box {
       text-align: center;
       background: white;
@@ -125,42 +84,48 @@
       margin-bottom: 10px;
     }
     
-    .epic-timeline {
+    .epic-process-box {
       position: relative;
-      padding-left: 50px;
-    }
-    
-    .epic-timeline:before {
-      content: '';
-      position: absolute;
-      left: 20px;
-      top: 0;
-      height: 100%;
-      width: 2px;
-      background-color: #c8102e;
-    }
-    
-    .epic-timeline-item {
-      position: relative;
+      padding: 25px;
+      border-radius: 5px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+      background: white;
       margin-bottom: 30px;
     }
     
-    .epic-timeline-item:before {
-      content: '';
+    .epic-process-number {
       position: absolute;
-      left: -50px;
-      top: 0;
-      width: 20px;
-      height: 20px;
-      background-color: white;
-      border: 3px solid #c8102e;
+      top: -15px;
+      left: 20px;
+      width: 30px;
+      height: 30px;
+      background-color: #c8102e;
+      color: white;
       border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
     }
     
-    .epic-timeline-content {
-      padding: 20px;
-      background-color: white;
+    .epic-service-box {
+      padding: 25px;
       border-radius: 5px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+      background: white;
+      height: 100%;
+      transition: transform 0.3s;
+    }
+    
+    .epic-service-box:hover {
+      transform: translateY(-5px);
+    }
+    
+    .epic-area-box {
+      background: white;
+      padding: 15px;
+      border-radius: 5px;
+      margin-bottom: 15px;
       box-shadow: 0 3px 10px rgba(0,0,0,0.05);
     }
     
@@ -192,8 +157,8 @@
   <!-- Hero Section -->
   <section class="epic-hero-section">
     <div class="container">
-      <h1 class="display-4 fw-bold mb-4">About EPIC Loft Conversion</h1>
-      <p class="lead mb-4">London's Premier Loft Conversion Specialists Since 2010</p>
+      <h1 class="display-4 fw-bold mb-4">About Us - EPIC Loft Conversion</h1>
+      <p class="lead mb-4">Your Trusted Loft Conversion Specialist in London</p>
     </div>
   </section>
 
@@ -202,13 +167,12 @@
     <div class="container">
       <div class="row align-items-center">
         <div class="col-lg-6 mb-4 mb-lg-0">
-          <h2 class="epic-section-title">Our Story</h2>
-          <p>Founded in 2010, EPIC Loft Conversion has established itself as one of London's leading specialists in loft conversions and home transformations. We've built our reputation on delivering exceptional quality, innovative designs, and outstanding customer service.</p>
-          <p>What started as a small team of passionate builders has grown into a full-service loft conversion company with over 50 dedicated professionals, each bringing their unique expertise to every project we undertake.</p>
-          <p>Our mission is simple: to transform underutilized spaces into beautiful, functional living areas that enhance your home and lifestyle. Whether you're looking to create an extra bedroom, home office, or entertainment space, our team is committed to bringing your vision to life.</p>
+          <h2 class="epic-section-title">Who We Are</h2>
+          <p>EPIC Loft Conversion is a <strong>leading loft conversion company based in London</strong>, with over <strong>15 years of hands-on experience</strong> turning empty lofts into stunning new rooms.</p>
+          <p>We're a team of friendly and skilled professionals who take pride in what we do. From start to finish, we focus on building spaces that are practical, attractive, and built to last. Whether you need an extra bedroom, a home office, or a quiet place to relax, we can help make it happen.</p>
           <div class="mt-4">
-            <a href="#values" class="btn epic-btn-primary me-3">Our Values</a>
-            <a href="#team" class="btn btn-outline-dark">Meet Our Team</a>
+            <a href="#why-choose" class="btn epic-btn-primary me-3">Why Choose Us</a>
+            <a href="#services" class="btn btn-outline-dark">Our Services</a>
           </div>
         </div>
         <div class="col-lg-6">
@@ -230,248 +194,337 @@
         </div>
         <div class="col-6 col-md-3 mb-4">
           <div class="epic-count-box">
-            <div class="epic-count-number">850+</div>
-            <h5>Projects Completed</h5>
+            <div class="epic-count-number">100s</div>
+            <h5>Happy Homeowners</h5>
           </div>
         </div>
         <div class="col-6 col-md-3 mb-4">
           <div class="epic-count-box">
             <div class="epic-count-number">50+</div>
-            <h5>Team Members</h5>
+            <h5>Mile Service Radius</h5>
           </div>
         </div>
         <div class="col-6 col-md-3 mb-4">
           <div class="epic-count-box">
-            <div class="epic-count-number">98%</div>
-            <h5>Client Satisfaction</h5>
+            <div class="epic-count-number">10</div>
+            <h5>Year Guarantee</h5>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Values Section -->
-  <section class="py-5" id="values">
+  <!-- Why Choose Us Section -->
+  <section class="py-5" id="why-choose">
     <div class="container">
       <div class="text-center mb-5">
-        <h2 class="fw-bold">Our Core Values</h2>
-        <p class="text-muted">The principles that guide everything we do</p>
+        <h2 class="fw-bold">Why Choose EPIC Loft Conversion?</h2>
+        <p class="text-muted">Here's why people across London trust us with their loft projects</p>
       </div>
 
       <div class="row g-4">
-        <div class="col-md-4 mb-4">
-          <div class="epic-feature-box">
-            <div class="epic-icon-box">
-              <i class="bi bi-star"></i>
-            </div>
-            <h4>Excellence</h4>
-            <p>We strive for excellence in every aspect of our work, from design and planning to construction and finishing touches. Our attention to detail ensures that every project exceeds expectations.</p>
-          </div>
-        </div>
-
-        <div class="col-md-4 mb-4">
-          <div class="epic-feature-box">
-            <div class="epic-icon-box">
-              <i class="bi bi-people"></i>
-            </div>
-            <h4>Partnership</h4>
-            <p>We believe in working closely with our clients, establishing a partnership based on trust, transparency, and collaboration. Your input is valued throughout the entire process.</p>
-          </div>
-        </div>
-
-        <div class="col-md-4 mb-4">
-          <div class="epic-feature-box">
-            <div class="epic-icon-box">
-              <i class="bi bi-lightning"></i>
-            </div>
-            <h4>Innovation</h4>
-            <p>We constantly seek innovative solutions and stay updated with the latest industry trends to provide our clients with cutting-edge designs and construction methods.</p>
-          </div>
-        </div>
-
-        <div class="col-md-4 mb-4">
-          <div class="epic-feature-box">
-            <div class="epic-icon-box">
-              <i class="bi bi-clipboard-check"></i>
-            </div>
-            <h4>Integrity</h4>
-            <p>Honesty and integrity are at the core of our business. We are transparent about costs, timelines, and potential challenges, ensuring there are no surprises along the way.</p>
-          </div>
-        </div>
-
-        <div class="col-md-4 mb-4">
+        <div class="col-md-6 mb-4">
           <div class="epic-feature-box">
             <div class="epic-icon-box">
               <i class="bi bi-award"></i>
             </div>
-            <h4>Quality</h4>
-            <p>We never compromise on quality. Using only the finest materials and employing skilled craftsmen, we ensure that every loft conversion we deliver stands the test of time.</p>
+            <h4>Experienced & Reliable</h4>
+            <ul class="list-unstyled mt-3">
+              <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Over 15 years of experience</li>
+              <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Fully trained team with proven results</li>
+              <li><i class="bi bi-check-circle-fill text-success me-2"></i> Hundreds of happy homeowners</li>
+            </ul>
           </div>
         </div>
 
-        <div class="col-md-4 mb-4">
+        <div class="col-md-6 mb-4">
           <div class="epic-feature-box">
             <div class="epic-icon-box">
-              <i class="bi bi-heart"></i>
+              <i class="bi bi-people"></i>
             </div>
-            <h4>Customer Satisfaction</h4>
-            <p>Your satisfaction is our ultimate goal. We go above and beyond to ensure that the final result not only meets but exceeds your expectations, creating spaces you'll love for years to come.</p>
+            <h4>Friendly and Helpful Service</h4>
+            <ul class="list-unstyled mt-3">
+              <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> We respect your home – always clean and tidy</li>
+              <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Clear communication and updates</li>
+              <li><i class="bi bi-check-circle-fill text-success me-2"></i> Solutions that fit your home and lifestyle</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-md-6 mb-4">
+          <div class="epic-feature-box">
+            <div class="epic-icon-box">
+              <i class="bi bi-star"></i>
+            </div>
+            <h4>High-Quality Results</h4>
+            <ul class="list-unstyled mt-3">
+              <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Great finish and long-lasting results</li>
+              <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Built to meet all building standards</li>
+              <li><i class="bi bi-check-circle-fill text-success me-2"></i> We don't cut corners – everything is done properly</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-md-6 mb-4">
+          <div class="epic-feature-box">
+            <div class="epic-icon-box">
+              <i class="bi bi-tools"></i>
+            </div>
+            <h4>All-in-One Service</h4>
+            <ul class="list-unstyled mt-3">
+              <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> We handle every step of the project</li>
+              <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> No need to hire separate designers or builders</li>
+              <li><i class="bi bi-check-circle-fill text-success me-2"></i> Stress-free experience from beginning to end</li>
+            </ul>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Company History -->
+  <!-- Process Section -->
   <section class="py-5 epic-bg-light">
     <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="fw-bold">How We Work – Easy and Clear Process</h2>
+        <p class="text-muted">We keep things simple so you know exactly what to expect</p>
+      </div>
+
       <div class="row">
-        <div class="col-lg-4 mb-4 mb-lg-0">
-          <h2 class="epic-section-title">Our Journey</h2>
-          <p>From humble beginnings to becoming London's most trusted loft conversion company, our journey has been one of continuous growth, learning, and excellence.</p>
-          <p>Throughout our history, we've maintained our commitment to quality and customer satisfaction, adapting to new challenges and embracing innovative technologies to deliver the best possible results.</p>
-          <img src="/api/placeholder/400/300" alt="EPIC Loft Conversion Early Days" class="img-fluid rounded mt-4">
-        </div>
-        <div class="col-lg-8">
-          <div class="epic-timeline">
-            <div class="epic-timeline-item">
-              <div class="epic-timeline-content">
-                <h4>2010 - Foundation</h4>
-                <p>EPIC Loft Conversion was founded by John Smith and Michael Brown, two experienced builders with a vision to create a company focused on quality loft conversions in London.</p>
-              </div>
-            </div>
-            <div class="epic-timeline-item">
-              <div class="epic-timeline-content">
-                <h4>2013 - Expansion</h4>
-                <p>After completing over 100 successful projects, we expanded our team to include architects, interior designers, and project managers, offering a more comprehensive service.</p>
-              </div>
-            </div>
-            <div class="epic-timeline-item">
-              <div class="epic-timeline-content">
-                <h4>2016 - Award Recognition</h4>
-                <p>Our dedication to excellence was recognized when we received the London Home Builder Award for "Best Loft Conversion Company," a testament to our team's hard work.</p>
-              </div>
-            </div>
-            <div class="epic-timeline-item">
-              <div class="epic-timeline-content">
-                <h4>2019 - Innovation Focus</h4>
-                <p>We introduced eco-friendly and energy-efficient conversion options, implementing sustainable practices and materials in our projects.</p>
-              </div>
-            </div>
-            <div class="epic-timeline-item">
-              <div class="epic-timeline-content">
-                <h4>2022 - Digital Transformation</h4>
-                <p>Embraced 3D modeling and virtual reality technology to help clients visualize their future loft spaces before construction begins.</p>
-              </div>
-            </div>
-            <div class="epic-timeline-item">
-              <div class="epic-timeline-content">
-                <h4>Today</h4>
-                <p>Now with over 850 successful projects completed, we continue to lead the industry with our commitment to innovation, quality, and customer satisfaction.</p>
-              </div>
-            </div>
+        <div class="col-md-6 offset-md-3">
+          <div class="epic-process-box">
+            <div class="epic-process-number">1</div>
+            <h4>Free Visit & Quote</h4>
+            <ul class="list-unstyled mt-3">
+              <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> We visit your home, listen to your ideas, and give a free quote</li>
+              <li><i class="bi bi-check-circle-fill text-success me-2"></i> Honest advice and no pressure</li>
+            </ul>
+          </div>
+
+          <div class="epic-process-box">
+            <div class="epic-process-number">2</div>
+            <h4>Planning & Design</h4>
+            <ul class="list-unstyled mt-3">
+              <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> We create a plan that suits your needs</li>
+              <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> We take care of drawings and permissions if required</li>
+              <li><i class="bi bi-check-circle-fill text-success me-2"></i> Everything follows safety and building rules</li>
+            </ul>
+          </div>
+
+          <div class="epic-process-box">
+            <div class="epic-process-number">3</div>
+            <h4>Building Phase</h4>
+            <ul class="list-unstyled mt-3">
+              <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Our builders get to work on time and keep things moving</li>
+              <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> A site manager is always available to answer your questions</li>
+              <li><i class="bi bi-check-circle-fill text-success me-2"></i> We keep you updated at every stage</li>
+            </ul>
+          </div>
+
+          <div class="epic-process-box">
+            <div class="epic-process-number">4</div>
+            <h4>Final Touches & Handover</h4>
+            <ul class="list-unstyled mt-3">
+              <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> We finish the loft to a high standard</li>
+              <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Full clean-up and final walk-through</li>
+              <li><i class="bi bi-check-circle-fill text-success me-2"></i> We make sure you're 100% happy</li>
+            </ul>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Team Section -->
-  <section class="py-5" id="team">
+  <!-- Services Section -->
+  <section class="py-5" id="services">
     <div class="container">
       <div class="text-center mb-5">
-        <h2 class="fw-bold">Meet Our Leadership Team</h2>
-        <p class="text-muted">The experts behind our exceptional loft conversions</p>
+        <h2 class="fw-bold">Our Loft Conversion Services – From Start to Finish</h2>
+        <p class="text-muted">We offer a full service, so you don't need to worry about finding separate tradespeople</p>
       </div>
 
       <div class="row g-4">
         <div class="col-md-4 mb-4">
-          <div class="epic-team-member">
-            <img src="/api/placeholder/400/400" alt="John Smith - CEO & Founder">
-            <div class="epic-team-info">
-              <h4>John Smith</h4>
-              <p class="text-muted">CEO & Founder</p>
-              <p>With over 25 years in construction, John brings unparalleled expertise and vision to every project.</p>
-              <div class="epic-social-icons">
-                <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-              </div>
-            </div>
+          <div class="epic-service-box">
+            <h4><i class="bi bi-pencil-square text-danger me-2"></i> Loft Design</h4>
+            <p>Custom designs made to fit your space and needs</p>
           </div>
         </div>
 
         <div class="col-md-4 mb-4">
-          <div class="epic-team-member">
-            <img src="/api/placeholder/400/400" alt="Sarah Johnson - Head Architect">
-            <div class="epic-team-info">
-              <h4>Sarah Johnson</h4>
-              <p class="text-muted">Head Architect</p>
-              <p>Sarah's innovative designs have won multiple awards and transformed hundreds of homes across London.</p>
-              <div class="epic-social-icons">
-                <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-              </div>
-            </div>
+          <div class="epic-service-box">
+            <h4><i class="bi bi-file-earmark-text text-danger me-2"></i> Help With Permissions</h4>
+            <p>We handle planning permissions and building control</p>
           </div>
         </div>
 
         <div class="col-md-4 mb-4">
-          <div class="epic-team-member">
-            <img src="/api/placeholder/400/400" alt="David Roberts - Construction Manager">
-            <div class="epic-team-info">
-              <h4>David Roberts</h4>
-              <p class="text-muted">Construction Manager</p>
-              <p>David ensures every project is completed to the highest standards, on time and within budget.</p>
-              <div class="epic-social-icons">
-                <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-              </div>
-            </div>
+          <div class="epic-service-box">
+            <h4><i class="bi bi-house-door text-danger me-2"></i> All Loft Types</h4>
+            <p>
+              Dormer, Mansard, Hip to Gable, Roof Light, and Modular conversions
+            </p>
           </div>
+        </div>
+
+        <div class="col-md-4 mb-4">
+          <div class="epic-service-box">
+            <h4><i class="bi bi-brush text-danger me-2"></i> Interior Finishing</h4>
+            <p>Plastering, painting, lighting, and decorative finishes</p>
+          </div>
+        </div>
+
+        <div class="col-md-4 mb-4">
+          <div class="epic-service-box">
+            <h4><i class="bi bi-droplet text-danger me-2"></i> Plumbing & Heating</h4>
+            <p>Bathrooms, en-suites, heating systems, and insulation</p>
+          </div>
+        </div>
+
+        <div class="col-md-4 mb-4">
+          <div class="epic-service-box">
+            <h4><i class="bi bi-grid-1x2 text-danger me-2"></i> Storage & Access</h4>
+            <p>Built-in storage solutions and custom staircases</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center mt-4">
+        <p>Want extra features like skylights or an en-suite bathroom? We can do that too.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Guarantee Section -->
+  <section class="py-5 epic-bg-light">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6 mb-4 mb-lg-0">
+          <h2 class="epic-section-title">Our Loft Guarantee – Built With Care</h2>
+          <p>We stand behind every project we complete. That's why we offer:</p>
+          <ul class="list-unstyled mt-4">
+            <li class="mb-3"><i class="bi bi-shield-check text-success me-2 fs-4"></i> A <strong>10-Year Guarantee</strong> on all our work</li>
+            <li class="mb-3"><i class="bi bi-patch-check text-success me-2 fs-4"></i> Product warranties from trusted suppliers</li>
+            <li class="mb-3"><i class="bi bi-headset text-success me-2 fs-4"></i> Ongoing help even after your loft is finished</li>
+          </ul>
+          <p class="mt-4">We don't just build lofts — we build peace of mind.</p>
+        </div>
+        <div class="col-lg-6">
+          <img src="/api/placeholder/600/400" alt="Quality Guarantee" class="img-fluid rounded shadow">
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Certifications Section -->
-  <section class="py-5 epic-bg-light">
+  <!-- Areas Section -->
+  <section class="py-5">
     <div class="container">
-      <div class="row align-items-center">
-        <div class="col-lg-6 mb-4 mb-lg-0">
-          <h2 class="epic-section-title">Our Accreditations</h2>
-          <p>At EPIC Loft Conversion, we're proud to maintain the highest industry standards through our professional accreditations and partnerships. These certifications not only demonstrate our commitment to excellence but also provide our clients with peace of mind.</p>
-          <ul class="list-unstyled mt-4">
-            <li class="mb-3"><i class="bi bi-check-circle-fill text-success me-2"></i> Federation of Master Builders (FMB) Approved</li>
-            <li class="mb-3"><i class="bi bi-check-circle-fill text-success me-2"></i> TrustMark Registered Firm</li>
-            <li class="mb-3"><i class="bi bi-check-circle-fill text-success me-2"></i> NICEIC Certified Electricians</li>
-            <li class="mb-3"><i class="bi bi-check-circle-fill text-success me-2"></i> Gas Safe Registered Engineers</li>
-            <li class="mb-3"><i class="bi bi-check-circle-fill text-success me-2"></i> Chartered Institute of Building (CIOB) Members</li>
-            <li><i class="bi bi-check-circle-fill text-success me-2"></i> Construction Skills Certification Scheme (CSCS) Qualified Team</li>
-          </ul>
-        </div>
-        <div class="col-lg-6">
+      <div class="text-center mb-5">
+        <h2 class="fw-bold">Areas We Cover</h2>
+        <p class="text-muted">We proudly serve homeowners in <strong>Central London</strong> and <strong>within a 50-mile radius</strong></p>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-6 mb-4">
+          <h4 class="mb-3">Central & Greater London:</h4>
           <div class="row g-3">
-            <div class="col-4 text-center">
-              <img src="/api/placeholder/100/100" alt="Certification 1" class="img-fluid">
+            <div class="col-6 col-md-4">
+              <div class="epic-area-box">Westminster</div>
             </div>
-            <div class="col-4 text-center">
-              <img src="/api/placeholder/100/100" alt="Certification 2" class="img-fluid">
+            <div class="col-6 col-md-4">
+              <div class="epic-area-box">Camden</div>
             </div>
-            <div class="col-4 text-center">
-              <img src="/api/placeholder/100/100" alt="Certification 3" class="img-fluid">
+            <div class="col-6 col-md-4">
+              <div class="epic-area-box">Islington</div>
             </div>
-            <div class="col-4 text-center">
-              <img src="/api/placeholder/100/100" alt="Certification 4" class="img-fluid">
+            <div class="col-6 col-md-4">
+              <div class="epic-area-box">Hackney</div>
             </div>
-            <div class="col-4 text-center">
-              <img src="/api/placeholder/100/100" alt="Certification 5" class="img-fluid">
+            <div class="col-6 col-md-4">
+              <div class="epic-area-box">Southwark</div>
             </div>
-            <div class="col-4 text-center">
-              <img src="/api/placeholder/100/100" alt="Certification 6" class="img-fluid">
+            <div class="col-6 col-md-4">
+              <div class="epic-area-box">Lambeth</div>
             </div>
+            <div class="col-6 col-md-4">
+              <div class="epic-area-box">Hammersmith</div>
+            </div>
+            <div class="col-6 col-md-4">
+              <div class="epic-area-box">Kensington</div>
+            </div>
+            <div class="col-6 col-md-4">
+              <div class="epic-area-box">Fulham</div>
+            </div>
+            <div class="col-6 col-md-4">
+              <div class="epic-area-box">Wandsworth</div>
+            </div>
+            <div class="col-6 col-md-4">
+              <div class="epic-area-box">Croydon</div>
+            </div>
+            <div class="col-6 col-md-4">
+              <div class="epic-area-box">Enfield</div>
+            </div>
+            <div class="col-6 col-md-4">
+              <div class="epic-area-box">Barnet</div>
+            </div>
+            <div class="col-6 col-md-4">
+              <div class="epic-area-box">Brent</div>
+            </div>
+            <div class="col-6 col-md-4">
+              <div class="epic-area-box">Ealing</div>
+            </div>
+            <div class="col-6 col-md-4">
+              <div class="epic-area-box">Hounslow</div>
+            </div>
+            <div class="col-6 col-md-4">
+              <div class="epic-area-box">Kingston</div>
+            </div>
+            <div class="col-6 col-md-4">
+              <div class="epic-area-box">Richmond</div>
+            </div>
+            <div class="col-6 col-md-4">
+              <div class="epic-area-box">Bromley</div>
+            </div>
+            <div class="col-6 col-md-4">
+              <div class="epic-area-box">Bexley</div>
+            </div>
+            <div class="col-6 col-md-4">
+              <div class="epic-area-box">Redbridge</div>
+            </div>
+            <div class="col-6 col-md-4">
+              <div class="epic-area-box">Havering</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-lg-6">
+          <h4 class="mb-3">Nearby Counties:</h4>
+          <div class="row g-3">
+            <div class="col-md-6">
+              <div class="epic-area-box"><strong>Essex</strong> – Romford, Ilford, Brentwood</div>
+            </div>
+            <div class="col-md-6">
+              <div class="epic-area-box"><strong>Hertfordshire</strong> – Watford, St Albans</div>
+            </div>
+            <div class="col-md-6">
+              <div class="epic-area-box"><strong>Surrey</strong> – Guildford, Woking</div>
+            </div>
+            <div class="col-md-6">
+              <div class="epic-area-box"><strong>Kent</strong> – Dartford, Sevenoaks</div>
+            </div>
+            <div class="col-md-6">
+              <div class="epic-area-box"><strong>Buckinghamshire</strong> – High Wycombe</div>
+            </div>
+            <div class="col-md-6">
+              <div class="epic-area-box"><strong>Berkshire</strong> – Slough, Reading</div>
+            </div>
+            <div class="col-md-6">
+              <div class="epic-area-box"><strong>Luton</strong></div>
+            </div>
+          </div>
+          
+          <div class="mt-4">
+            <p>If you're just outside these areas, get in touch – we often travel further for the right project.</p>
           </div>
         </div>
       </div>

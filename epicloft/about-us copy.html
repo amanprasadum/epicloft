@@ -6,15 +6,10 @@
   <title>About Us - EPIC Loft Conversion</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
   <style>
-    .hero-section {
-      background-color: #2d3e50;
-      color: white;
-      padding: 100px 0;
-      text-align: center;
-    }
-    
-    .section-title {
+    .epic-section-title {
       color: #2d3e50;
       font-weight: 700;
       margin-bottom: 30px;
@@ -22,7 +17,7 @@
       padding-bottom: 15px;
     }
     
-    .section-title:after {
+    .epic-section-title:after {
       content: '';
       position: absolute;
       bottom: 0;
@@ -32,26 +27,20 @@
       background-color: #c8102e;
     }
     
-    .bg-light-custom {
+    .epic-bg-light {
       background-color: #f8f9fa;
     }
     
-    .count-box {
+    .epic-hero-section {
+      background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/api/placeholder/1400/600');
+      background-size: cover;
+      background-position: center;
+      padding: 100px 0;
+      color: white;
       text-align: center;
-      background: white;
-      padding: 30px 20px;
-      border-radius: 5px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
     }
     
-    .count-number {
-      font-size: 40px;
-      font-weight: 700;
-      color: #c8102e;
-      margin-bottom: 10px;
-    }
-    
-    .feature-box {
+    .epic-feature-box {
       padding: 30px;
       border-radius: 5px;
       box-shadow: 0 5px 15px rgba(0,0,0,0.08);
@@ -60,11 +49,42 @@
       transition: transform 0.3s;
     }
     
-    .feature-box:hover {
+    .epic-feature-box:hover {
       transform: translateY(-10px);
     }
     
-    .process-box {
+    .epic-icon-box {
+      width: 70px;
+      height: 70px;
+      background-color: rgba(200, 16, 46, 0.1);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+    
+    .epic-icon-box i {
+      font-size: 28px;
+      color: #c8102e;
+    }
+    
+    .epic-count-box {
+      text-align: center;
+      background: white;
+      padding: 30px 20px;
+      border-radius: 5px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    }
+    
+    .epic-count-number {
+      font-size: 40px;
+      font-weight: 700;
+      color: #c8102e;
+      margin-bottom: 10px;
+    }
+    
+    .epic-process-box {
       position: relative;
       padding: 25px;
       border-radius: 5px;
@@ -73,7 +93,7 @@
       margin-bottom: 30px;
     }
     
-    .process-number {
+    .epic-process-number {
       position: absolute;
       top: -15px;
       left: 20px;
@@ -88,28 +108,48 @@
       font-weight: bold;
     }
     
-    .btn-custom {
+    .epic-service-box {
+      padding: 25px;
+      border-radius: 5px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+      background: white;
+      height: 100%;
+      transition: transform 0.3s;
+    }
+    
+    .epic-service-box:hover {
+      transform: translateY(-5px);
+    }
+    
+    .epic-cta-section {
+      background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/api/placeholder/1400/600');
+      background-size: cover;
+      background-position: center;
+      color: white;
+      padding: 80px 0;
+      text-align: center;
+    }
+    
+    .epic-btn-primary {
       background-color: #c8102e;
       border-color: #c8102e;
-      color: white;
       border-radius: 30px;
       padding: 10px 30px;
       font-weight: 600;
     }
     
-    .btn-custom:hover {
+    .epic-btn-primary:hover {
       background-color: #a80d26;
       border-color: #a80d26;
-      color: white;
     }
   </style>
 </head>
 
 <body>
   <!-- Hero Section -->
-  <section class="hero-section">
+  <section class="epic-hero-section">
     <div class="container">
-      <h1 class="display-4 fw-bold mb-4">About Us – EPIC Loft Conversion</h1>
+      <h1 class="display-4 fw-bold mb-4">About Us - EPIC Loft Conversion</h1>
       <p class="lead mb-4">Your Trusted Loft Conversion Specialist in London</p>
     </div>
   </section>
@@ -119,9 +159,13 @@
     <div class="container">
       <div class="row align-items-center">
         <div class="col-lg-6 mb-4 mb-lg-0">
-          <h2 class="section-title">Who We Are</h2>
+          <h2 class="epic-section-title">Who We Are</h2>
           <p>EPIC Loft Conversion is a <strong>leading loft conversion company based in London</strong>, with over <strong>15 years of hands-on experience</strong> turning empty lofts into stunning new rooms.</p>
           <p>We're a team of friendly and skilled professionals who take pride in what we do. From start to finish, we focus on building spaces that are practical, attractive, and built to last. Whether you need an extra bedroom, a home office, or a quiet place to relax, we can help make it happen.</p>
+          <div class="mt-4">
+            <a href="#why-choose" class="btn epic-btn-primary me-3">Why Choose Us</a>
+            <a href="#services" class="btn btn-outline-dark">Our Services</a>
+          </div>
         </div>
         <div class="col-lg-6">
           <img src="/api/placeholder/600/400" alt="EPIC Loft Conversion Team" class="img-fluid rounded shadow">
@@ -131,30 +175,30 @@
   </section>
 
   <!-- Stats Section -->
-  <section class="py-5 bg-light-custom">
+  <section class="py-5 epic-bg-light">
     <div class="container">
       <div class="row text-center">
         <div class="col-6 col-md-3 mb-4">
-          <div class="count-box">
-            <div class="count-number">15+</div>
+          <div class="epic-count-box">
+            <div class="epic-count-number">15+</div>
             <h5>Years Experience</h5>
           </div>
         </div>
         <div class="col-6 col-md-3 mb-4">
-          <div class="count-box">
-            <div class="count-number">100s</div>
+          <div class="epic-count-box">
+            <div class="epic-count-number">100s</div>
             <h5>Happy Homeowners</h5>
           </div>
         </div>
         <div class="col-6 col-md-3 mb-4">
-          <div class="count-box">
-            <div class="count-number">10</div>
+          <div class="epic-count-box">
+            <div class="epic-count-number">10</div>
             <h5>Year Guarantee</h5>
           </div>
         </div>
         <div class="col-6 col-md-3 mb-4">
-          <div class="count-box">
-            <div class="count-number">50+</div>
+          <div class="epic-count-box">
+            <div class="epic-count-number">50+</div>
             <h5>Mile Service Radius</h5>
           </div>
         </div>
@@ -167,13 +211,16 @@
     <div class="container">
       <div class="text-center mb-5">
         <h2 class="fw-bold">Why Choose EPIC Loft Conversion?</h2>
-        <p class="text-muted">Here's why people across London trust us with their loft projects:</p>
+        <p class="text-muted">Here's why people across London trust us with their loft projects</p>
       </div>
 
       <div class="row g-4">
         <div class="col-md-6 mb-4">
-          <div class="feature-box">
-            <h4>✅ Experienced & Reliable</h4>
+          <div class="epic-feature-box">
+            <div class="epic-icon-box">
+              <i class="bi bi-award"></i>
+            </div>
+            <h4>Experienced & Reliable</h4>
             <ul class="list-unstyled mt-3">
               <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Over 15 years of experience</li>
               <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Fully trained team with proven results</li>
@@ -183,8 +230,11 @@
         </div>
 
         <div class="col-md-6 mb-4">
-          <div class="feature-box">
-            <h4>✅ Friendly and Helpful Service</h4>
+          <div class="epic-feature-box">
+            <div class="epic-icon-box">
+              <i class="bi bi-people"></i>
+            </div>
+            <h4>Friendly and Helpful Service</h4>
             <ul class="list-unstyled mt-3">
               <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> We respect your home – always clean and tidy</li>
               <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Clear communication and updates</li>
@@ -194,8 +244,11 @@
         </div>
 
         <div class="col-md-6 mb-4">
-          <div class="feature-box">
-            <h4>✅ High-Quality Results</h4>
+          <div class="epic-feature-box">
+            <div class="epic-icon-box">
+              <i class="bi bi-star"></i>
+            </div>
+            <h4>High-Quality Results</h4>
             <ul class="list-unstyled mt-3">
               <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Great finish and long-lasting results</li>
               <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Built to meet all building standards</li>
@@ -205,8 +258,11 @@
         </div>
 
         <div class="col-md-6 mb-4">
-          <div class="feature-box">
-            <h4>✅ All-in-One Service</h4>
+          <div class="epic-feature-box">
+            <div class="epic-icon-box">
+              <i class="bi bi-tools"></i>
+            </div>
+            <h4>All-in-One Service</h4>
             <ul class="list-unstyled mt-3">
               <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> We handle every step of the project</li>
               <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> No need to hire separate designers or builders</li>
@@ -219,17 +275,17 @@
   </section>
 
   <!-- Process Section -->
-  <section class="py-5 bg-light-custom">
+  <section class="py-5 epic-bg-light">
     <div class="container">
       <div class="text-center mb-5">
         <h2 class="fw-bold">How We Work – Easy and Clear Process</h2>
-        <p class="text-muted">We keep things simple so you know exactly what to expect:</p>
+        <p class="text-muted">We keep things simple so you know exactly what to expect</p>
       </div>
 
       <div class="row">
         <div class="col-md-6 offset-md-3">
-          <div class="process-box">
-            <div class="process-number">1</div>
+          <div class="epic-process-box">
+            <div class="epic-process-number">1</div>
             <h4>Free Visit & Quote</h4>
             <ul class="list-unstyled mt-3">
               <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> We visit your home, listen to your ideas, and give a free quote</li>
@@ -237,8 +293,8 @@
             </ul>
           </div>
 
-          <div class="process-box">
-            <div class="process-number">2</div>
+          <div class="epic-process-box">
+            <div class="epic-process-number">2</div>
             <h4>Planning & Design</h4>
             <ul class="list-unstyled mt-3">
               <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> We create a plan that suits your needs</li>
@@ -247,8 +303,8 @@
             </ul>
           </div>
 
-          <div class="process-box">
-            <div class="process-number">3</div>
+          <div class="epic-process-box">
+            <div class="epic-process-number">3</div>
             <h4>Building Phase</h4>
             <ul class="list-unstyled mt-3">
               <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Our builders get to work on time and keep things moving</li>
@@ -257,8 +313,8 @@
             </ul>
           </div>
 
-          <div class="process-box">
-            <div class="process-number">4</div>
+          <div class="epic-process-box">
+            <div class="epic-process-number">4</div>
             <h4>Final Touches & Handover</h4>
             <ul class="list-unstyled mt-3">
               <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> We finish the loft to a high standard</li>
@@ -276,43 +332,67 @@
     <div class="container">
       <div class="text-center mb-5">
         <h2 class="fw-bold">Our Loft Conversion Services – From Start to Finish</h2>
-        <p class="text-muted">We offer a full service, so you don't need to worry about finding separate tradespeople:</p>
+        <p class="text-muted">We offer a full service, so you don't need to worry about finding separate tradespeople</p>
       </div>
 
-      <div class="row">
-        <div class="col-lg-8 mx-auto">
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item"><i class="bi bi-check-circle-fill text-success me-2"></i> <strong>Loft Design</strong> made to fit your space and needs</li>
-            <li class="list-group-item"><i class="bi bi-check-circle-fill text-success me-2"></i> <strong>Help With Permissions</strong> and building control</li>
-            <li class="list-group-item"><i class="bi bi-check-circle-fill text-success me-2"></i> We build all types of lofts:
-              <ul class="mt-2 ms-4">
-                <li>Dormer</li>
-                <li>Mansard</li>
-                <li>Hip to Gable</li>
-                <li>Roof Light</li>
-                <li>Modular</li>
-              </ul>
-            </li>
-            <li class="list-group-item"><i class="bi bi-check-circle-fill text-success me-2"></i> We also take care of:
-              <ul class="mt-2 ms-4">
-                <li>Plastering, painting, lighting</li>
-                <li>Bathrooms, heating, insulation</li>
-                <li>Built-in storage and staircases</li>
-              </ul>
-            </li>
-          </ul>
-          <p class="text-center mt-4">Want extra features like skylights or an en-suite bathroom? We can do that too.</p>
+      <div class="row g-4">
+        <div class="col-md-4 mb-4">
+          <div class="epic-service-box">
+            <h4><i class="bi bi-pencil-square text-danger me-2"></i> Loft Design</h4>
+            <p>Custom designs made to fit your space and needs</p>
+          </div>
         </div>
+
+        <div class="col-md-4 mb-4">
+          <div class="epic-service-box">
+            <h4><i class="bi bi-file-earmark-text text-danger me-2"></i> Help With Permissions</h4>
+            <p>We handle planning permissions and building control</p>
+          </div>
+        </div>
+
+        <div class="col-md-4 mb-4">
+          <div class="epic-service-box">
+            <h4><i class="bi bi-house-door text-danger me-2"></i> All Loft Types</h4>
+            <p>
+              Dormer, Mansard, Hip to Gable, Roof Light, and Modular conversions
+            </p>
+          </div>
+        </div>
+
+        <div class="col-md-4 mb-4">
+          <div class="epic-service-box">
+            <h4><i class="bi bi-brush text-danger me-2"></i> Interior Finishing</h4>
+            <p>Plastering, painting, and lighting</p>
+          </div>
+        </div>
+
+        <div class="col-md-4 mb-4">
+          <div class="epic-service-box">
+            <h4><i class="bi bi-droplet text-danger me-2"></i> Bathrooms & Heating</h4>
+            <p>Bathrooms, heating, and insulation</p>
+          </div>
+        </div>
+
+        <div class="col-md-4 mb-4">
+          <div class="epic-service-box">
+            <h4><i class="bi bi-grid-1x2 text-danger me-2"></i> Storage Solutions</h4>
+            <p>Built-in storage and staircases</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center mt-4">
+        <p>Want extra features like skylights or an en-suite bathroom? We can do that too.</p>
       </div>
     </div>
   </section>
 
   <!-- Guarantee Section -->
-  <section class="py-5 bg-light-custom">
+  <section class="py-5 epic-bg-light">
     <div class="container">
       <div class="row align-items-center">
         <div class="col-lg-6 mb-4 mb-lg-0">
-          <h2 class="section-title">Our Loft Guarantee – Built With Care</h2>
+          <h2 class="epic-section-title">Our Loft Guarantee – Built With Care</h2>
           <p>We stand behind every project we complete. That's why we offer:</p>
           <ul class="list-unstyled mt-4">
             <li class="mb-3"><i class="bi bi-shield-check text-success me-2 fs-4"></i> A <strong>10-Year Guarantee</strong> on all our work</li>
@@ -328,69 +408,28 @@
     </div>
   </section>
 
-  <!-- Areas We Cover Section -->
-  <section class="py-5">
-    <div class="container">
-      <h2 class="section-title">Areas We Cover</h2>
-      <p>We proudly serve homeowners in <strong>Central London</strong> and <strong>within a 50-mile radius</strong>, including:</p>
-      
-      <div class="row mt-4">
-        <div class="col-md-6">
-          <h4>Central & Greater London:</h4>
-          <ul class="list-unstyled">
-            <li><i class="bi bi-geo-alt-fill text-danger me-2"></i> Westminster</li>
-            <li><i class="bi bi-geo-alt-fill text-danger me-2"></i> Camden</li>
-            <li><i class="bi bi-geo-alt-fill text-danger me-2"></i> Islington</li>
-            <li><i class="bi bi-geo-alt-fill text-danger me-2"></i> Hackney</li>
-            <li><i class="bi bi-geo-alt-fill text-danger me-2"></i> Southwark</li>
-            <li><i class="bi bi-geo-alt-fill text-danger me-2"></i> Lambeth</li>
-            <li><i class="bi bi-geo-alt-fill text-danger me-2"></i> Hammersmith</li>
-            <li><i class="bi bi-geo-alt-fill text-danger me-2"></i> Kensington</li>
-            <li><i class="bi bi-geo-alt-fill text-danger me-2"></i> Fulham</li>
-            <li><i class="bi bi-geo-alt-fill text-danger me-2"></i> Wandsworth</li>
-            <li><i class="bi bi-geo-alt-fill text-danger me-2"></i> Croydon</li>
-            <li><i class="bi bi-geo-alt-fill text-danger me-2"></i> Enfield</li>
-            <li><i class="bi bi-geo-alt-fill text-danger me-2"></i> Barnet</li>
-            <li><i class="bi bi-geo-alt-fill text-danger me-2"></i> Brent</li>
-            <li><i class="bi bi-geo-alt-fill text-danger me-2"></i> Ealing</li>
-            <li><i class="bi bi-geo-alt-fill text-danger me-2"></i> Hounslow</li>
-            <li><i class="bi bi-geo-alt-fill text-danger me-2"></i> Kingston</li>
-            <li><i class="bi bi-geo-alt-fill text-danger me-2"></i> Richmond</li>
-            <li><i class="bi bi-geo-alt-fill text-danger me-2"></i> Bromley</li>
-            <li><i class="bi bi-geo-alt-fill text-danger me-2"></i> Bexley</li>
-            <li><i class="bi bi-geo-alt-fill text-danger me-2"></i> Redbridge</li>
-            <li><i class="bi bi-geo-alt-fill text-danger me-2"></i> Havering</li>
-          </ul>
-        </div>
-        <div class="col-md-6">
-          <h4>Nearby Counties:</h4>
-          <ul class="list-unstyled">
-            <li><i class="bi bi-geo-alt-fill text-danger me-2"></i> <strong>Essex</strong> – Romford, Ilford, Brentwood</li>
-            <li><i class="bi bi-geo-alt-fill text-danger me-2"></i> <strong>Hertfordshire</strong> – Watford, St Albans</li>
-            <li><i class="bi bi-geo-alt-fill text-danger me-2"></i> <strong>Surrey</strong> – Guildford, Woking</li>
-            <li><i class="bi bi-geo-alt-fill text-danger me-2"></i> <strong>Kent</strong> – Dartford, Sevenoaks</li>
-            <li><i class="bi bi-geo-alt-fill text-danger me-2"></i> <strong>Buckinghamshire</strong> – High Wycombe</li>
-            <li><i class="bi bi-geo-alt-fill text-danger me-2"></i> <strong>Berkshire</strong> – Slough, Reading</li>
-            <li><i class="bi bi-geo-alt-fill text-danger me-2"></i> <strong>Luton</strong></li>
-          </ul>
-          <p class="mt-4">If you're just outside these areas, get in touch – we often travel further for the right project.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <!-- CTA Section -->
-  <section class="py-5 text-center bg-dark text-white">
+  <section class="epic-cta-section">
     <div class="container">
       <h2 class="mb-4">Ready to Transform Your Home?</h2>
       <p class="lead mb-5">Contact us today for a free consultation and take the first step towards your dream loft conversion</p>
       <div>
-        <a href="#" class="btn btn-custom me-3">Get a Free Quote</a>
+        <a href="#" class="btn epic-btn-primary me-3">Get a Free Quote</a>
         <a href="#" class="btn btn-outline-light">View Our Projects</a>
       </div>
     </div>
   </section>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      AOS.init({
+        duration: 800,
+        easing: 'ease-in-out',
+        once: true
+      });
+    });
+  </script>
 </body>
 </html>

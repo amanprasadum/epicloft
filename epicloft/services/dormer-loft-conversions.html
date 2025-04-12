@@ -32,7 +32,8 @@
                         </span>
                         <span style="font-size: 14px; color: #4a4a4a;">
                             <i class="bi bi-telephone-fill me-1" style="color: #c8102e;"></i>
-                            <a href="tel:+07577123400" style="color: #4a4a4a; text-decoration: none;">07577 123 400</a> &nbsp;&nbsp;
+                            <a href="tel:+07577123400" style="color: #4a4a4a; text-decoration: none;">07577 123 400</a>
+                            &nbsp;&nbsp;
                             <i class="bi bi-telephone-fill me-1" style="color: #c8102e;"></i>
                             <a href="tel:07307544544" style="color: #4a4a4a; text-decoration: none;">07307 544 544</a>
                         </span>
@@ -104,7 +105,8 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav mx-auto align-items-lg-center text-center">
                         <li class="nav-item">
-                            <a class="nav-link text-white py-3 px-4 airnavbar-link" href="https://epicloftconversion.co.uk"
+                            <a class="nav-link text-white py-3 px-4 airnavbar-link"
+                                href="https://epicloftconversion.co.uk"
                                 style="font-weight: 500; letter-spacing: 0.5px;">Home</a>
                         </li>
                         <li class="nav-item">
@@ -112,8 +114,8 @@
                                 style="font-weight: 500; letter-spacing: 0.5px;">About Us</a>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle text-white py-3 px-4 airnavbar-link" href="./service.html"
-                                role="button" data-bs-toggle="dropdown" aria-expanded="false"
+                            <a class="nav-link dropdown-toggle text-white py-3 px-4 airnavbar-link"
+                                href="./service.html" role="button" data-bs-toggle="dropdown" aria-expanded="false"
                                 style="font-weight: 500; letter-spacing: 0.5px;">
                                 Services
                             </a>
@@ -126,7 +128,8 @@
                                 <li><a class="dropdown-item py-2" href="./roof-light-loft-conversion.html">Roof Light
                                         Loft
                                         Conversion</a></li>
-                                <li><a class="dropdown-item py-2" href="./hip-to-gable-loft-conversion.html">Hip-to-gable
+                                <li><a class="dropdown-item py-2"
+                                        href="./hip-to-gable-loft-conversion.html">Hip-to-gable
                                         Loft Conversion</a></li>
                                 <li><a class="dropdown-item py-2" href="./modular-loft-conversion.html">Modular Loft
                                         Conversions</a></li>
@@ -682,8 +685,8 @@
                         <li><a href="https://epicloftconversion.co.uk">Home</a></li>
                         <li><a href="../about-us.html">About Us</a></li>
                         <li><a href="./service.html">Services</a></li>
-                        
-                        
+
+
                         <li><a href="../contact-us.html">Contact</a></li>
                     </ul>
                 </div>
@@ -707,13 +710,15 @@
                         <li>
                             <i class="fas fa-phone"></i>
                             <div>
-                                <a href="tel:07577123400" style="color: #ffffff; text-decoration: none;">07577 123 400</a>
+                                <a href="tel:07577123400" style="color: #ffffff; text-decoration: none;">07577 123
+                                    400</a>
                             </div>
                         </li>
                         <li>
                             <i class="fas fa-phone"></i>
                             <div>
-                                <a href="tel:+07307 544 544" style="color: #ffffff; text-decoration: none;">07307 544 544</a>
+                                <a href="tel:+07307 544 544" style="color: #ffffff; text-decoration: none;">07307 544
+                                    544</a>
                             </div>
                         </li>
                         <li>
@@ -732,58 +737,76 @@
         </div>
     </footer>
 
+   <!-- Back to Top Button -->
+   <a href="#" class="back-to-top" id="backToTop">
+    <i class="fas fa-arrow-up"></i>
+</a>
+
+<!-- Bootstrap JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+<!-- AOS Library JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+<!-- Custom JavaScript -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-1M181EZVHS"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-1M181EZVHS');
+</script>
 
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-        // Initialize AOS
-        document.addEventListener('DOMContentLoaded', function () {
-            AOS.init({
-                duration: 800,
-                easing: 'ease-in-out',
-                once: true
-            });
+<script>
+    // Initialize AOS
+    document.addEventListener('DOMContentLoaded', function () {
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true
+        });
 
-            // Back to top button
-            const backToTopButton = document.getElementById('backToTop');
+        // Back to top button
+        const backToTopButton = document.getElementById('backToTop');
 
-            window.addEventListener('scroll', function () {
-                if (window.pageYOffset > 300) {
-                    backToTopButton.classList.add('active');
-                } else {
-                    backToTopButton.classList.remove('active');
+        window.addEventListener('scroll', function () {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.add('active');
+            } else {
+                backToTopButton.classList.remove('active');
+            }
+        });
+
+        backToTopButton.addEventListener('click', function (e) {
+            e.preventDefault();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // Smooth scrolling for navbar links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+
+                // Close mobile menu if open
+                const navbarCollapse = document.querySelector('.navbar-collapse');
+                if (navbarCollapse.classList.contains('show')) {
+                    navbarCollapse.classList.remove('show');
                 }
             });
-
-            backToTopButton.addEventListener('click', function (e) {
-                e.preventDefault();
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-            });
-
-            // Smooth scrolling for navbar links
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function (e) {
-                    e.preventDefault();
-
-                    const targetId = this.getAttribute('href');
-                    if (targetId === '#') return;
-
-                    const targetElement = document.querySelector(targetId);
-                    if (targetElement) {
-                        targetElement.scrollIntoView({
-                            behavior: 'smooth'
-                        });
-                    }
-
-                    // Close mobile menu if open
-                    const navbarCollapse = document.querySelector('.navbar-collapse');
-                    if (navbarCollapse.classList.contains('show')) {
-                        navbarCollapse.classList.remove('show');
-                    }
-                });
-            });
         });
-    </script>
+    });
+</script>
+
 </body>
 
 </html>

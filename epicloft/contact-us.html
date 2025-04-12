@@ -1,537 +1,638 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us - EPIC Loft Conversion</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <style>
-        :root {
-            --primary-color: #3498db;
-            --secondary-color: #2c3e50;
-            --accent-color: #e74c3c;
-            --light-gray: #f8f9fa;
-        }
-        
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            color: #333;
-        }
-        
-        .section-title {
-            position: relative;
-            margin-bottom: 2rem;
-            font-weight: 700;
-            color: var(--secondary-color);
-        }
-        
-        .section-title:after {
-            content: '';
-            position: absolute;
-            bottom: -10px;
-            left: 0;
-            width: 60px;
-            height: 4px;
-            background-color: var(--primary-color);
-        }
-        
-        .contact-section {
-            padding: 80px 0;
-        }
-        
-        .bg-light-gray {
-            background-color: var(--light-gray);
-        }
-        
-        .contact-info-card {
-            border: none;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-            transition: all 0.3s ease;
-            height: 100%;
-        }
-        
-        .contact-info-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 20px rgba(0,0,0,0.1);
-        }
-        
-        .contact-icon {
-            width: 60px;
-            height: 60px;
-            background-color: var(--primary-color);
-            color: white;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.5rem;
-            margin: 0 auto 15px;
-        }
-        
-        .contact-form .form-control {
-            border-radius: 0;
-            padding: 12px 15px;
-            border: 1px solid #ddd;
-            margin-bottom: 20px;
-        }
-        
-        .contact-form .form-control:focus {
-            box-shadow: none;
-            border-color: var(--primary-color);
-        }
-        
-        .contact-form .btn-primary {
-            background-color: var(--primary-color);
-            border-color: var(--primary-color);
-            padding: 12px 25px;
-            border-radius: 50px;
-            font-weight: 600;
-            transition: all 0.3s ease;
-        }
-        
-        .contact-form .btn-primary:hover {
-            background-color: #2980b9;
-            border-color: #2980b9;
-            transform: translateY(-2px);
-        }
-        
-        .map-container {
-            height: 400px;
-            overflow: hidden;
-            border-radius: 8px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-        }
-        
-        .map-container img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-        
-        .faq-item {
-            margin-bottom: 20px;
-            border: 1px solid #eee;
-            border-radius: 8px;
-            overflow: hidden;
-        }
-        
-        .faq-question {
-            background-color: #f8f9fa;
-            padding: 15px 20px;
-            cursor: pointer;
-            font-weight: 600;
-            position: relative;
-            transition: all 0.3s ease;
-        }
-        
-        .faq-question:hover {
-            background-color: #e9ecef;
-        }
-        
-        .faq-answer {
-            padding: 15px 20px;
-            border-top: 1px solid #eee;
-        }
-        
-        .testimonial {
-            background-color: white;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-            margin-bottom: 20px;
-            position: relative;
-        }
-        
-        .testimonial:before {
-            content: '\201C';
-            position: absolute;
-            top: 10px;
-            left: 15px;
-            font-size: 4rem;
-            color: var(--primary-color);
-            opacity: 0.1;
-            line-height: 1;
-        }
-        
-        .testimonial-content {
-            position: relative;
-            z-index: 1;
-        }
-        
-        .testimonial-author {
-            margin-top: 15px;
-            font-weight: 600;
-        }
-        
-        .testimonial-location {
-            font-size: 0.9rem;
-            color: #777;
-        }
-        
-        .custom-shape {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            overflow: hidden;
-            line-height: 0;
-        }
-        
-        .custom-shape svg {
-            position: relative;
-            display: block;
-            width: calc(100% + 1.3px);
-            height: 80px;
-        }
-        
-        .social-icon {
-            display: inline-block;
-            width: 40px;
-            height: 40px;
-            background-color: var(--primary-color);
-            color: white;
-            border-radius: 50%;
-            line-height: 40px;
-            text-align: center;
-            margin-right: 10px;
-            transition: all 0.3s ease;
-        }
-        
-        .social-icon:hover {
-            background-color: var(--secondary-color);
-            transform: translateY(-3px);
-        }
-    </style>
+    <meta name="google-site-verification" content="5d9nUzcN62Uh2uN48NqZtqXIRdbUnRkN-hC9_PAYWMY" />
+    <title>EPIC Loft Conversion Company London</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <!-- bootstrap icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- AOS Library for scroll animations -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/styles.css">
+    <link rel="stylesheet" href="./assets/css/mobile.css">
 </head>
+
 <body>
-    <main>
-        <!-- Contact Intro Section -->
-        <section class="contact-section position-relative">
+    <!-- Airnavbar -->
+    <section class="airnavbar">
+        <!-- Top layer: Social icons and email -->
+        <div class="airnavbar-top py-2" style="background-color: #f8f9fa;">
             <div class="container">
                 <div class="row align-items-center">
-                    <div class="col-lg-6 mb-5 mb-lg-0">
-                        <h1 class="section-title">Get In Touch</h1>
-                        <p class="lead mb-4">Ready to transform your loft? We're here to help you every step of the way!</p>
-                        <p>Whether you have questions about our services, want to discuss your project ideas, or are ready for a free quote, our friendly team is just a message away.</p>
-                        <div class="d-flex mt-4">
-                            <a href="#contact-form" class="btn btn-primary me-3">Contact Us Now</a>
-                            <a href="tel:02012345678" class="btn btn-outline-secondary">
-                                <i class="fas fa-phone-alt me-2"></i> Call Directly
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <img src="/api/placeholder/600/400" alt="EPIC Loft Conversion Contact" class="img-fluid rounded shadow">
-                    </div>
-                </div>
-            </div>
-            <div class="custom-shape">
-                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-                    <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" fill="#f8f9fa"></path>
-                </svg>
-            </div>
-        </section>
+                    <div class="col-md-8 col-12 text-center text-md-start mb-2 mb-md-0">
+                        <span class="me-4" style="font-size: 14px; color: #4a4a4a;">
+                            <i class="bi bi-envelope-fill me-1" style="color: #c8102e;"></i> <a
+                                href="mailto:info@epicloftconversion.co.uk"
+                                style="color: #4a4a4a; text-decoration: none;">info@epicloftconversion.co.uk</a>
+                        </span>
+                        <span style="font-size: 14px; color: #4a4a4a;">
+                            <i class="bi bi-telephone-fill me-1" style="color: #c8102e;"></i>
+                            <a href="tel:+44 7577123400" style="color: #4a4a4a; text-decoration: none;">+44
+                                7577123400</a> &nbsp;&nbsp;
+                            <i class="bi bi-telephone-fill me-1" style="color: #c8102e;"></i>
+                            <a href="tel:+44 7307 544544" style="color: #4a4a4a; text-decoration: none;">+44 7307
+                                544544</a>
+                        </span>
 
-        <!-- Contact Info Cards -->
-        <section class="contact-section bg-light-gray">
-            <div class="container">
-                <div class="row g-4">
-                    <div class="col-md-4">
-                        <div class="contact-info-card card text-center h-100">
-                            <div class="card-body">
-                                <div class="contact-icon">
-                                    <i class="fas fa-map-marker-alt"></i>
-                                </div>
-                                <h4>Our Office</h4>
-                                <p class="mb-0">123 Conversion Street</p>
-                                <p class="mb-0">Loft District, London</p>
-                                <p>EC1A 1BB</p>
-                            </div>
-                        </div>
                     </div>
-                    <div class="col-md-4">
-                        <div class="contact-info-card card text-center h-100">
-                            <div class="card-body">
-                                <div class="contact-icon">
-                                    <i class="fas fa-phone-alt"></i>
-                                </div>
-                                <h4>Phone Number</h4>
-                                <p class="mb-0">020 1234 5678</p>
-                                <p>Monday-Friday: 8am-6pm</p>
-                                <a href="tel:02012345678" class="btn btn-outline-primary mt-2">Call Us</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="contact-info-card card text-center h-100">
-                            <div class="card-body">
-                                <div class="contact-icon">
-                                    <i class="fas fa-envelope"></i>
-                                </div>
-                                <h4>Email Address</h4>
-                                <p class="mb-0">info@epicloftconversion.co.uk</p>
-                                <p>We reply within 24 hours</p>
-                                <a href="mailto:info@epicloftconversion.co.uk" class="btn btn-outline-primary mt-2">Email Us</a>
-                            </div>
-                        </div>
+                    <div class="col-md-4 col-12 text-center text-md-end">
+                        <a href="#" class="me-3 airnavbar-social"><i class="bi bi-facebook"
+                                style="color: #4a4a4a;"></i></a>
+                        <a href="#" class="me-3 airnavbar-social"><i class="bi bi-instagram"
+                                style="color: #4a4a4a;"></i></a>
+                        <a href="#" class="me-3 airnavbar-social"><i class="bi bi-twitter-x"
+                                style="color: #4a4a4a;"></i></a>
+                        <a href="#" class="airnavbar-social"><i class="bi bi-linkedin" style="color: #4a4a4a;"></i></a>
                     </div>
                 </div>
             </div>
-        </section>
-
-        <!-- Contact Form Section -->
-        <section class="contact-section" id="contact-form">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-6 mb-5 mb-lg-0">
-                        <h2 class="section-title">Send Us a Message</h2>
-                        <p class="mb-4">Fill out the form below and we'll get back to you as soon as possible. For a free quote, please provide details about your loft space and what you'd like to achieve.</p>
-                        
-                        <form class="contact-form">
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <input type="text" class="form-control" placeholder="Your Name*" required>
-                                </div>
-                                <div class="col-md-6">
-                                    <input type="tel" class="form-control" placeholder="Phone Number*" required>
-                                </div>
-                            </div>
-                            <input type="email" class="form-control" placeholder="Email Address*" required>
-                            <input type="text" class="form-control" placeholder="Address/Postcode*" required>
-                            <select class="form-select form-control">
-                                <option selected>Select Service Type</option>
-                                <option value="dormer">Dormer Loft Conversion</option>
-                                <option value="mansard">Mansard Loft Conversion</option>
-                                <option value="hip-to-gable">Hip to Gable Conversion</option>
-                                <option value="roof-light">Roof Light Conversion</option>
-                                <option value="modular">Modular Loft Conversion</option>
-                                <option value="other">Other/Not Sure Yet</option>
-                            </select>
-                            <textarea class="form-control" rows="5" placeholder="Tell us about your project*" required></textarea>
-                            <div class="form-check mb-4">
-                                <input class="form-check-input" type="checkbox" value="" id="privacy-check" required>
-                                <label class="form-check-label" for="privacy-check">
-                                    I agree to the privacy policy and consent to being contacted regarding my inquiry.
-                                </label>
-                            </div>
-                            <button type="submit" class="btn btn-primary btn-lg">
-                                <i class="fas fa-paper-plane me-2"></i> Send Message
-                            </button>
-                        </form>
-                    </div>
-                    
-                    <div class="col-lg-6">
-                        <div class="map-container mb-4">
-                            <img src="/api/placeholder/600/400" alt="Map Location of EPIC Loft Conversion">
-                        </div>
-                        
-                        <h4 class="mb-3">Follow Us</h4>
-                        <div class="social-links mb-4">
-                            <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
-                            <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
-                            <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
-                            <a href="#" class="social-icon"><i class="fab fa-pinterest"></i></a>
-                            <a href="#" class="social-icon"><i class="fab fa-houzz"></i></a>
-                        </div>
-                        
-                        <div class="card p-4 bg-light">
-                            <h4 class="mb-3">Working Hours</h4>
-                            <ul class="list-group list-group-flush">
-                                <li class="list-group-item d-flex justify-content-between align-items-center px-0">
-                                    Monday - Friday
-                                    <span>8:00 AM - 6:00 PM</span>
-                                </li>
-                                <li class="list-group-item d-flex justify-content-between align-items-center px-0">
-                                    Saturday
-                                    <span>9:00 AM - 2:00 PM</span>
-                                </li>
-                                <li class="list-group-item d-flex justify-content-between align-items-center px-0">
-                                    Sunday
-                                    <span>Closed</span>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- FAQ Section -->
-        <section class="contact-section bg-light-gray">
-            <div class="container">
-                <h2 class="section-title text-center mb-5">Frequently Asked Questions</h2>
-                <div class="row">
-                    <div class="col-lg-6">
-                        <div class="faq-item">
-                            <div class="faq-question">
-                                How long does a typical loft conversion take?
-                            </div>
-                            <div class="faq-answer">
-                                Most standard loft conversions take between 6-8 weeks to complete. More complex projects might take 10-12 weeks. We'll provide you with a detailed timeline during our initial consultation.
-                            </div>
-                        </div>
-                        <div class="faq-item">
-                            <div class="faq-question">
-                                Do I need planning permission for a loft conversion?
-                            </div>
-                            <div class="faq-answer">
-                                Many loft conversions fall under permitted development rights, meaning they don't require planning permission. However, this depends on the type of conversion and your property. We'll advise you during our initial assessment and handle any necessary applications.
-                            </div>
-                        </div>
-                        <div class="faq-item">
-                            <div class="faq-question">
-                                What is your payment schedule?
-                            </div>
-                            <div class="faq-answer">
-                                We typically work with a stage payment system - an initial deposit, followed by payments at key project milestones. This ensures you only pay for work that has been completed to your satisfaction. We'll outline the full schedule in your quote.
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="faq-item">
-                            <div class="faq-question">
-                                Is my loft suitable for conversion?
-                            </div>
-                            <div class="faq-answer">
-                                Most lofts are suitable for conversion. Key factors include the height of your loft (ideally at least 2.2m at the highest point), the roof structure, and available space. Our free assessment will quickly determine if your loft is suitable.
-                            </div>
-                        </div>
-                        <div class="faq-item">
-                            <div class="faq-question">
-                                Do you provide guarantees on your work?
-                            </div>
-                            <div class="faq-answer">
-                                Yes, we provide a comprehensive 10-year guarantee on all our loft conversions, covering both structural work and finishing. We also provide manufacturer warranties for all installed products and materials.
-                            </div>
-                        </div>
-                        <div class="faq-item">
-                            <div class="faq-question">
-                                Can I stay in my home during the conversion work?
-                            </div>
-                            <div class="faq-answer">
-                                Yes, most of our clients continue to live in their homes during the conversion process. We make every effort to minimize disruption to your daily life, working efficiently and keeping noise and mess to a minimum.
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="text-center mt-4">
-                    <p>Have another question? We're happy to help!</p>
-                    <a href="#contact-form" class="btn btn-outline-primary">Ask Us Anything</a>
-                </div>
-            </div>
-        </section>
-
-        <!-- Customer Reviews -->
-        <section class="contact-section">
-            <div class="container">
-                <h2 class="section-title text-center mb-5">What Our Customers Say</h2>
-                <div class="row">
-                    <div class="col-md-6 mb-4">
-                        <div class="testimonial">
-                            <div class="testimonial-content">
-                                <p>"EPIC Loft Conversion transformed our unused attic into a stunning master bedroom with en-suite bathroom. The team was professional, tidy, and completed the work within the timeframe promised. We couldn't be happier with the results!"</p>
-                                <div class="testimonial-author">Sarah Johnson</div>
-                                <div class="testimonial-location">Richmond, London</div>
-                                <div class="mt-2">
-                                    <i class="fas fa-star text-warning"></i>
-                                    <i class="fas fa-star text-warning"></i>
-                                    <i class="fas fa-star text-warning"></i>
-                                    <i class="fas fa-star text-warning"></i>
-                                    <i class="fas fa-star text-warning"></i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 mb-4">
-                        <div class="testimonial">
-                            <div class="testimonial-content">
-                                <p>"From the initial consultation to the final handover, EPIC was superb. They were upfront about costs, stuck to the budget, and the craftsmanship is excellent. Our new home office loft space has completely changed how we work from home."</p>
-                                <div class="testimonial-author">Michael Thompson</div>
-                                <div class="testimonial-location">Islington, London</div>
-                                <div class="mt-2">
-                                    <i class="fas fa-star text-warning"></i>
-                                    <i class="fas fa-star text-warning"></i>
-                                    <i class="fas fa-star text-warning"></i>
-                                    <i class="fas fa-star text-warning"></i>
-                                    <i class="fas fa-star text-warning"></i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 mb-4 mb-md-0">
-                        <div class="testimonial">
-                            <div class="testimonial-content">
-                                <p>"The EPIC team turned our cramped loft into a bright, spacious bedroom and play area for our children. They were considerate of our family needs during the build, and the end result exceeded our expectations. Highly recommended!"</p>
-                                <div class="testimonial-author">Emma & David Wilson</div>
-                                <div class="testimonial-location">Camden, London</div>
-                                <div class="mt-2">
-                                    <i class="fas fa-star text-warning"></i>
-                                    <i class="fas fa-star text-warning"></i>
-                                    <i class="fas fa-star text-warning"></i>
-                                    <i class="fas fa-star text-warning"></i>
-                                    <i class="fas fa-star text-warning"></i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="testimonial">
-                            <div class="testimonial-content">
-                                <p>"I was worried about disruption during the conversion, but EPIC made the process so smooth. They were clean, respectful of our home, and the communication was excellent throughout. The new loft bedroom has added significant value to our house."</p>
-                                <div class="testimonial-author">James Peterson</div>
-                                <div class="testimonial-location">Hackney, London</div>
-                                <div class="mt-2">
-                                    <i class="fas fa-star text-warning"></i>
-                                    <i class="fas fa-star text-warning"></i>
-                                    <i class="fas fa-star text-warning"></i>
-                                    <i class="fas fa-star text-warning"></i>
-                                    <i class="fas fa-star text-warning"></i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="text-center mt-5">
-                    <a href="about.html#testimonials" class="btn btn-outline-primary">Read More Reviews</a>
-                </div>
-            </div>
-        </section>
-
-        <!-- Call to Action -->
-        <section class="cta-section">
+        </div>
+        <!-- Middle layer: Logo and text with increased spacing -->
+        <div class="airnavbar-middle py-4" style="background-color: white; box-shadow: 0 2px 15px rgba(0,0,0,0.05);">
             <div class="container">
                 <div class="row justify-content-center">
-                    <div class="col-lg-8 text-center">
-                        <h2 class="mb-3">Ready to Start Your Loft Conversion Journey?</h2>
-                        <p class="lead mb-4">Contact us today for a free, no-obligation quote and home visit. Let's turn your unused loft into a beautiful new living space!</p>
-                        <div class="d-flex justify-content-center flex-wrap">
-                            <a href="#contact-form" class="btn btn-light btn-lg me-3 mb-2">Get Your Free Quote</a>
-                            <a href="tel:02012345678" class="btn btn-outline-light btn-lg mb-2">
-                                <i class="fas fa-phone-alt me-2"></i> 020 1234 5678
-                            </a>
+                    <div class="col-lg-10 col-md-11 col-12">
+                        <div class="row align-items-center">
+                            <div class="col-lg-5 col-md-12 col-12 col-xs-12 text-center text-lg-start mb-3 mb-lg-0">
+                                <a class="navbar-brand middle_logo_a align-items-center" href="#">
+                                    <img src="./assets/image/my-logo.jpg" alt="EPIC Loft Conversion Logo"
+                                        class="img-fluid middle_logo">
+                                    <!-- <img src="./assets/image/main-logo.svg" alt="EPIC Loft Conversion Logo"
+                                        class="img-fluid middle_logo"> -->
+                                    <div class="ms-3">
+                                        <p class="mb-0"
+                                            style="color: #c8102e; font-size: clamp(16px, 2vw, 20px); font-weight: 500; letter-spacing: 1px;">
+                                            London's Top Company
+                                        </p>
+                                        <p class="mb-0"
+                                            style="color: #4a4a4a; font-size: clamp(14px, 1.8vw, 18px); font-weight: 600;">
+                                            For Loft Conversion
+                                        </p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-lg-7 col-md-12 col-xs-12 col-12 text-center text-lg-end">
+                                <p class="mb-0"
+                                    style="font-size: clamp(16px, 2vw, 18px); font-weight: 600; color: #4a4a4a;">
+                                    Create, Expand, and Enjoy Your New Loft
+                                </p>
+                                <div class="mt-2 mx-auto mx-lg-0"
+                                    style="height: 2px; width: 100px; background-color: #c8102e; display: inline-block;">
+                                </div>
+                                <p class="mb-0 mt-2" style="font-size: clamp(12px, 1.5vw, 14px); color: #666;">
+                                    Specialist Loft Conversion Company Providing Services Across London
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
-    </main>
+        </div>
+        <!-- Bottom layer: Navigation menu -->
+        <nav class="airnavbar-bottom navbar navbar-expand-lg sticky-top-off"
+            style="background-color: #c8102e; padding: 0;">
+            <div class="container">
+                <button class="navbar-toggler my-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    style="border-color: rgba(255,255,255,0.7);">
+                    <span class="navbar-toggler-icon" style="filter: brightness(0) invert(1);"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav mx-auto align-items-lg-center text-center">
+                        <li class="nav-item">
+                            <a class="nav-link text-white py-3 px-4 airnavbar-link" href="#"
+                                style="font-weight: 500; letter-spacing: 0.5px;">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white py-3 px-4 airnavbar-link" href="./about-us.html"
+                                style="font-weight: 500; letter-spacing: 0.5px;">About Us</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-white py-3 px-4 airnavbar-link" href="#"
+                                role="button" data-bs-toggle="dropdown" aria-expanded="false"
+                                style="font-weight: 500; letter-spacing: 0.5px;">
+                                Services
+                            </a>
+                            <ul class="dropdown-menu airnavbar-dropdown"
+                                style="border-radius: 0; border-top: 3px solid #c8102e; box-shadow: 0 10px 20px rgba(0,0,0,0.1);">
+                                <li><a class="dropdown-item py-2" href="./services/dormer-loft-conversions.html">Dormer
+                                        Loft
+                                        Conversion</a></li>
+                                <li><a class="dropdown-item py-2" href="./services/mansard-loft-conversion.html">Mansard
+                                        Loft
+                                        Conversion</a></li>
+                                <li><a class="dropdown-item py-2" href="./services/roof-light-loft-conversion.html">Roof
+                                        Light Loft Conversion</a></li>
+                                <li><a class="dropdown-item py-2"
+                                        href="./services/hip-to-gable-loft-conversion">Hip-to-gable Loft Conversion</a>
+                                </li>
+                                <li><a class="dropdown-item py-2" href="./services/modular-loft-conversion.html">Modular
+                                        Loft Conversions</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white py-3 px-4 airnavbar-link" href="./contact-us.html"
+                                style="font-weight: 500; letter-spacing: 0.5px;">Contact</a>
+                        </li>
+                        <li class="nav-item ms-lg-1">
+                            <a class="btn px-4 py-2 my-2 my-lg-0 mx-lg-3 airnavbar-btn" href="#quote"
+                                style="background-color: #fff; color: #c8102e; font-weight: 600; border-radius: 30px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+                                Get a Free Quote
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </section>
+    <!-- Contact Intro Section -->
+    <section class="contact-section position-relative">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-5 mb-lg-0">
+                    <h1 class="section-title">Get In Touch</h1>
+                    <p class="lead mb-4">Ready to transform your loft? We're here to help you every step of the way!</p>
+                    <p>Whether you have questions about our services, want to discuss your project ideas, or are ready
+                        for a free quote, our friendly team is just a message away.</p>
+                    <div class="d-flex mt-4">
+                        <a href="#contact-form" class="btn btn-primary me-3">Contact Us Now</a>
+                        <a href="tel:02012345678" class="btn btn-outline-secondary">
+                            <i class="fas fa-phone-alt me-2"></i> Call Directly
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <img src="/api/placeholder/600/400" alt="EPIC Loft Conversion Contact"
+                        class="img-fluid rounded shadow">
+                </div>
+            </div>
+        </div>
+        <div class="custom-shape">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
+                preserveAspectRatio="none">
+                <path
+                    d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+                    fill="#f8f9fa"></path>
+            </svg>
+        </div>
+    </section>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Contact Info Cards -->
+    <section class="contact-section bg-light-gray">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="contact-info-card card text-center h-100">
+                        <div class="card-body">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <h4>Our Office</h4>
+                            <p class="mb-0">123 Conversion Street</p>
+                            <p class="mb-0">Loft District, London</p>
+                            <p>EC1A 1BB</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="contact-info-card card text-center h-100">
+                        <div class="card-body">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <h4>Phone Number</h4>
+                            <p class="mb-0">020 1234 5678</p>
+                            <p>Monday-Friday: 8am-6pm</p>
+                            <a href="tel:02012345678" class="btn btn-outline-primary mt-2">Call Us</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="contact-info-card card text-center h-100">
+                        <div class="card-body">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <h4>Email Address</h4>
+                            <p class="mb-0">info@epicloftconversion.co.uk</p>
+                            <p>We reply within 24 hours</p>
+                            <a href="mailto:info@epicloftconversion.co.uk" class="btn btn-outline-primary mt-2">Email
+                                Us</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section class="contact-section" id="contact-form">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 mb-5 mb-lg-0">
+                    <h2 class="section-title">Send Us a Message</h2>
+                    <p class="mb-4">Fill out the form below and we'll get back to you as soon as possible. For a free
+                        quote, please provide details about your loft space and what you'd like to achieve.</p>
+
+                    <form class="contact-form">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <input type="text" class="form-control" placeholder="Your Name*" required>
+                            </div>
+                            <div class="col-md-6">
+                                <input type="tel" class="form-control" placeholder="Phone Number*" required>
+                            </div>
+                        </div>
+                        <input type="email" class="form-control" placeholder="Email Address*" required>
+                        <input type="text" class="form-control" placeholder="Address/Postcode*" required>
+                        <select class="form-select form-control">
+                            <option selected>Select Service Type</option>
+                            <option value="dormer">Dormer Loft Conversion</option>
+                            <option value="mansard">Mansard Loft Conversion</option>
+                            <option value="hip-to-gable">Hip to Gable Conversion</option>
+                            <option value="roof-light">Roof Light Conversion</option>
+                            <option value="modular">Modular Loft Conversion</option>
+                            <option value="other">Other/Not Sure Yet</option>
+                        </select>
+                        <textarea class="form-control" rows="5" placeholder="Tell us about your project*"
+                            required></textarea>
+                        <div class="form-check mb-4">
+                            <input class="form-check-input" type="checkbox" value="" id="privacy-check" required>
+                            <label class="form-check-label" for="privacy-check">
+                                I agree to the privacy policy and consent to being contacted regarding my inquiry.
+                            </label>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-lg">
+                            <i class="fas fa-paper-plane me-2"></i> Send Message
+                        </button>
+                    </form>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="map-container mb-4">
+                        <img src="/api/placeholder/600/400" alt="Map Location of EPIC Loft Conversion">
+                    </div>
+
+                    <h4 class="mb-3">Follow Us</h4>
+                    <div class="social-links mb-4">
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-pinterest"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-houzz"></i></a>
+                    </div>
+
+                    <div class="card p-4 bg-light">
+                        <h4 class="mb-3">Working Hours</h4>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item d-flex justify-content-between align-items-center px-0">
+                                Monday - Friday
+                                <span>8:00 AM - 6:00 PM</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center px-0">
+                                Saturday
+                                <span>9:00 AM - 2:00 PM</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center px-0">
+                                Sunday
+                                <span>Closed</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="contact-section bg-light-gray">
+        <div class="container">
+            <h2 class="section-title text-center mb-5">Frequently Asked Questions</h2>
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            How long does a typical loft conversion take?
+                        </div>
+                        <div class="faq-answer">
+                            Most standard loft conversions take between 6-8 weeks to complete. More complex projects
+                            might take 10-12 weeks. We'll provide you with a detailed timeline during our initial
+                            consultation.
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            Do I need planning permission for a loft conversion?
+                        </div>
+                        <div class="faq-answer">
+                            Many loft conversions fall under permitted development rights, meaning they don't require
+                            planning permission. However, this depends on the type of conversion and your property.
+                            We'll advise you during our initial assessment and handle any necessary applications.
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            What is your payment schedule?
+                        </div>
+                        <div class="faq-answer">
+                            We typically work with a stage payment system - an initial deposit, followed by payments at
+                            key project milestones. This ensures you only pay for work that has been completed to your
+                            satisfaction. We'll outline the full schedule in your quote.
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            Is my loft suitable for conversion?
+                        </div>
+                        <div class="faq-answer">
+                            Most lofts are suitable for conversion. Key factors include the height of your loft (ideally
+                            at least 2.2m at the highest point), the roof structure, and available space. Our free
+                            assessment will quickly determine if your loft is suitable.
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            Do you provide guarantees on your work?
+                        </div>
+                        <div class="faq-answer">
+                            Yes, we provide a comprehensive 10-year guarantee on all our loft conversions, covering both
+                            structural work and finishing. We also provide manufacturer warranties for all installed
+                            products and materials.
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            Can I stay in my home during the conversion work?
+                        </div>
+                        <div class="faq-answer">
+                            Yes, most of our clients continue to live in their homes during the conversion process. We
+                            make every effort to minimize disruption to your daily life, working efficiently and keeping
+                            noise and mess to a minimum.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-4">
+                <p>Have another question? We're happy to help!</p>
+                <a href="#contact-form" class="btn btn-outline-primary">Ask Us Anything</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Customer Reviews -->
+    <section class="contact-section">
+        <div class="container">
+            <h2 class="section-title text-center mb-5">What Our Customers Say</h2>
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <div class="testimonial">
+                        <div class="testimonial-content">
+                            <p>"EPIC Loft Conversion transformed our unused attic into a stunning master bedroom with
+                                en-suite bathroom. The team was professional, tidy, and completed the work within the
+                                timeframe promised. We couldn't be happier with the results!"</p>
+                            <div class="testimonial-author">Sarah Johnson</div>
+                            <div class="testimonial-location">Richmond, London</div>
+                            <div class="mt-2">
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="testimonial">
+                        <div class="testimonial-content">
+                            <p>"From the initial consultation to the final handover, EPIC was superb. They were upfront
+                                about costs, stuck to the budget, and the craftsmanship is excellent. Our new home
+                                office loft space has completely changed how we work from home."</p>
+                            <div class="testimonial-author">Michael Thompson</div>
+                            <div class="testimonial-location">Islington, London</div>
+                            <div class="mt-2">
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4 mb-md-0">
+                    <div class="testimonial">
+                        <div class="testimonial-content">
+                            <p>"The EPIC team turned our cramped loft into a bright, spacious bedroom and play area for
+                                our children. They were considerate of our family needs during the build, and the end
+                                result exceeded our expectations. Highly recommended!"</p>
+                            <div class="testimonial-author">Emma & David Wilson</div>
+                            <div class="testimonial-location">Camden, London</div>
+                            <div class="mt-2">
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="testimonial">
+                        <div class="testimonial-content">
+                            <p>"I was worried about disruption during the conversion, but EPIC made the process so
+                                smooth. They were clean, respectful of our home, and the communication was excellent
+                                throughout. The new loft bedroom has added significant value to our house."</p>
+                            <div class="testimonial-author">James Peterson</div>
+                            <div class="testimonial-location">Hackney, London</div>
+                            <div class="mt-2">
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-5">
+                <a href="about.html#testimonials" class="btn btn-outline-primary">Read More Reviews</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center">
+                    <h2 class="mb-3">Ready to Start Your Loft Conversion Journey?</h2>
+                    <p class="lead mb-4">Contact us today for a free, no-obligation quote and home visit. Let's turn
+                        your unused loft into a beautiful new living space!</p>
+                    <div class="d-flex justify-content-center flex-wrap">
+                        <a href="#contact-form" class="btn btn-light btn-lg me-3 mb-2">Get Your Free Quote</a>
+                        <a href="tel:02012345678" class="btn btn-outline-light btn-lg mb-2">
+                            <i class="fas fa-phone-alt me-2"></i> 020 1234 5678
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <!-- <div class="footer-logo">
+                    <img src="./assets/image/logo.jpeg" alt="EPIC Loft Conversion Logo" class="img-fluid">
+                </div> -->
+                    <p>EPIC Loft Conversion is a leading provider of high-quality loft conversions in London, delivering
+                        exceptional results and outstanding customer service.</p>
+                    <div class="social-links mt-4">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
+                    <h5 class="text-white mb-4">Quick Links</h5>
+                    <ul class="list-unstyled footer-links">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="./services/service.html">Services</a></li>
+                        <li><a href="#process">Our Process</a></li>
+                        <li><a href="#testimonials">Testimonials</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                    <h5 class="text-white mb-4">Our Services</h5>
+                    <ul class="list-unstyled footer-links">
+                        <li><a href="./services/dormer-loft-conversions.html">Dormer Loft Conversion</a></li>
+                        <li><a href="./services/mansard-loft-conversion.html">Mansard Loft Conversion</a></li>
+                        <li><a href="./services/roof-light-loft-conversion.html">Roof Light Conversion</a></li>
+                        <li><a href="./services/hip-to-gable-loft-conversion.html">Hip to Gable Conversion</a></li>
+                        <li><a href="./services/modular-loft-conversion.html">Modular Loft Conversion</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-white mb-4">Contact Info</h5>
+                    <ul class="list-unstyled footer-contact">
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>London, UK<br>Serving Central London and a 50-miles radius</div>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <a href="tel:+44 7577123400" style="color: #ffffff; text-decoration: none;">+44
+                                    7577123400</a>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <a href="tel:+44 7577123400" style="color: #ffffff; text-decoration: none;">+44 7307
+                                    544544</a>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <a href="mailto:info@epicloftconversion.co.uk"
+                                    style="color: #ffffff; text-decoration: none;">info@epicloftconversion.co.uk</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom text-center">
+                <p class="m-0">&copy; 2025 EPIC Loft Conversion. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <!-- AOS Library JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+    <!-- Custom JavaScript -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1M181EZVHS"></script>
     <script>
-        // Simple toggle for FAQ items
-        document.querySelectorAll('.faq-question').forEach(question => {
-            question.addEventListener('click', () => {
-                const answer = question.nextElementSibling;
-                if (answer.style.display === 'none' || answer.style.display === '') {
-                    answer.style.display = 'block';
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-1M181EZVHS');
+    </script>
+
+
+    <script>
+        // Initialize AOS
+        document.addEventListener('DOMContentLoaded', function () {
+            AOS.init({
+                duration: 800,
+                easing: 'ease-in-out',
+                once: true
+            });
+
+            // Back to top button
+            const backToTopButton = document.getElementById('backToTop');
+
+            window.addEventListener('scroll', function () {
+                if (window.pageYOffset > 300) {
+                    backToTopButton.classList.add('active');
                 } else {
-                    answer.style.display = 'none';
+                    backToTopButton.classList.remove('active');
                 }
+            });
+
+            backToTopButton.addEventListener('click', function (e) {
+                e.preventDefault();
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+
+            // Smooth scrolling for navbar links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        targetElement.scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                    }
+
+                    // Close mobile menu if open
+                    const navbarCollapse = document.querySelector('.navbar-collapse');
+                    if (navbarCollapse.classList.contains('show')) {
+                        navbarCollapse.classList.remove('show');
+                    }
+                });
             });
         });
     </script>
+
 </body>
+
 </html>

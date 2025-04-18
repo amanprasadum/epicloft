@@ -726,3 +726,45 @@ footer {
 .airnavbar .airnavbar-top .container a{
     font-weight: 800 ;
 }
+
+.epic-roofing-section {
+    background-color: #f8f9fa;
+  }
+  
+  .epic-heading {
+    color: #1a3c6e;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .epic-subheading {
+    color: #e74c3c;
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  .epic-content-box {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .epic-text {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #333333;
+  }
+  
+  @media (max-width: 768px) {
+    .epic-heading {
+      font-size: 1.8rem;
+    }
+    
+    .epic-subheading {
+      font-size: 1.2rem;
+    }
+    
+    .epic-text {
+      font-size: 1rem;
+    }
+  }

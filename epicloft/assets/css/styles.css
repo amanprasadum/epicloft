@@ -763,21 +763,25 @@ img.card-img-top {
 
 /* ------------------------- */
 
-/* Loft Conversion Carousel with Morph/Brush Effects
-   Prefix: lftcnv- for all custom classes
-*/
+/* -----------------------------
+ * Loft Conversion Carousel with Enhanced Effects
+ * Theme colors: #d80030 (red) and #4a4a4a (gray)
+ * Prefix: lftcnv- for all custom classes
+ * ----------------------------- */
 
 /* Main Container Styles */
 .lftcnv-hero-slider {
     position: relative;
     width: 100%;
     overflow: hidden;
+    --primary-color: #d80030;
+    --secondary-color: #4a4a4a;
 }
 
 .carousel-item {
     position: relative;
-    height: 85vh;
-    min-height: 500px;
+    height: 100vh;
+    min-height: 600px;
     overflow: hidden;
 }
 
@@ -801,8 +805,8 @@ img.card-img-top {
     background-size: cover;
     background-position: center;
     filter: grayscale(0.3) contrast(1.1);
-    transform: scale(1.1);
-    transition: transform 8s ease;
+    transform: scale(1.15);
+    transition: transform 10s ease-out;
 }
 
 .carousel-item.active .lftcnv-bg-image {
@@ -820,7 +824,7 @@ img.card-img-top {
 }
 
 .lftcnv-morph-path {
-    transition: d 1.5s cubic-bezier(0.7, 0, 0.3, 1);
+    transition: d 1.8s cubic-bezier(0.7, 0, 0.3, 1);
 }
 
 /* Brush Stroke Elements */
@@ -833,11 +837,11 @@ img.card-img-top {
 }
 
 .lftcnv-brush-1 {
-    top: 30%;
+    top: 25%;
     left: -100%;
     width: 90%;
     height: 250px;
-    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 300"><path fill="rgba(255,255,255,0.15)" d="M1200 0L0 0 0 150C300 280 900 200 1200 100z"/></svg>');
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 300"><path fill="rgba(216,0,48,0.15)" d="M1200 0L0 0 0 150C300 280 900 200 1200 100z"/></svg>');
     transform: rotate(-5deg);
     animation: lftcnv-brush-in-1 1.8s cubic-bezier(0.7, 0, 0.3, 1) forwards;
     animation-delay: 0.2s;
@@ -848,21 +852,115 @@ img.card-img-top {
     right: -100%;
     width: 80%;
     height: 180px;
-    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 300"><path fill="rgba(255,255,255,0.1)" d="M0 0L1200 0 1200 150C900 250 300 180 0 100z"/></svg>');
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 300"><path fill="rgba(216,0,48,0.1)" d="M0 0L1200 0 1200 150C900 250 300 180 0 100z"/></svg>');
     transform: rotate(3deg);
     animation: lftcnv-brush-in-2 1.8s cubic-bezier(0.7, 0, 0.3, 1) forwards;
     animation-delay: 0.5s;
 }
 
 .lftcnv-brush-3 {
-    bottom: 10%;
+    bottom: 15%;
     left: -100%;
     width: 100%;
     height: 200px;
-    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 300"><path fill="rgba(255,255,255,0.12)" d="M1200 0L0 0 0 200C400 300 800 250 1200 150z"/></svg>');
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 300"><path fill="rgba(216,0,48,0.12)" d="M1200 0L0 0 0 200C400 300 800 250 1200 150z"/></svg>');
     transform: rotate(-2deg);
     animation: lftcnv-brush-in-1 1.8s cubic-bezier(0.7, 0, 0.3, 1) forwards;
     animation-delay: 0.8s;
+}
+
+/* Accent Lines */
+.lftcnv-accent-line {
+    position: absolute;
+    background-color: rgba(216, 0, 48, 0.6);
+    z-index: 2;
+    transform-origin: center;
+    opacity: 0;
+}
+
+.lftcnv-accent-1 {
+    top: 0;
+    left: 10%;
+    width: 3px;
+    height: 60%;
+    animation: lftcnv-accent-in 1.5s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+    animation-delay: 1s;
+}
+
+.lftcnv-accent-2 {
+    bottom: 0;
+    right: 25%;
+    width: 3px;
+    height: 40%;
+    animation: lftcnv-accent-in 1.5s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+    animation-delay: 1.3s;
+}
+
+@keyframes lftcnv-accent-in {
+    0% {
+        opacity: 0;
+        transform: scaleY(0);
+    }
+    100% {
+        opacity: 0.8;
+        transform: scaleY(1);
+    }
+}
+
+/* Floating Shapes */
+.lftcnv-floating-shape {
+    position: absolute;
+    z-index: 1;
+    opacity: 0.08;
+    pointer-events: none;
+}
+
+.lftcnv-shape-1 {
+    top: 15%;
+    left: 10%;
+    width: 200px;
+    height: 200px;
+    background-color: var(--primary-color);
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+    animation: lftcnv-float 20s ease-in-out infinite alternate, lftcnv-rotate 25s linear infinite;
+}
+
+.lftcnv-shape-2 {
+    top: 60%;
+    right: 15%;
+    width: 150px;
+    height: 150px;
+    background-color: var(--primary-color);
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    animation: lftcnv-float 15s ease-in-out infinite alternate-reverse, lftcnv-rotate 20s linear infinite reverse;
+}
+
+.lftcnv-shape-3 {
+    bottom: 10%;
+    left: 20%;
+    width: 100px;
+    height: 100px;
+    background-color: var(--secondary-color);
+    border-radius: 50% 50% 50% 70% / 50% 50% 70% 60%;
+    animation: lftcnv-float 18s ease-in-out infinite alternate, lftcnv-rotate 30s linear infinite;
+}
+
+@keyframes lftcnv-float {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(40px, 30px);
+    }
+}
+
+@keyframes lftcnv-rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 /* Brush Animation Keyframes */
@@ -909,16 +1007,77 @@ img.card-img-top {
     position: relative;
 }
 
+/* Badge */
+.lftcnv-badge {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: white;
+    font-size: 0.9rem;
+    font-weight: 700;
+    padding: 0.5rem 1.2rem;
+    border-radius: 50px;
+    margin-bottom: 1.5rem;
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: lftcnv-badge-in 0.8s cubic-bezier(0.17, 0.67, 0.3, 0.96) forwards;
+    animation-delay: 0.8s;
+    box-shadow: 0 8px 20px rgba(216, 0, 48, 0.3);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+@keyframes lftcnv-badge-in {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 /* Title Style */
 .lftcnv-title {
-    font-size: 3rem;
-    font-weight: 700;
+    font-size: 3.5rem;
+    font-weight: 800;
     margin-bottom: 1rem;
     opacity: 0;
     transform: translateY(30px);
     animation: lftcnv-text-in 1s cubic-bezier(0.17, 0.67, 0.3, 0.96) forwards;
     animation-delay: 1.2s;
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+    line-height: 1.2;
+}
+
+.lftcnv-highlight {
+    color: var(--primary-color);
+    position: relative;
+    display: inline-block;
+}
+
+.lftcnv-highlight::after {
+    content: '';
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    width: 100%;
+    height: 8px;
+    background-color: rgba(216, 0, 48, 0.3);
+    z-index: -1;
+    transform: scaleX(0);
+    transform-origin: left;
+    animation: lftcnv-highlight-in 1s cubic-bezier(0.17, 0.67, 0.83, 0.67) forwards;
+    animation-delay: 1.8s;
+}
+
+@keyframes lftcnv-highlight-in {
+    0% {
+        transform: scaleX(0);
+    }
+    100% {
+        transform: scaleX(1);
+    }
 }
 
 @keyframes lftcnv-text-in {
@@ -936,8 +1095,8 @@ img.card-img-top {
 .lftcnv-brush-divider {
     height: 20px;
     width: 0;
-    margin: 1.5rem auto;
-    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 20"><path fill="%23ffffff" d="M0 10 C75 0, 225 0, 300 10 L300 20 L0 20 Z"/></svg>');
+    margin: 1.8rem auto;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 20"><path fill="%23d80030" d="M0 10 C75 0, 225 0, 300 10 L300 20 L0 20 Z"/></svg>');
     background-size: cover;
     animation: lftcnv-divider-in 1.2s ease forwards;
     animation-delay: 1.5s;
@@ -948,26 +1107,27 @@ img.card-img-top {
         width: 0;
     }
     100% {
-        width: 150px;
+        width: 180px;
     }
 }
 
 /* Description Style */
 .lftcnv-description {
-    font-size: 1.25rem;
-    margin-bottom: 2rem;
+    font-size: 1.3rem;
+    margin-bottom: 2.5rem;
     opacity: 0;
     transform: translateY(30px);
     animation: lftcnv-text-in 1s cubic-bezier(0.17, 0.67, 0.3, 0.96) forwards;
     animation-delay: 1.8s;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+    line-height: 1.6;
 }
 
 /* Button Group */
 .lftcnv-btn-group {
     display: flex;
     justify-content: center;
-    gap: 1rem;
+    gap: 1.2rem;
     opacity: 0;
     transform: translateY(30px);
     animation: lftcnv-text-in 1s cubic-bezier(0.17, 0.67, 0.3, 0.96) forwards;
@@ -977,20 +1137,23 @@ img.card-img-top {
 /* Button Styles */
 .lftcnv-btn {
     display: inline-block;
-    padding: 0.75rem 1.8rem;
+    padding: 1rem 2rem;
     font-size: 1.1rem;
-    font-weight: 500;
+    font-weight: 600;
     text-decoration: none;
     border-radius: 50px;
-    transition: all 0.4s ease;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
     position: relative;
     overflow: hidden;
+    z-index: 1;
+    letter-spacing: 0.5px;
 }
 
 .lftcnv-btn-primary {
-    background: linear-gradient(135deg, #3498db, #1abc9c);
+    background: var(--primary-color);
     color: white;
     border: none;
+    box-shadow: 0 12px 24px rgba(216, 0, 48, 0.4);
 }
 
 .lftcnv-btn-primary::before {
@@ -1000,13 +1163,14 @@ img.card-img-top {
     left: -100%;
     width: 100%;
     height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
     transition: left 0.7s ease;
+    z-index: -1;
 }
 
 .lftcnv-btn-primary:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(216, 0, 48, 0.5);
     color: white;
 }
 
@@ -1018,13 +1182,30 @@ img.card-img-top {
     background: transparent;
     color: white;
     border: 2px solid white;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.lftcnv-btn-outline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.15);
+    transition: width 0.4s ease;
+    z-index: -1;
 }
 
 .lftcnv-btn-outline:hover {
-    background: rgba(255, 255, 255, 0.1);
-    transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    background: transparent;
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
     color: white;
+}
+
+.lftcnv-btn-outline:hover::before {
+    width: 100%;
 }
 
 /* Custom Navigation Controls */
@@ -1034,7 +1215,7 @@ img.card-img-top {
     transform: translateY(-50%);
     width: 60px;
     height: 60px;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(74, 74, 74, 0.5);
     border: none;
     border-radius: 50%;
     display: flex;
@@ -1044,15 +1225,15 @@ img.card-img-top {
     color: white;
     z-index: 20;
     opacity: 0;
-    transition: all 0.3s ease;
+    transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
 .lftcnv-carousel-prev {
-    left: 20px;
+    left: 30px;
 }
 
 .lftcnv-carousel-next {
-    right: 20px;
+    right: 30px;
 }
 
 .lftcnv-hero-slider:hover .lftcnv-carousel-control {
@@ -1060,7 +1241,7 @@ img.card-img-top {
 }
 
 .lftcnv-carousel-control:hover {
-    background: rgba(0, 0, 0, 0.8);
+    background: var(--primary-color);
     opacity: 1 !important;
     transform: translateY(-50%) scale(1.1);
 }
@@ -1074,11 +1255,11 @@ img.card-img-top {
 /* Custom Indicators */
 .lftcnv-carousel-indicators {
     position: absolute;
-    bottom: 20px;
+    bottom: 30px;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
-    gap: 10px;
+    gap: 12px;
     z-index: 20;
 }
 
@@ -1088,16 +1269,23 @@ img.card-img-top {
     border-radius: 50%;
     border: none;
     background: rgba(255, 255, 255, 0.5);
-    transition: all 0.3s ease;
+    transition: all 0.4s ease;
 }
 
 .lftcnv-carousel-indicators button.active {
-    width: 30px;
+    width: 35px;
     border-radius: 10px;
-    background: white;
+    background: var(--primary-color);
+    box-shadow: 0 0 12px rgba(216, 0, 48, 0.5);
 }
 
 /* Media Queries */
+@media (max-width: 1200px) {
+    .lftcnv-title {
+        font-size: 3rem;
+    }
+}
+
 @media (max-width: 992px) {
     .lftcnv-title {
         font-size: 2.5rem;
@@ -1108,25 +1296,52 @@ img.card-img-top {
     }
     
     .lftcnv-btn {
-        padding: 0.6rem 1.5rem;
+        padding: 0.8rem 1.6rem;
         font-size: 1rem;
+    }
+    
+    .lftcnv-floating-shape {
+        opacity: 0.05;
+        transform: scale(0.8);
+    }
+    
+    .lftcnv-accent-1, 
+    .lftcnv-accent-2 {
+        height: 40%;
     }
 }
 
 @media (max-width: 768px) {
+    .carousel-item {
+        height: 80vh;
+    }
+    
     .lftcnv-title {
-        font-size: 2rem;
+        font-size: 2.2rem;
+    }
+    
+    .lftcnv-description {
+        font-size: 1rem;
+        margin-bottom: 2rem;
     }
     
     .lftcnv-btn-group {
         flex-direction: column;
-        gap: 0.75rem;
+        gap: 0.8rem;
     }
     
-    .lftcnv-brush-1,
-    .lftcnv-brush-2,
-    .lftcnv-brush-3 {
-        height: 100px;
+    .lftcnv-btn {
+        width: 100%;
+        padding: 0.8rem 1.5rem;
+    }
+    
+    .lftcnv-floating-shape {
+        display: none;
+    }
+    
+    .lftcnv-badge {
+        font-size: 0.8rem;
+        padding: 0.4rem 1rem;
     }
 }
 
@@ -1140,9 +1355,31 @@ img.card-img-top {
     }
     
     .lftcnv-description {
-        font-size: 1rem;
+        font-size: 0.9rem;
         margin-bottom: 1.5rem;
     }
+    
+    .lftcnv-carousel-control {
+        width: 45px;
+        height: 45px;
+    }
+    
+    .lftcnv-carousel-prev {
+        left: 15px;
+    }
+    
+    .lftcnv-carousel-next {
+        right: 15px;
+    }
+    
+    .lftcnv-arrow svg {
+        width: 30px;
+        height: 30px;
+    }
+    
+    .lftcnv-brush-divider {
+        margin: 1.2rem auto;
+        height: 15px;
+    }
 }
-
 /* ------------------------- */

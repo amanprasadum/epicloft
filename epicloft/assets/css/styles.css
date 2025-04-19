@@ -711,26 +711,44 @@ footer {
 }
 
 .epic-roofing-section {
-    background-color: #e6ebf1;
-    ;
+    background-color: #f8f9fa;
+    position: relative;
+    padding: 6rem 0;
+    overflow: hidden;
 }
 
 .epic-heading {
     color: #1a3c6e;
     font-size: 2.5rem;
-    margin-bottom: 1rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    position: relative;
+    z-index: 2;
 }
 
 .epic-subheading {
     color: #e74c3c;
     font-size: 1.5rem;
     margin-bottom: 2rem;
+    position: relative;
+    z-index: 2;
 }
 
 .epic-content-box {
-    background-color: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    padding: 2.5rem;
+    position: relative;
+    z-index: 2;
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    transform: translateY(0);
+    transition: transform 0.3s ease;
+}
+
+.epic-content-box:hover {
+    transform: translateY(-5px);
 }
 
 .epic-text {
@@ -739,16 +757,167 @@ footer {
     color: #333333;
 }
 
+.epic-image-container {
+    position: absolute;
+    width: 38%;
+    height: 78%;
+    right: 2%;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+    border-radius: 20px 0 0 20px;
+    overflow: hidden;
+    box-shadow: -10px 10px 30px rgba(0, 0, 0, 0.15);
+    padding: 20px;
+    margin-right: 20px;
+}
+
+.epic-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.epic-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(248, 249, 250, 0.9) 0%, rgba(248, 249, 250, 0) 100%);
+    z-index: 1;
+}
+
+.epic-accent {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: rgba(231, 76, 60, 0.1);
+    top: -75px;
+    left: 10%;
+    z-index: 1;
+}
+
+.epic-accent-2 {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: rgba(26, 60, 110, 0.1);
+    bottom: -50px;
+    left: 20%;
+    z-index: 1;
+}
+
+.epic-badge {
+    display: inline-block;
+    background-color: #e74c3c;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    transform: translateY(0);
+    transition: transform 0.3s ease;
+}
+
+.epic-badge:hover {
+    transform: translateY(-3px);
+}
+
+.epic-read-more {
+    display: inline-block;
+    position: relative;
+    color: #1a3c6e;
+    font-weight: 600;
+    text-decoration: none;
+    padding: 0.75rem 2rem;
+    margin-top: 1.5rem;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    border-radius: 50px;
+    border: 2px solid #1a3c6e;
+    background: transparent;
+    z-index: 1;
+    font-size: 1.1rem;
+}
+
+.epic-read-more:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0%;
+    height: 100%;
+    background-color: #1a3c6e;
+    transition: width 0.3s ease;
+    z-index: -1;
+}
+
+.epic-read-more:hover {
+    color: #ffffff;
+}
+
+.epic-read-more:hover:before {
+    width: 100%;
+}
+
+.epic-read-more i {
+    margin-left: 8px;
+    transition: transform 0.3s ease;
+}
+
+.epic-read-more:hover i {
+    transform: translateX(5px);
+}
+
+@media (max-width: 991px) {
+    .epic-image-container {
+        position: relative;
+        width: 100%;
+        height: 300px;
+        right: 0;
+        top: 0;
+        transform: none;
+        border-radius: 12px;
+        margin: 0 0 2rem 0;
+        padding: 0;
+    }
+    
+    .epic-overlay {
+        background: linear-gradient(0deg, rgba(248, 249, 250, 0.6) 0%, rgba(248, 249, 250, 0) 100%);
+    }
+    
+    .epic-roofing-section {
+        padding: 4rem 0;
+    }
+    
+    .epic-content-container {
+        padding: 0 1.5rem;
+    }
+}
+
 @media (max-width: 768px) {
     .epic-heading {
         font-size: 1.8rem;
     }
-
+    
     .epic-subheading {
         font-size: 1.2rem;
     }
-
+    
     .epic-text {
+        font-size: 1rem;
+    }
+    
+    .epic-content-box {
+        padding: 1.8rem;
+    }
+    
+    .epic-read-more {
+        padding: 0.6rem 1.8rem;
         font-size: 1rem;
     }
 }

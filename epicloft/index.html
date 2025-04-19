@@ -16,6 +16,146 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="./assets/css/styles.css">
     <link rel="stylesheet" href="./assets/css/mobile.css">
+    <style>
+        /* Base Styles for Hero Carousel */
+        .hero-slider {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .carousel-item {
+            height: 80vh;
+            min-height: 500px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Background Image with Zoom Effect */
+        .bg-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            transition: transform 10s ease-in-out;
+        }
+
+        .carousel-item.active .bg-image.zoom-effect {
+            transform: scale(1.1);
+        }
+
+        /* Overlay Gradients */
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0.5;
+        }
+
+        .overlay-blue {
+            background: linear-gradient(135deg, rgba(0, 32, 76, 0.6) 0%, rgba(0, 0, 0, 0.3) 100%);
+        }
+
+        .overlay-green {
+            background: linear-gradient(135deg, rgba(0, 76, 63, 0.6) 0%, rgba(0, 0, 0, 0.3) 100%);
+        }
+
+        .overlay-brown {
+            background: linear-gradient(135deg, rgba(76, 40, 0, 0.6) 0%, rgba(0, 0, 0, 0.3) 100%);
+        }
+
+        /* Caption Text Animation */
+        .carousel-caption {
+            z-index: 10;
+            padding-bottom: 5rem;
+        }
+
+        .animate-caption-title,
+        .animate-caption-text,
+        .animate-caption-buttons {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        .carousel-item.active .animate-caption-title {
+            animation: fadeInUp 0.8s ease forwards;
+            animation-delay: 0.2s;
+        }
+
+        .carousel-item.active .animate-caption-text {
+            animation: fadeInUp 0.8s ease forwards;
+            animation-delay: 0.6s;
+        }
+
+        .carousel-item.active .animate-caption-buttons {
+            animation: fadeInUp 0.8s ease forwards;
+            animation-delay: 1s;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Button Hover Effects */
+        .btn-primary {
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .btn-outline-light {
+            transition: all 0.3s ease;
+        }
+
+        .btn-outline-light:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Carousel Controls Enhancement */
+        .carousel-control-prev,
+        .carousel-control-next {
+            width: 10%;
+            opacity: 0;
+            transition: all 0.3s ease;
+        }
+
+        .hero-slider:hover .carousel-control-prev,
+        .hero-slider:hover .carousel-control-next {
+            opacity: 0.7;
+        }
+
+        .carousel-indicators {
+            bottom: 30px;
+        }
+
+        .carousel-indicators button {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            margin: 0 5px;
+            transition: all 0.3s ease;
+        }
+
+        .carousel-indicators button.active {
+            transform: scale(1.2);
+        }
+    </style>
 </head>
 
 <body>
@@ -145,8 +285,9 @@
             </div>
         </nav>
     </section>
+
     <!-- Hero Carousel -->
-    <section class="hero-slider">
+    <!-- <section class="hero-slider">
         <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
             <div class="carousel-indicators">
                 <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active"></button>
@@ -189,7 +330,71 @@
                 <span class="visually-hidden">Next</span>
             </button>
         </div>
+    </section> -->
+
+    <!-- Hero Carousel with Enhanced Animations -->
+    <section class="hero-slider">
+        <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active"></button>
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="bg-image zoom-effect" style="background-image: url('./assets/image/hero.jpg')"></div>
+                    <div class="overlay overlay-blue"></div>
+                    <div class="carousel-caption">
+                        <h1 class="display-4 fw-bold mb-4 animate-caption-title">Hire London's Best Loft Conversion
+                            Company</h1>
+                        <p class="lead mb-4 animate-caption-text">Upgrade your home and add value to your property with
+                            our quality loft
+                            conversion services</p>
+                        <div class="animate-caption-buttons">
+                            <a href="#quote" class="btn btn-primary btn-lg px-5 me-3">Get a Free Quote</a>
+                            <a href="#process" class="btn btn-outline-light btn-lg px-5">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="bg-image zoom-effect" style="background-image: url('./assets/image/hero2.jpg')"></div>
+                    <div class="overlay overlay-green"></div>
+                    <div class="carousel-caption">
+                        <h1 class="display-4 fw-bold mb-4 animate-caption-title">Custom Loft Designs for Every Home</h1>
+                        <p class="lead mb-4 animate-caption-text">From dormers to mansards, we create the perfect space
+                            for your needs</p>
+                        <div class="animate-caption-buttons">
+                            <a href="#services" class="btn btn-primary btn-lg px-5 me-3">Our Services</a>
+                            <a href="#quote" class="btn btn-outline-light btn-lg px-5">Get a Free Quote</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="bg-image zoom-effect" style="background-image: url('./assets/image/hero3.jpg')"></div>
+                    <div class="overlay overlay-brown"></div>
+                    <div class="carousel-caption">
+                        <h1 class="display-4 fw-bold mb-4 animate-caption-title">Trusted Loft Conversion Specialists in
+                            London</h1>
+                        <p class="lead mb-4 animate-caption-text">Serving Central London and surrounding areas within a
+                            50-miles radius</p>
+                        <div class="animate-caption-buttons">
+                            <a href="#testimonials" class="btn btn-primary btn-lg px-5 me-3">Our Testimonials</a>
+                            <a href="#contact" class="btn btn-outline-light btn-lg px-5">Contact Us</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
     </section>
+
     <!-- About Section -->
     <section id="about" class="py-5 my-5">
         <div class="container">
@@ -240,6 +445,7 @@
             </div>
         </div>
     </section>
+
     <!-- Video Section -->
     <section class="airvideo-section py-5">
         <div class="container">
@@ -373,6 +579,7 @@
             </div>
         </div>
     </section>
+
     <!-- Process Section -->
     <section id="process" class="py-5 my-5">
         <div class="container">
@@ -441,8 +648,6 @@
             </div>
         </div>
     </section>
-
-
 
     <!-- Benefits Section -->
     <section class="py-5 bg-light">
@@ -1075,6 +1280,54 @@
                     if (navbarCollapse.classList.contains('show')) {
                         navbarCollapse.classList.remove('show');
                     }
+                });
+            });
+        });
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Initialize Bootstrap Carousel
+            var heroCarousel = document.querySelector('#heroCarousel');
+            var carousel = new bootstrap.Carousel(heroCarousel, {
+                interval: 7000,  // Longer interval to allow animations to complete
+                pause: 'hover'
+            });
+
+            // Reset animations when slide changes
+            heroCarousel.addEventListener('slide.bs.carousel', function () {
+                var titles = document.querySelectorAll('.animate-caption-title');
+                var texts = document.querySelectorAll('.animate-caption-text');
+                var buttons = document.querySelectorAll('.animate-caption-buttons');
+
+                titles.forEach(function (title) {
+                    title.style.opacity = 0;
+                    title.style.transform = 'translateY(20px)';
+                });
+
+                texts.forEach(function (text) {
+                    text.style.opacity = 0;
+                    text.style.transform = 'translateY(20px)';
+                });
+
+                buttons.forEach(function (button) {
+                    button.style.opacity = 0;
+                    button.style.transform = 'translateY(20px)';
+                });
+            });
+
+            // Optional: Add parallax effect on mouse move
+            heroCarousel.addEventListener('mousemove', function (e) {
+                const moveX = (e.clientX / window.innerWidth) - 0.5;
+                const moveY = (e.clientY / window.innerHeight) - 0.5;
+
+                const activeSlide = this.querySelector('.carousel-item.active');
+                const bgImage = activeSlide.querySelector('.bg-image');
+
+                gsap.to(bgImage, {
+                    duration: 1,
+                    x: moveX * 20,
+                    y: moveY * 20,
+                    ease: "power1.out"
                 });
             });
         });

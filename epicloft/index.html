@@ -333,6 +333,7 @@
     </section> -->
 
     <!-- Hero Carousel with Advanced Animations -->
+    <!-- Hero Carousel with Morph/Brush Animations -->
     <section class="lftcnv-hero-slider">
         <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
             <div class="lftcnv-carousel-indicators">
@@ -344,29 +345,43 @@
             <div class="carousel-inner">
                 <!-- Item 1 -->
                 <div class="carousel-item active">
-                    <div class="lftcnv-slide-container">
-                        <!-- Image layers with clip-path effects -->
-                        <div class="lftcnv-bg-wrapper">
-                            <div class="lftcnv-bg-main" style="background-image: url('./assets/image/hero.jpg')"></div>
-                            <div class="lftcnv-bg-clip lftcnv-clip-1"
-                                style="background-image: url('./assets/image/hero.jpg')"></div>
-                            <div class="lftcnv-bg-clip lftcnv-clip-2"
-                                style="background-image: url('./assets/image/hero.jpg')"></div>
-                            <div class="lftcnv-bg-clip lftcnv-clip-3"
-                                style="background-image: url('./assets/image/hero.jpg')"></div>
-                        </div>
+                    <!-- Morph SVG Mask Container -->
+                    <div class="lftcnv-morph-container">
+                        <!-- Base Image -->
+                        <div class="lftcnv-bg-image" style="background-image: url('./assets/image/hero.jpg')"></div>
 
-                        <!-- Content with staggered reveal -->
-                        <div class="lftcnv-carousel-content">
-                            <div class="lftcnv-content-inner">
-                                <h1 class="lftcnv-title">Hire London's Best Loft Conversion Company</h1>
-                                <div class="lftcnv-line"></div>
-                                <p class="lftcnv-description">Upgrade your home and add value to your property with our
-                                    quality loft conversion services</p>
-                                <div class="lftcnv-btn-group">
-                                    <a href="#quote" class="lftcnv-btn lftcnv-btn-primary">Get a Free Quote</a>
-                                    <a href="#process" class="lftcnv-btn lftcnv-btn-outline">Learn More</a>
-                                </div>
+                        <!-- SVG Mask Layer -->
+                        <svg class="lftcnv-morph-svg" width="100%" height="100%" viewBox="0 0 1440 800"
+                            preserveAspectRatio="none">
+                            <defs>
+                                <clipPath id="lftcnv-morph-mask-1">
+                                    <path class="lftcnv-morph-path" d="M0,0 L1440,0 L1440,800 L0,800 Z"></path>
+                                </clipPath>
+                            </defs>
+                            <g clip-path="url(#lftcnv-morph-mask-1)">
+                                <image class="lftcnv-morph-image" width="100%" height="100%"
+                                    xlink:href="./assets/image/hero.jpg" preserveAspectRatio="xMidYMid slice" />
+                                <rect class="lftcnv-color-overlay" width="100%" height="100%" fill="rgba(0,32,76,0.4)">
+                                </rect>
+                            </g>
+                        </svg>
+
+                        <!-- Brush Stroke Elements -->
+                        <div class="lftcnv-brush-stroke lftcnv-brush-1"></div>
+                        <div class="lftcnv-brush-stroke lftcnv-brush-2"></div>
+                        <div class="lftcnv-brush-stroke lftcnv-brush-3"></div>
+                    </div>
+
+                    <!-- Content -->
+                    <div class="lftcnv-carousel-content">
+                        <div class="lftcnv-content-inner">
+                            <h1 class="lftcnv-title">Hire London's Best Loft Conversion Company</h1>
+                            <div class="lftcnv-brush-divider"></div>
+                            <p class="lftcnv-description">Upgrade your home and add value to your property with our
+                                quality loft conversion services</p>
+                            <div class="lftcnv-btn-group">
+                                <a href="#quote" class="lftcnv-btn lftcnv-btn-primary">Get a Free Quote</a>
+                                <a href="#process" class="lftcnv-btn lftcnv-btn-outline">Learn More</a>
                             </div>
                         </div>
                     </div>
@@ -374,29 +389,43 @@
 
                 <!-- Item 2 -->
                 <div class="carousel-item">
-                    <div class="lftcnv-slide-container">
-                        <!-- Image layers with clip-path effects -->
-                        <div class="lftcnv-bg-wrapper">
-                            <div class="lftcnv-bg-main" style="background-image: url('./assets/image/hero2.jpg')"></div>
-                            <div class="lftcnv-bg-clip lftcnv-clip-1"
-                                style="background-image: url('./assets/image/hero2.jpg')"></div>
-                            <div class="lftcnv-bg-clip lftcnv-clip-2"
-                                style="background-image: url('./assets/image/hero2.jpg')"></div>
-                            <div class="lftcnv-bg-clip lftcnv-clip-3"
-                                style="background-image: url('./assets/image/hero2.jpg')"></div>
-                        </div>
+                    <!-- Morph SVG Mask Container -->
+                    <div class="lftcnv-morph-container">
+                        <!-- Base Image -->
+                        <div class="lftcnv-bg-image" style="background-image: url('./assets/image/hero2.jpg')"></div>
 
-                        <!-- Content with staggered reveal -->
-                        <div class="lftcnv-carousel-content">
-                            <div class="lftcnv-content-inner">
-                                <h1 class="lftcnv-title">Custom Loft Designs for Every Home</h1>
-                                <div class="lftcnv-line"></div>
-                                <p class="lftcnv-description">From dormers to mansards, we create the perfect space for
-                                    your needs</p>
-                                <div class="lftcnv-btn-group">
-                                    <a href="#services" class="lftcnv-btn lftcnv-btn-primary">Our Services</a>
-                                    <a href="#quote" class="lftcnv-btn lftcnv-btn-outline">Get a Free Quote</a>
-                                </div>
+                        <!-- SVG Mask Layer -->
+                        <svg class="lftcnv-morph-svg" width="100%" height="100%" viewBox="0 0 1440 800"
+                            preserveAspectRatio="none">
+                            <defs>
+                                <clipPath id="lftcnv-morph-mask-2">
+                                    <path class="lftcnv-morph-path" d="M0,0 L1440,0 L1440,800 L0,800 Z"></path>
+                                </clipPath>
+                            </defs>
+                            <g clip-path="url(#lftcnv-morph-mask-2)">
+                                <image class="lftcnv-morph-image" width="100%" height="100%"
+                                    xlink:href="./assets/image/hero2.jpg" preserveAspectRatio="xMidYMid slice" />
+                                <rect class="lftcnv-color-overlay" width="100%" height="100%" fill="rgba(0,76,63,0.4)">
+                                </rect>
+                            </g>
+                        </svg>
+
+                        <!-- Brush Stroke Elements -->
+                        <div class="lftcnv-brush-stroke lftcnv-brush-1"></div>
+                        <div class="lftcnv-brush-stroke lftcnv-brush-2"></div>
+                        <div class="lftcnv-brush-stroke lftcnv-brush-3"></div>
+                    </div>
+
+                    <!-- Content -->
+                    <div class="lftcnv-carousel-content">
+                        <div class="lftcnv-content-inner">
+                            <h1 class="lftcnv-title">Custom Loft Designs for Every Home</h1>
+                            <div class="lftcnv-brush-divider"></div>
+                            <p class="lftcnv-description">From dormers to mansards, we create the perfect space for your
+                                needs</p>
+                            <div class="lftcnv-btn-group">
+                                <a href="#services" class="lftcnv-btn lftcnv-btn-primary">Our Services</a>
+                                <a href="#quote" class="lftcnv-btn lftcnv-btn-outline">Get a Free Quote</a>
                             </div>
                         </div>
                     </div>
@@ -404,29 +433,43 @@
 
                 <!-- Item 3 -->
                 <div class="carousel-item">
-                    <div class="lftcnv-slide-container">
-                        <!-- Image layers with clip-path effects -->
-                        <div class="lftcnv-bg-wrapper">
-                            <div class="lftcnv-bg-main" style="background-image: url('./assets/image/hero3.jpg')"></div>
-                            <div class="lftcnv-bg-clip lftcnv-clip-1"
-                                style="background-image: url('./assets/image/hero3.jpg')"></div>
-                            <div class="lftcnv-bg-clip lftcnv-clip-2"
-                                style="background-image: url('./assets/image/hero3.jpg')"></div>
-                            <div class="lftcnv-bg-clip lftcnv-clip-3"
-                                style="background-image: url('./assets/image/hero3.jpg')"></div>
-                        </div>
+                    <!-- Morph SVG Mask Container -->
+                    <div class="lftcnv-morph-container">
+                        <!-- Base Image -->
+                        <div class="lftcnv-bg-image" style="background-image: url('./assets/image/hero3.jpg')"></div>
 
-                        <!-- Content with staggered reveal -->
-                        <div class="lftcnv-carousel-content">
-                            <div class="lftcnv-content-inner">
-                                <h1 class="lftcnv-title">Trusted Loft Conversion Specialists in London</h1>
-                                <div class="lftcnv-line"></div>
-                                <p class="lftcnv-description">Serving Central London and surrounding areas within a
-                                    50-miles radius</p>
-                                <div class="lftcnv-btn-group">
-                                    <a href="#testimonials" class="lftcnv-btn lftcnv-btn-primary">Our Testimonials</a>
-                                    <a href="#contact" class="lftcnv-btn lftcnv-btn-outline">Contact Us</a>
-                                </div>
+                        <!-- SVG Mask Layer -->
+                        <svg class="lftcnv-morph-svg" width="100%" height="100%" viewBox="0 0 1440 800"
+                            preserveAspectRatio="none">
+                            <defs>
+                                <clipPath id="lftcnv-morph-mask-3">
+                                    <path class="lftcnv-morph-path" d="M0,0 L1440,0 L1440,800 L0,800 Z"></path>
+                                </clipPath>
+                            </defs>
+                            <g clip-path="url(#lftcnv-morph-mask-3)">
+                                <image class="lftcnv-morph-image" width="100%" height="100%"
+                                    xlink:href="./assets/image/hero3.jpg" preserveAspectRatio="xMidYMid slice" />
+                                <rect class="lftcnv-color-overlay" width="100%" height="100%" fill="rgba(76,40,0,0.4)">
+                                </rect>
+                            </g>
+                        </svg>
+
+                        <!-- Brush Stroke Elements -->
+                        <div class="lftcnv-brush-stroke lftcnv-brush-1"></div>
+                        <div class="lftcnv-brush-stroke lftcnv-brush-2"></div>
+                        <div class="lftcnv-brush-stroke lftcnv-brush-3"></div>
+                    </div>
+
+                    <!-- Content -->
+                    <div class="lftcnv-carousel-content">
+                        <div class="lftcnv-content-inner">
+                            <h1 class="lftcnv-title">Trusted Loft Conversion Specialists in London</h1>
+                            <div class="lftcnv-brush-divider"></div>
+                            <p class="lftcnv-description">Serving Central London and surrounding areas within a 50-miles
+                                radius</p>
+                            <div class="lftcnv-btn-group">
+                                <a href="#testimonials" class="lftcnv-btn lftcnv-btn-primary">Our Testimonials</a>
+                                <a href="#contact" class="lftcnv-btn lftcnv-btn-outline">Contact Us</a>
                             </div>
                         </div>
                     </div>
@@ -1346,99 +1389,138 @@
 
     <!-- JavaScript to handle transition animations -->
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const carousel = document.getElementById('heroCarousel');
+        // Loft Conversion Carousel Morph Animation JavaScript
 
+        document.addEventListener('DOMContentLoaded', function () {
             // Initialize carousel with longer interval
+            const carousel = document.getElementById('heroCarousel');
             const bsCarousel = new bootstrap.Carousel(carousel, {
                 interval: 8000,
                 pause: 'hover'
             });
 
-            // Handle slide transition animations
-            carousel.addEventListener('slide.bs.carousel', function (e) {
-                const activeItem = e.relatedTarget;
+            // SVG Morph Paths - Different shapes for transitions
+            const morphPaths = {
+                initial: "M0,0 L1440,0 L1440,800 L0,800 Z",
+                reveal1: "M0,0 L1440,0 L1440,800 C1200,780 800,600 400,700 C200,750 100,800 0,800 Z",
+                reveal2: "M0,0 L1440,0 C1300,100 1100,50 950,150 C750,300 500,200 300,300 C100,400 0,350 0,800 Z",
+                reveal3: "M0,0 L1440,0 C1200,200 900,100 700,300 C500,500 200,400 0,250 L0,800 Z"
+            };
 
-                // Reset all animations for new slide
+            // Prepare morph elements once DOM is loaded
+            const morphPaths1 = document.querySelector("#lftcnv-morph-mask-1 .lftcnv-morph-path");
+            const morphPaths2 = document.querySelector("#lftcnv-morph-mask-2 .lftcnv-morph-path");
+            const morphPaths3 = document.querySelector("#lftcnv-morph-mask-3 .lftcnv-morph-path");
+
+            if (morphPaths1) morphPaths1.setAttribute('d', morphPaths.initial);
+            if (morphPaths2) morphPaths2.setAttribute('d', morphPaths.initial);
+            if (morphPaths3) morphPaths3.setAttribute('d', morphPaths.initial);
+
+            // Function to handle morphing animations
+            function animateMorphPaths(item) {
+                const morphPath = item.querySelector(".lftcnv-morph-path");
+                if (!morphPath) return;
+
+                // Random selection of reveal path for variety
+                const revealPaths = [morphPaths.reveal1, morphPaths.reveal2, morphPaths.reveal3];
+                const randomPath = revealPaths[Math.floor(Math.random() * revealPaths.length)];
+
+                // Animate the path
                 setTimeout(() => {
-                    // Trigger clip path animations
-                    const clips = activeItem.querySelectorAll('.lftcnv-bg-clip');
-                    clips.forEach((clip, index) => {
-                        clip.classList.add('lftcnv-animate');
-                        // Stagger the animations
-                        clip.style.animationDelay = `${index * 0.15}s`;
-                    });
+                    morphPath.setAttribute('d', randomPath);
+                }, 100);
+            }
 
-                    // Animate content elements
-                    const title = activeItem.querySelector('.lftcnv-title');
-                    const line = activeItem.querySelector('.lftcnv-line');
-                    const desc = activeItem.querySelector('.lftcnv-description');
-                    const btnGroup = activeItem.querySelector('.lftcnv-btn-group');
+            // Reset path when slide changes
+            function resetMorphPath(item) {
+                const morphPath = item.querySelector(".lftcnv-morph-path");
+                if (!morphPath) return;
+                morphPath.setAttribute('d', morphPaths.initial);
+            }
 
-                    title.classList.add('lftcnv-animate');
+            // Handle brush strokes reset
+            function resetBrushStrokes(item) {
+                const brushes = item.querySelectorAll('.lftcnv-brush-stroke');
+                brushes.forEach(brush => {
+                    // Remove and re-add animation classes to restart animations
+                    brush.style.animation = 'none';
+                    brush.offsetHeight; // Trigger reflow
 
-                    setTimeout(() => {
-                        line.classList.add('lftcnv-animate');
-                    }, 300);
+                    if (brush.classList.contains('lftcnv-brush-1') || brush.classList.contains('lftcnv-brush-3')) {
+                        brush.style.animation = 'lftcnv-brush-in-1 1.8s cubic-bezier(0.7, 0, 0.3, 1) forwards';
+                    } else {
+                        brush.style.animation = 'lftcnv-brush-in-2 1.8s cubic-bezier(0.7, 0, 0.3, 1) forwards';
+                    }
+                });
+            }
 
-                    setTimeout(() => {
-                        desc.classList.add('lftcnv-animate');
-                    }, 500);
+            // Reset all text animations
+            function resetTextAnimations(item) {
+                const title = item.querySelector('.lftcnv-title');
+                const divider = item.querySelector('.lftcnv-brush-divider');
+                const desc = item.querySelector('.lftcnv-description');
+                const btnGroup = item.querySelector('.lftcnv-btn-group');
 
-                    setTimeout(() => {
-                        btnGroup.classList.add('lftcnv-animate');
-                    }, 700);
-                }, 50);
-            });
+                if (title) {
+                    title.style.animation = 'none';
+                    title.offsetHeight; // Trigger reflow
+                    title.style.animation = 'lftcnv-text-in 1s cubic-bezier(0.17, 0.67, 0.3, 0.96) forwards 1.2s';
+                }
 
-            // Initial animation for first slide
+                if (divider) {
+                    divider.style.animation = 'none';
+                    divider.offsetHeight; // Trigger reflow
+                    divider.style.animation = 'lftcnv-divider-in 1.2s ease forwards 1.5s';
+                }
+
+                if (desc) {
+                    desc.style.animation = 'none';
+                    desc.offsetHeight; // Trigger reflow
+                    desc.style.animation = 'lftcnv-text-in 1s cubic-bezier(0.17, 0.67, 0.3, 0.96) forwards 1.8s';
+                }
+
+                if (btnGroup) {
+                    btnGroup.style.animation = 'none';
+                    btnGroup.offsetHeight; // Trigger reflow
+                    btnGroup.style.animation = 'lftcnv-text-in 1s cubic-bezier(0.17, 0.67, 0.3, 0.96) forwards 2.1s';
+                }
+            }
+
+            // Animate the initial (first) slide
             setTimeout(() => {
                 const activeItem = carousel.querySelector('.carousel-item.active');
-                const clips = activeItem.querySelectorAll('.lftcnv-bg-clip');
-                clips.forEach((clip, index) => {
-                    clip.classList.add('lftcnv-animate');
-                    clip.style.animationDelay = `${index * 0.15}s`;
-                });
-
-                const title = activeItem.querySelector('.lftcnv-title');
-                const line = activeItem.querySelector('.lftcnv-line');
-                const desc = activeItem.querySelector('.lftcnv-description');
-                const btnGroup = activeItem.querySelector('.lftcnv-btn-group');
-
-                title.classList.add('lftcnv-animate');
-
-                setTimeout(() => {
-                    line.classList.add('lftcnv-animate');
-                }, 300);
-
-                setTimeout(() => {
-                    desc.classList.add('lftcnv-animate');
-                }, 500);
-
-                setTimeout(() => {
-                    btnGroup.classList.add('lftcnv-animate');
-                }, 700);
-            }, 100);
-
-            // Reset animations when hidden
-            carousel.addEventListener('slid.bs.carousel', function (e) {
-                const prevItem = carousel.querySelector('.carousel-item:not(.active)');
-                if (prevItem) {
-                    const clips = prevItem.querySelectorAll('.lftcnv-bg-clip');
-                    clips.forEach(clip => {
-                        clip.classList.remove('lftcnv-animate');
-                    });
-
-                    const title = prevItem.querySelector('.lftcnv-title');
-                    const line = prevItem.querySelector('.lftcnv-line');
-                    const desc = prevItem.querySelector('.lftcnv-description');
-                    const btnGroup = prevItem.querySelector('.lftcnv-btn-group');
-
-                    title.classList.remove('lftcnv-animate');
-                    line.classList.remove('lftcnv-animate');
-                    desc.classList.remove('lftcnv-animate');
-                    btnGroup.classList.remove('lftcnv-animate');
+                if (activeItem) {
+                    animateMorphPaths(activeItem);
+                    resetBrushStrokes(activeItem);
+                    resetTextAnimations(activeItem);
                 }
+            }, 300);
+
+            // Add carousel event listeners
+            carousel.addEventListener('slide.bs.carousel', function (event) {
+                // Reset the next slide's animations
+                const nextSlide = event.relatedTarget;
+                resetMorphPath(nextSlide);
+
+                // Delay the animation to match the carousel transition
+                setTimeout(() => {
+                    animateMorphPaths(nextSlide);
+                    resetBrushStrokes(nextSlide);
+                    resetTextAnimations(nextSlide);
+                }, 600); // Slightly after the Bootstrap transition
+            });
+
+            // Optional: Interactive elements on mouse move
+            carousel.addEventListener('mousemove', function (e) {
+                const moveX = (e.clientX / window.innerWidth) - 0.5;
+                const moveY = (e.clientY / window.innerHeight) - 0.5;
+
+                const brushes = document.querySelectorAll('.lftcnv-brush-stroke');
+                brushes.forEach((brush, index) => {
+                    // Each brush moves differently based on mouse position
+                    const factor = (index + 1) * 10;
+                    brush.style.transform = `translateX(${moveX * factor}px) translateY(${moveY * factor}px) rotate(${index - 2}deg)`;
+                });
             });
         });
     </script>

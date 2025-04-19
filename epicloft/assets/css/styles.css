@@ -711,8 +711,7 @@ footer {
 }
 
 .epic-roofing-section {
-    background-color: #e6ebf1;
-    ;
+    background-color: #e6ebf1;;
 }
 
 .epic-heading {
@@ -758,13 +757,13 @@ footer {
 img.card-img-top {
     height: 60%;
 }
-
+    
 /* critical css will ensure it later end */
 
 
 /* ------------------------- */
 
-/* Advanced Loft Conversion Carousel Styles
+/* Loft Conversion Carousel with Morph/Brush Effects
    Prefix: lftcnv- for all custom classes
 */
 
@@ -775,16 +774,15 @@ img.card-img-top {
     overflow: hidden;
 }
 
-/* Slide Container */
-.lftcnv-slide-container {
+.carousel-item {
     position: relative;
     height: 85vh;
     min-height: 500px;
     overflow: hidden;
 }
 
-/* Background Image Styles */
-.lftcnv-bg-wrapper {
+/* Morph Container */
+.lftcnv-morph-container {
     position: absolute;
     top: 0;
     left: 0;
@@ -793,7 +791,8 @@ img.card-img-top {
     overflow: hidden;
 }
 
-.lftcnv-bg-main {
+/* Base Image */
+.lftcnv-bg-image {
     position: absolute;
     top: 0;
     left: 0;
@@ -801,56 +800,91 @@ img.card-img-top {
     height: 100%;
     background-size: cover;
     background-position: center;
-    transform: scale(1.05);
+    filter: grayscale(0.3) contrast(1.1);
+    transform: scale(1.1);
     transition: transform 8s ease;
 }
 
-.carousel-item.active .lftcnv-bg-main {
+.carousel-item.active .lftcnv-bg-image {
     transform: scale(1);
 }
 
-/* Clip Path Background Layers */
-.lftcnv-bg-clip {
+/* SVG Morph Elements */
+.lftcnv-morph-svg {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
+    z-index: 1;
+}
+
+.lftcnv-morph-path {
+    transition: d 1.5s cubic-bezier(0.7, 0, 0.3, 1);
+}
+
+/* Brush Stroke Elements */
+.lftcnv-brush-stroke {
+    position: absolute;
     background-size: cover;
     background-position: center;
     opacity: 0;
-    transform: translateY(100%);
+    z-index: 2;
 }
 
-.lftcnv-clip-1 {
-    clip-path: polygon(0 60%, 100% 25%, 100% 100%, 0% 100%);
-    background-blend-mode: luminosity;
+.lftcnv-brush-1 {
+    top: 30%;
+    left: -100%;
+    width: 90%;
+    height: 250px;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 300"><path fill="rgba(255,255,255,0.15)" d="M1200 0L0 0 0 150C300 280 900 200 1200 100z"/></svg>');
+    transform: rotate(-5deg);
+    animation: lftcnv-brush-in-1 1.8s cubic-bezier(0.7, 0, 0.3, 1) forwards;
+    animation-delay: 0.2s;
 }
 
-.lftcnv-clip-2 {
-    clip-path: polygon(0 75%, 100% 45%, 100% 100%, 0% 100%);
-    background-blend-mode: color;
+.lftcnv-brush-2 {
+    top: 45%;
+    right: -100%;
+    width: 80%;
+    height: 180px;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 300"><path fill="rgba(255,255,255,0.1)" d="M0 0L1200 0 1200 150C900 250 300 180 0 100z"/></svg>');
+    transform: rotate(3deg);
+    animation: lftcnv-brush-in-2 1.8s cubic-bezier(0.7, 0, 0.3, 1) forwards;
+    animation-delay: 0.5s;
 }
 
-.lftcnv-clip-3 {
-    clip-path: polygon(0 90%, 100% 70%, 100% 100%, 0% 100%);
-    background-blend-mode: overlay;
+.lftcnv-brush-3 {
+    bottom: 10%;
+    left: -100%;
+    width: 100%;
+    height: 200px;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 300"><path fill="rgba(255,255,255,0.12)" d="M1200 0L0 0 0 200C400 300 800 250 1200 150z"/></svg>');
+    transform: rotate(-2deg);
+    animation: lftcnv-brush-in-1 1.8s cubic-bezier(0.7, 0, 0.3, 1) forwards;
+    animation-delay: 0.8s;
 }
 
-/* Clip Path Animation */
-.lftcnv-bg-clip.lftcnv-animate {
-    animation: lftcnv-reveal-clip 1.5s cubic-bezier(0.77, 0, 0.175, 1) forwards;
-}
-
-@keyframes lftcnv-reveal-clip {
+/* Brush Animation Keyframes */
+@keyframes lftcnv-brush-in-1 {
     0% {
-        transform: translateY(100%);
         opacity: 0;
+        left: -100%;
     }
-
     100% {
-        transform: translateY(0);
-        opacity: 0.7;
+        opacity: 1;
+        left: 0;
+    }
+}
+
+@keyframes lftcnv-brush-in-2 {
+    0% {
+        opacity: 0;
+        right: -100%;
+    }
+    100% {
+        opacity: 1;
+        right: 0;
     }
 }
 
@@ -872,10 +906,7 @@ img.card-img-top {
 .lftcnv-content-inner {
     max-width: 800px;
     color: #fff;
-    padding: 2rem;
-    background: rgba(0, 0, 0, 0.2);
-    backdrop-filter: blur(5px);
-    border-radius: 15px;
+    position: relative;
 }
 
 /* Title Style */
@@ -885,25 +916,40 @@ img.card-img-top {
     margin-bottom: 1rem;
     opacity: 0;
     transform: translateY(30px);
-    transition: all 0.8s cubic-bezier(0.17, 0.67, 0.3, 0.96);
+    animation: lftcnv-text-in 1s cubic-bezier(0.17, 0.67, 0.3, 0.96) forwards;
+    animation-delay: 1.2s;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
 }
 
-.lftcnv-title.lftcnv-animate {
-    opacity: 1;
-    transform: translateY(0);
+@keyframes lftcnv-text-in {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
-/* Line Animation */
-.lftcnv-line {
+/* Brush Divider Animation */
+.lftcnv-brush-divider {
+    height: 20px;
     width: 0;
-    height: 3px;
-    background: linear-gradient(90deg, transparent, #fff, transparent);
     margin: 1.5rem auto;
-    transition: width 1s ease;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 20"><path fill="%23ffffff" d="M0 10 C75 0, 225 0, 300 10 L300 20 L0 20 Z"/></svg>');
+    background-size: cover;
+    animation: lftcnv-divider-in 1.2s ease forwards;
+    animation-delay: 1.5s;
 }
 
-.lftcnv-line.lftcnv-animate {
-    width: 150px;
+@keyframes lftcnv-divider-in {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 150px;
+    }
 }
 
 /* Description Style */
@@ -912,12 +958,9 @@ img.card-img-top {
     margin-bottom: 2rem;
     opacity: 0;
     transform: translateY(30px);
-    transition: all 0.8s cubic-bezier(0.17, 0.67, 0.3, 0.96);
-}
-
-.lftcnv-description.lftcnv-animate {
-    opacity: 1;
-    transform: translateY(0);
+    animation: lftcnv-text-in 1s cubic-bezier(0.17, 0.67, 0.3, 0.96) forwards;
+    animation-delay: 1.8s;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
 }
 
 /* Button Group */
@@ -927,12 +970,8 @@ img.card-img-top {
     gap: 1rem;
     opacity: 0;
     transform: translateY(30px);
-    transition: all 0.8s cubic-bezier(0.17, 0.67, 0.3, 0.96);
-}
-
-.lftcnv-btn-group.lftcnv-animate {
-    opacity: 1;
-    transform: translateY(0);
+    animation: lftcnv-text-in 1s cubic-bezier(0.17, 0.67, 0.3, 0.96) forwards;
+    animation-delay: 2.1s;
 }
 
 /* Button Styles */
@@ -944,14 +983,25 @@ img.card-img-top {
     text-decoration: none;
     border-radius: 50px;
     transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
 }
 
 .lftcnv-btn-primary {
     background: linear-gradient(135deg, #3498db, #1abc9c);
     color: white;
     border: none;
-    position: relative;
-    overflow: hidden;
+}
+
+.lftcnv-btn-primary::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+    transition: left 0.7s ease;
 }
 
 .lftcnv-btn-primary:hover {
@@ -960,26 +1010,8 @@ img.card-img-top {
     color: white;
 }
 
-.lftcnv-btn-primary:active {
-    transform: translateY(-1px);
-}
-
-.lftcnv-btn-primary::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: white;
-    opacity: 0.2;
-    transform: translateX(-100%);
-    transition: transform 0.3s ease-out;
-    z-index: -1;
-}
-
 .lftcnv-btn-primary:hover::before {
-    transform: translateX(0);
+    left: 100%;
 }
 
 .lftcnv-btn-outline {
@@ -1070,11 +1102,11 @@ img.card-img-top {
     .lftcnv-title {
         font-size: 2.5rem;
     }
-
+    
     .lftcnv-description {
         font-size: 1.1rem;
     }
-
+    
     .lftcnv-btn {
         padding: 0.6rem 1.5rem;
         font-size: 1rem;
@@ -1085,26 +1117,28 @@ img.card-img-top {
     .lftcnv-title {
         font-size: 2rem;
     }
-
-    .lftcnv-content-inner {
-        padding: 1.5rem;
-    }
-
+    
     .lftcnv-btn-group {
         flex-direction: column;
         gap: 0.75rem;
     }
+    
+    .lftcnv-brush-1,
+    .lftcnv-brush-2,
+    .lftcnv-brush-3 {
+        height: 100px;
+    }
 }
 
 @media (max-width: 576px) {
-    .lftcnv-slide-container {
+    .carousel-item {
         height: 70vh;
     }
-
+    
     .lftcnv-title {
         font-size: 1.8rem;
     }
-
+    
     .lftcnv-description {
         font-size: 1rem;
         margin-bottom: 1.5rem;

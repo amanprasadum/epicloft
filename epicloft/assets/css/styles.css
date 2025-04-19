@@ -711,7 +711,8 @@ footer {
 }
 
 .epic-roofing-section {
-    background-color: #e6ebf1;;
+    background-color: #e6ebf1;
+    ;
 }
 
 .epic-heading {
@@ -757,5 +758,357 @@ footer {
 img.card-img-top {
     height: 60%;
 }
-    
+
 /* critical css will ensure it later end */
+
+
+/* ------------------------- */
+
+/* Advanced Loft Conversion Carousel Styles
+   Prefix: lftcnv- for all custom classes
+*/
+
+/* Main Container Styles */
+.lftcnv-hero-slider {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+/* Slide Container */
+.lftcnv-slide-container {
+    position: relative;
+    height: 85vh;
+    min-height: 500px;
+    overflow: hidden;
+}
+
+/* Background Image Styles */
+.lftcnv-bg-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.lftcnv-bg-main {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    transform: scale(1.05);
+    transition: transform 8s ease;
+}
+
+.carousel-item.active .lftcnv-bg-main {
+    transform: scale(1);
+}
+
+/* Clip Path Background Layers */
+.lftcnv-bg-clip {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transform: translateY(100%);
+}
+
+.lftcnv-clip-1 {
+    clip-path: polygon(0 60%, 100% 25%, 100% 100%, 0% 100%);
+    background-blend-mode: luminosity;
+}
+
+.lftcnv-clip-2 {
+    clip-path: polygon(0 75%, 100% 45%, 100% 100%, 0% 100%);
+    background-blend-mode: color;
+}
+
+.lftcnv-clip-3 {
+    clip-path: polygon(0 90%, 100% 70%, 100% 100%, 0% 100%);
+    background-blend-mode: overlay;
+}
+
+/* Clip Path Animation */
+.lftcnv-bg-clip.lftcnv-animate {
+    animation: lftcnv-reveal-clip 1.5s cubic-bezier(0.77, 0, 0.175, 1) forwards;
+}
+
+@keyframes lftcnv-reveal-clip {
+    0% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 0.7;
+    }
+}
+
+/* Content Styles */
+.lftcnv-carousel-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem;
+    z-index: 10;
+}
+
+.lftcnv-content-inner {
+    max-width: 800px;
+    color: #fff;
+    padding: 2rem;
+    background: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(5px);
+    border-radius: 15px;
+}
+
+/* Title Style */
+.lftcnv-title {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s cubic-bezier(0.17, 0.67, 0.3, 0.96);
+}
+
+.lftcnv-title.lftcnv-animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Line Animation */
+.lftcnv-line {
+    width: 0;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, #fff, transparent);
+    margin: 1.5rem auto;
+    transition: width 1s ease;
+}
+
+.lftcnv-line.lftcnv-animate {
+    width: 150px;
+}
+
+/* Description Style */
+.lftcnv-description {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s cubic-bezier(0.17, 0.67, 0.3, 0.96);
+}
+
+.lftcnv-description.lftcnv-animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Button Group */
+.lftcnv-btn-group {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s cubic-bezier(0.17, 0.67, 0.3, 0.96);
+}
+
+.lftcnv-btn-group.lftcnv-animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Button Styles */
+.lftcnv-btn {
+    display: inline-block;
+    padding: 0.75rem 1.8rem;
+    font-size: 1.1rem;
+    font-weight: 500;
+    text-decoration: none;
+    border-radius: 50px;
+    transition: all 0.4s ease;
+}
+
+.lftcnv-btn-primary {
+    background: linear-gradient(135deg, #3498db, #1abc9c);
+    color: white;
+    border: none;
+    position: relative;
+    overflow: hidden;
+}
+
+.lftcnv-btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    color: white;
+}
+
+.lftcnv-btn-primary:active {
+    transform: translateY(-1px);
+}
+
+.lftcnv-btn-primary::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: white;
+    opacity: 0.2;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-out;
+    z-index: -1;
+}
+
+.lftcnv-btn-primary:hover::before {
+    transform: translateX(0);
+}
+
+.lftcnv-btn-outline {
+    background: transparent;
+    color: white;
+    border: 2px solid white;
+}
+
+.lftcnv-btn-outline:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    color: white;
+}
+
+/* Custom Navigation Controls */
+.lftcnv-carousel-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 60px;
+    height: 60px;
+    background: rgba(0, 0, 0, 0.5);
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: white;
+    z-index: 20;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.lftcnv-carousel-prev {
+    left: 20px;
+}
+
+.lftcnv-carousel-next {
+    right: 20px;
+}
+
+.lftcnv-hero-slider:hover .lftcnv-carousel-control {
+    opacity: 0.7;
+}
+
+.lftcnv-carousel-control:hover {
+    background: rgba(0, 0, 0, 0.8);
+    opacity: 1 !important;
+    transform: translateY(-50%) scale(1.1);
+}
+
+.lftcnv-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Custom Indicators */
+.lftcnv-carousel-indicators {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    z-index: 20;
+}
+
+.lftcnv-carousel-indicators button {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: none;
+    background: rgba(255, 255, 255, 0.5);
+    transition: all 0.3s ease;
+}
+
+.lftcnv-carousel-indicators button.active {
+    width: 30px;
+    border-radius: 10px;
+    background: white;
+}
+
+/* Media Queries */
+@media (max-width: 992px) {
+    .lftcnv-title {
+        font-size: 2.5rem;
+    }
+
+    .lftcnv-description {
+        font-size: 1.1rem;
+    }
+
+    .lftcnv-btn {
+        padding: 0.6rem 1.5rem;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .lftcnv-title {
+        font-size: 2rem;
+    }
+
+    .lftcnv-content-inner {
+        padding: 1.5rem;
+    }
+
+    .lftcnv-btn-group {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .lftcnv-slide-container {
+        height: 70vh;
+    }
+
+    .lftcnv-title {
+        font-size: 1.8rem;
+    }
+
+    .lftcnv-description {
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+    }
+}
+
+/* ------------------------- */

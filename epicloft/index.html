@@ -16,7 +16,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="./assets/css/styles.css">
     <link rel="stylesheet" href="./assets/css/mobile.css">
-    <style>
+    <!-- <style>
         /* Base Styles for Hero Carousel */
         .hero-slider {
             position: relative;
@@ -155,7 +155,7 @@
         .carousel-indicators button.active {
             transform: scale(1.2);
         }
-    </style>
+    </style> -->
 </head>
 
 <body>
@@ -332,69 +332,128 @@
         </div>
     </section> -->
 
-    <!-- Hero Carousel with Enhanced Animations -->
-    <section class="hero-slider">
-        <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
-            <div class="carousel-indicators">
+    <!-- Hero Carousel with Advanced Animations -->
+    <section class="lftcnv-hero-slider">
+        <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="lftcnv-carousel-indicators">
                 <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active"></button>
                 <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1"></button>
                 <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2"></button>
             </div>
+
             <div class="carousel-inner">
+                <!-- Item 1 -->
                 <div class="carousel-item active">
-                    <div class="bg-image zoom-effect" style="background-image: url('./assets/image/hero.jpg')"></div>
-                    <div class="overlay overlay-blue"></div>
-                    <div class="carousel-caption">
-                        <h1 class="display-4 fw-bold mb-4 animate-caption-title">Hire London's Best Loft Conversion
-                            Company</h1>
-                        <p class="lead mb-4 animate-caption-text">Upgrade your home and add value to your property with
-                            our quality loft
-                            conversion services</p>
-                        <div class="animate-caption-buttons">
-                            <a href="#quote" class="btn btn-primary btn-lg px-5 me-3">Get a Free Quote</a>
-                            <a href="#process" class="btn btn-outline-light btn-lg px-5">Learn More</a>
+                    <div class="lftcnv-slide-container">
+                        <!-- Image layers with clip-path effects -->
+                        <div class="lftcnv-bg-wrapper">
+                            <div class="lftcnv-bg-main" style="background-image: url('./assets/image/hero.jpg')"></div>
+                            <div class="lftcnv-bg-clip lftcnv-clip-1"
+                                style="background-image: url('./assets/image/hero.jpg')"></div>
+                            <div class="lftcnv-bg-clip lftcnv-clip-2"
+                                style="background-image: url('./assets/image/hero.jpg')"></div>
+                            <div class="lftcnv-bg-clip lftcnv-clip-3"
+                                style="background-image: url('./assets/image/hero.jpg')"></div>
+                        </div>
+
+                        <!-- Content with staggered reveal -->
+                        <div class="lftcnv-carousel-content">
+                            <div class="lftcnv-content-inner">
+                                <h1 class="lftcnv-title">Hire London's Best Loft Conversion Company</h1>
+                                <div class="lftcnv-line"></div>
+                                <p class="lftcnv-description">Upgrade your home and add value to your property with our
+                                    quality loft conversion services</p>
+                                <div class="lftcnv-btn-group">
+                                    <a href="#quote" class="lftcnv-btn lftcnv-btn-primary">Get a Free Quote</a>
+                                    <a href="#process" class="lftcnv-btn lftcnv-btn-outline">Learn More</a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
+
+                <!-- Item 2 -->
                 <div class="carousel-item">
-                    <div class="bg-image zoom-effect" style="background-image: url('./assets/image/hero2.jpg')"></div>
-                    <div class="overlay overlay-green"></div>
-                    <div class="carousel-caption">
-                        <h1 class="display-4 fw-bold mb-4 animate-caption-title">Custom Loft Designs for Every Home</h1>
-                        <p class="lead mb-4 animate-caption-text">From dormers to mansards, we create the perfect space
-                            for your needs</p>
-                        <div class="animate-caption-buttons">
-                            <a href="#services" class="btn btn-primary btn-lg px-5 me-3">Our Services</a>
-                            <a href="#quote" class="btn btn-outline-light btn-lg px-5">Get a Free Quote</a>
+                    <div class="lftcnv-slide-container">
+                        <!-- Image layers with clip-path effects -->
+                        <div class="lftcnv-bg-wrapper">
+                            <div class="lftcnv-bg-main" style="background-image: url('./assets/image/hero2.jpg')"></div>
+                            <div class="lftcnv-bg-clip lftcnv-clip-1"
+                                style="background-image: url('./assets/image/hero2.jpg')"></div>
+                            <div class="lftcnv-bg-clip lftcnv-clip-2"
+                                style="background-image: url('./assets/image/hero2.jpg')"></div>
+                            <div class="lftcnv-bg-clip lftcnv-clip-3"
+                                style="background-image: url('./assets/image/hero2.jpg')"></div>
+                        </div>
+
+                        <!-- Content with staggered reveal -->
+                        <div class="lftcnv-carousel-content">
+                            <div class="lftcnv-content-inner">
+                                <h1 class="lftcnv-title">Custom Loft Designs for Every Home</h1>
+                                <div class="lftcnv-line"></div>
+                                <p class="lftcnv-description">From dormers to mansards, we create the perfect space for
+                                    your needs</p>
+                                <div class="lftcnv-btn-group">
+                                    <a href="#services" class="lftcnv-btn lftcnv-btn-primary">Our Services</a>
+                                    <a href="#quote" class="lftcnv-btn lftcnv-btn-outline">Get a Free Quote</a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
+
+                <!-- Item 3 -->
                 <div class="carousel-item">
-                    <div class="bg-image zoom-effect" style="background-image: url('./assets/image/hero3.jpg')"></div>
-                    <div class="overlay overlay-brown"></div>
-                    <div class="carousel-caption">
-                        <h1 class="display-4 fw-bold mb-4 animate-caption-title">Trusted Loft Conversion Specialists in
-                            London</h1>
-                        <p class="lead mb-4 animate-caption-text">Serving Central London and surrounding areas within a
-                            50-miles radius</p>
-                        <div class="animate-caption-buttons">
-                            <a href="#testimonials" class="btn btn-primary btn-lg px-5 me-3">Our Testimonials</a>
-                            <a href="#contact" class="btn btn-outline-light btn-lg px-5">Contact Us</a>
+                    <div class="lftcnv-slide-container">
+                        <!-- Image layers with clip-path effects -->
+                        <div class="lftcnv-bg-wrapper">
+                            <div class="lftcnv-bg-main" style="background-image: url('./assets/image/hero3.jpg')"></div>
+                            <div class="lftcnv-bg-clip lftcnv-clip-1"
+                                style="background-image: url('./assets/image/hero3.jpg')"></div>
+                            <div class="lftcnv-bg-clip lftcnv-clip-2"
+                                style="background-image: url('./assets/image/hero3.jpg')"></div>
+                            <div class="lftcnv-bg-clip lftcnv-clip-3"
+                                style="background-image: url('./assets/image/hero3.jpg')"></div>
+                        </div>
+
+                        <!-- Content with staggered reveal -->
+                        <div class="lftcnv-carousel-content">
+                            <div class="lftcnv-content-inner">
+                                <h1 class="lftcnv-title">Trusted Loft Conversion Specialists in London</h1>
+                                <div class="lftcnv-line"></div>
+                                <p class="lftcnv-description">Serving Central London and surrounding areas within a
+                                    50-miles radius</p>
+                                <div class="lftcnv-btn-group">
+                                    <a href="#testimonials" class="lftcnv-btn lftcnv-btn-primary">Our Testimonials</a>
+                                    <a href="#contact" class="lftcnv-btn lftcnv-btn-outline">Contact Us</a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon"></span>
-                <span class="visually-hidden">Previous</span>
+
+            <!-- Custom Navigation Arrows -->
+            <button class="lftcnv-carousel-control lftcnv-carousel-prev" type="button" data-bs-target="#heroCarousel"
+                data-bs-slide="prev">
+                <span class="lftcnv-arrow">
+                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                </span>
             </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
-                <span class="carousel-control-next-icon"></span>
-                <span class="visually-hidden">Next</span>
+            <button class="lftcnv-carousel-control lftcnv-carousel-next" type="button" data-bs-target="#heroCarousel"
+                data-bs-slide="next">
+                <span class="lftcnv-arrow">
+                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9 6L15 12L9 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                </span>
             </button>
         </div>
     </section>
-
     <!-- About Section -->
     <section id="about" class="py-5 my-5">
         <div class="container">
@@ -1284,51 +1343,102 @@
             });
         });
     </script>
+
+    <!-- JavaScript to handle transition animations -->
     <script>
         document.addEventListener('DOMContentLoaded', function () {
-            // Initialize Bootstrap Carousel
-            var heroCarousel = document.querySelector('#heroCarousel');
-            var carousel = new bootstrap.Carousel(heroCarousel, {
-                interval: 7000,  // Longer interval to allow animations to complete
+            const carousel = document.getElementById('heroCarousel');
+
+            // Initialize carousel with longer interval
+            const bsCarousel = new bootstrap.Carousel(carousel, {
+                interval: 8000,
                 pause: 'hover'
             });
 
-            // Reset animations when slide changes
-            heroCarousel.addEventListener('slide.bs.carousel', function () {
-                var titles = document.querySelectorAll('.animate-caption-title');
-                var texts = document.querySelectorAll('.animate-caption-text');
-                var buttons = document.querySelectorAll('.animate-caption-buttons');
+            // Handle slide transition animations
+            carousel.addEventListener('slide.bs.carousel', function (e) {
+                const activeItem = e.relatedTarget;
 
-                titles.forEach(function (title) {
-                    title.style.opacity = 0;
-                    title.style.transform = 'translateY(20px)';
-                });
+                // Reset all animations for new slide
+                setTimeout(() => {
+                    // Trigger clip path animations
+                    const clips = activeItem.querySelectorAll('.lftcnv-bg-clip');
+                    clips.forEach((clip, index) => {
+                        clip.classList.add('lftcnv-animate');
+                        // Stagger the animations
+                        clip.style.animationDelay = `${index * 0.15}s`;
+                    });
 
-                texts.forEach(function (text) {
-                    text.style.opacity = 0;
-                    text.style.transform = 'translateY(20px)';
-                });
+                    // Animate content elements
+                    const title = activeItem.querySelector('.lftcnv-title');
+                    const line = activeItem.querySelector('.lftcnv-line');
+                    const desc = activeItem.querySelector('.lftcnv-description');
+                    const btnGroup = activeItem.querySelector('.lftcnv-btn-group');
 
-                buttons.forEach(function (button) {
-                    button.style.opacity = 0;
-                    button.style.transform = 'translateY(20px)';
-                });
+                    title.classList.add('lftcnv-animate');
+
+                    setTimeout(() => {
+                        line.classList.add('lftcnv-animate');
+                    }, 300);
+
+                    setTimeout(() => {
+                        desc.classList.add('lftcnv-animate');
+                    }, 500);
+
+                    setTimeout(() => {
+                        btnGroup.classList.add('lftcnv-animate');
+                    }, 700);
+                }, 50);
             });
 
-            // Optional: Add parallax effect on mouse move
-            heroCarousel.addEventListener('mousemove', function (e) {
-                const moveX = (e.clientX / window.innerWidth) - 0.5;
-                const moveY = (e.clientY / window.innerHeight) - 0.5;
-
-                const activeSlide = this.querySelector('.carousel-item.active');
-                const bgImage = activeSlide.querySelector('.bg-image');
-
-                gsap.to(bgImage, {
-                    duration: 1,
-                    x: moveX * 20,
-                    y: moveY * 20,
-                    ease: "power1.out"
+            // Initial animation for first slide
+            setTimeout(() => {
+                const activeItem = carousel.querySelector('.carousel-item.active');
+                const clips = activeItem.querySelectorAll('.lftcnv-bg-clip');
+                clips.forEach((clip, index) => {
+                    clip.classList.add('lftcnv-animate');
+                    clip.style.animationDelay = `${index * 0.15}s`;
                 });
+
+                const title = activeItem.querySelector('.lftcnv-title');
+                const line = activeItem.querySelector('.lftcnv-line');
+                const desc = activeItem.querySelector('.lftcnv-description');
+                const btnGroup = activeItem.querySelector('.lftcnv-btn-group');
+
+                title.classList.add('lftcnv-animate');
+
+                setTimeout(() => {
+                    line.classList.add('lftcnv-animate');
+                }, 300);
+
+                setTimeout(() => {
+                    desc.classList.add('lftcnv-animate');
+                }, 500);
+
+                setTimeout(() => {
+                    btnGroup.classList.add('lftcnv-animate');
+                }, 700);
+            }, 100);
+
+            // Reset animations when hidden
+            carousel.addEventListener('slid.bs.carousel', function (e) {
+                const prevItem = carousel.querySelector('.carousel-item:not(.active)');
+                if (prevItem) {
+                    const clips = prevItem.querySelectorAll('.lftcnv-bg-clip');
+                    clips.forEach(clip => {
+                        clip.classList.remove('lftcnv-animate');
+                    });
+
+                    const title = prevItem.querySelector('.lftcnv-title');
+                    const line = prevItem.querySelector('.lftcnv-line');
+                    const desc = prevItem.querySelector('.lftcnv-description');
+                    const btnGroup = prevItem.querySelector('.lftcnv-btn-group');
+
+                    title.classList.remove('lftcnv-animate');
+                    line.classList.remove('lftcnv-animate');
+                    desc.classList.remove('lftcnv-animate');
+                    btnGroup.classList.remove('lftcnv-animate');
+                }
             });
         });
     </script>

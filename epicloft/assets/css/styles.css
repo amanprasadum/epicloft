@@ -1223,7 +1223,8 @@ img.card-img-top {
     display: flex;
     align-items: center;
     gap: 5px;
-    z-index: 20;
+    /* z-index: 20; */
+    display: none;
 }
 
 .sr-current {
